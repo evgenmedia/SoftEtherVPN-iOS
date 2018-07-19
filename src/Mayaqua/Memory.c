@@ -120,7 +120,11 @@
 #include <stdarg.h>
 #include <time.h>
 #include <errno.h>
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 #include <zlib/zlib.h>
+#else
+#include <zlib.h>
+#endif
 #include <Mayaqua/Mayaqua.h>
 
 #define	MEMORY_SLEEP_TIME		150

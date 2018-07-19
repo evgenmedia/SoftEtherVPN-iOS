@@ -549,6 +549,7 @@ void NsGenMacAddress(void *dest, char *mac_address_seed, char *device_name)
 
 // Add the iptables entries for native stack
 IPTABLES_STATE *StartAddIpTablesEntryForNativeStack(void *seed, UINT seed_size)
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 {
 	IPTABLES_STATE *ret = NULL;
 	bool ok = false;
@@ -640,9 +641,12 @@ IPTABLES_STATE *StartAddIpTablesEntryForNativeStack(void *seed, UINT seed_size)
 
 	return ret;
 }
-
+#else
+{return (IPTABLES_STATE*)NULL;}
+#endif
 // Maintain the iptables
 bool MaintainAddIpTablesEntryForNativeStack(IPTABLES_STATE *s)
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 {
 	UINT i;
 	bool ret = false;
@@ -687,9 +691,12 @@ bool MaintainAddIpTablesEntryForNativeStack(IPTABLES_STATE *s)
 
 	return ret;
 }
-
+#else
+{return false;}
+#endif
 // Stop the iptables management
 void EndAddIpTablesEntryForNativeStack(IPTABLES_STATE *s)
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 {
 	UINT i;
 	if (s == NULL)
@@ -724,6 +731,9 @@ void EndAddIpTablesEntryForNativeStack(IPTABLES_STATE *s)
 
 	FreeIpTablesState(s);
 }
+#else
+{}
+#endif
 
 // Generate a set of dummy IP addresses and mark
 void GenerateDummyIpAndMark(void *hash_seed, IPTABLES_ENTRY *e, UINT id)

@@ -1992,6 +1992,7 @@ char *ParseCommandA(wchar_t *str, char *name)
 
 // Password prompt
 bool PasswordPrompt(char *password, UINT size)
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 {
 	UINT wp;
 	bool escape = false;
@@ -2074,9 +2075,13 @@ BACKSPACE:
 
 	return (escape ? false : true);
 }
+#else
+{return false;}
+#endif
 
 // Show the prompt
 wchar_t *Prompt(wchar_t *prompt_str)
+#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
 {
 	wchar_t *ret = NULL;
 	wchar_t *tmp = NULL;
@@ -2142,6 +2147,10 @@ wchar_t *Prompt(wchar_t *prompt_str)
 
 	return ret;
 }
+#else
+{return (wchar_t*)NULL;}
+#endif
+
 char *PromptA(wchar_t *prompt_str)
 {
 	wchar_t *str = Prompt(prompt_str);
