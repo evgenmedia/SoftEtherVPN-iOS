@@ -1,0 +1,2829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BD1D753AB93FE3F81E9538A /* Pods_Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82BB7FF2531F516436751ED /* Pods_Cedar.framework */; };
+		14351CC6210064D700F35C56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CBD210064D700F35C56 /* DetailViewController.swift */; };
+		14351CC7210064D700F35C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14351CBE210064D700F35C56 /* Assets.xcassets */; };
+		14351CCA210064D700F35C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CC3210064D700F35C56 /* AppDelegate.swift */; };
+		14351CCB210064D700F35C56 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CC4210064D700F35C56 /* MasterViewController.swift */; };
+		14351CCD2100652000F35C56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14351CBF210064D700F35C56 /* LaunchScreen.storyboard */; };
+		14351CCE2100652000F35C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14351CC1210064D700F35C56 /* Main.storyboard */; };
+		14351CEE2100658D00F35C56 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
+		14351CEF2100658D00F35C56 /* Mayaqua.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14351D77210065A900F35C56 /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF5210065A900F35C56 /* Network.c */; };
+		14351D78210065A900F35C56 /* Tick64.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF6210065A900F35C56 /* Tick64.c */; };
+		14351D7B210065A900F35C56 /* Table.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF9210065A900F35C56 /* Table.c */; };
+		14351D7C210065A900F35C56 /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFA210065A900F35C56 /* Object.c */; };
+		14351D7D210065A900F35C56 /* Memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFB210065A900F35C56 /* Memory.c */; };
+		14351D7E210065A900F35C56 /* FileIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFC210065A900F35C56 /* FileIO.c */; };
+		14351D7F210065A900F35C56 /* Kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFD210065A900F35C56 /* Kernel.c */; };
+		14351DCD210065A900F35C56 /* Tracking.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4D210065A900F35C56 /* Tracking.c */; };
+		14351DCE210065A900F35C56 /* Cfg.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4E210065A900F35C56 /* Cfg.c */; };
+		14351DCF210065A900F35C56 /* Encrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4F210065A900F35C56 /* Encrypt.c */; };
+		14351DD1210065A900F35C56 /* Mayaqua.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D51210065A900F35C56 /* Mayaqua.c */; };
+		14351DD2210065A900F35C56 /* Str.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D52210065A900F35C56 /* Str.c */; };
+		14351DD4210065A900F35C56 /* Secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D54210065A900F35C56 /* Secure.c */; };
+		14351DD6210065A900F35C56 /* Unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D56210065A900F35C56 /* Unix.c */; };
+		14351DDA210065A900F35C56 /* TcpIp.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D5B210065A900F35C56 /* TcpIp.c */; };
+		14351DDB210065A900F35C56 /* Pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D5C210065A900F35C56 /* Pack.c */; };
+		14351DE1210065A900F35C56 /* Microsoft.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D63210065A900F35C56 /* Microsoft.c */; };
+		14351DE4210065A900F35C56 /* Internat.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D66210065A900F35C56 /* Internat.c */; };
+		14351DEC210065A900F35C56 /* OS.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D6E210065A900F35C56 /* OS.c */; };
+		14351DF0210065A900F35C56 /* Win32.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D72210065A900F35C56 /* Win32.c */; };
+		14351F2F210066F200F35C56 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F2E210066F200F35C56 /* libiconv.tbd */; };
+		14351F7F2100707C00F35C56 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; };
+		14351F802100707C00F35C56 /* Cedar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14351F8B210071AF00F35C56 /* Account.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E69210065F500F35C56 /* Account.c */; };
+		14351F8C210071AF00F35C56 /* Admin.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E48210065F500F35C56 /* Admin.c */; };
+		14351F8D210071AF00F35C56 /* AzureClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7F210065F500F35C56 /* AzureClient.c */; };
+		14351F8E210071AF00F35C56 /* AzureServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E2B210065F500F35C56 /* AzureServer.c */; };
+		14351F8F210071AF00F35C56 /* Bridge.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E75210065F500F35C56 /* Bridge.c */; };
+		14351F90210071AF00F35C56 /* BridgeUnix.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E16210065F500F35C56 /* BridgeUnix.c */; };
+		14351F91210071AF00F35C56 /* BridgeWin32.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E14210065F500F35C56 /* BridgeWin32.c */; };
+		14351F92210071AF00F35C56 /* Cedar.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E1F210065F500F35C56 /* Cedar.c */; };
+		14351F93210071AF00F35C56 /* CedarPch.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E6C210065F500F35C56 /* CedarPch.c */; };
+		14351F94210071AF00F35C56 /* Client.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E53210065F500F35C56 /* Client.c */; };
+		14351F96210071AF00F35C56 /* Command.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E40210065F500F35C56 /* Command.c */; };
+		14351F97210071AF00F35C56 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
+		14351F98210071AF00F35C56 /* Console.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5C210065F500F35C56 /* Console.c */; };
+		14351F99210071AF00F35C56 /* Database.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E2F210065F500F35C56 /* Database.c */; };
+		14351F9A210071AF00F35C56 /* DDNS.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E19210065F500F35C56 /* DDNS.c */; };
+		14351F9C210071AF00F35C56 /* EtherLog.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E67210065F500F35C56 /* EtherLog.c */; };
+		14351F9E210071AF00F35C56 /* Interop_OpenVPN.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7D210065F500F35C56 /* Interop_OpenVPN.c */; };
+		14351F9F210071AF00F35C56 /* Interop_SSTP.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5B210065F500F35C56 /* Interop_SSTP.c */; };
+		14351FA0210071AF00F35C56 /* IPsec_EtherIP.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8C210065F500F35C56 /* IPsec_EtherIP.c */; };
+		14351FA1210071AF00F35C56 /* IPsec_IKE.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7E210065F500F35C56 /* IPsec_IKE.c */; };
+		14351FA2210071AF00F35C56 /* IPsec_IkePacket.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E60210065F500F35C56 /* IPsec_IkePacket.c */; };
+		14351FA3210071AF00F35C56 /* IPsec_IPC.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E70210065F500F35C56 /* IPsec_IPC.c */; };
+		14351FA4210071AF00F35C56 /* IPsec_L2TP.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7A210065F500F35C56 /* IPsec_L2TP.c */; };
+		14351FA5210071AF00F35C56 /* IPsec_PPP.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E6F210065F500F35C56 /* IPsec_PPP.c */; };
+		14351FA6210071AF00F35C56 /* IPsec_Win7.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8D210065F500F35C56 /* IPsec_Win7.c */; };
+		14351FA7210071AF00F35C56 /* IPsec.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E54210065F500F35C56 /* IPsec.c */; };
+		14351FA8210071AF00F35C56 /* Layer3.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8F210065F500F35C56 /* Layer3.c */; };
+		14351FA9210071AF00F35C56 /* Link.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E35210065F500F35C56 /* Link.c */; };
+		14351FAA210071AF00F35C56 /* Listener.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E78210065F500F35C56 /* Listener.c */; };
+		14351FAB210071AF00F35C56 /* Logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8B210065F500F35C56 /* Logging.c */; };
+		14351FAC210071AF00F35C56 /* Nat.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E62210065F500F35C56 /* Nat.c */; };
+		14351FAD210071AF00F35C56 /* NativeStack.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E71210065F500F35C56 /* NativeStack.c */; };
+		14351FAF210071AF00F35C56 /* NullLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E37210065F500F35C56 /* NullLan.c */; };
+		14351FB1210071AF00F35C56 /* Radius.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E6E210065F500F35C56 /* Radius.c */; };
+		14351FB2210071AF00F35C56 /* Remote.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E18210065F500F35C56 /* Remote.c */; };
+		14351FB3210071AF00F35C56 /* Sam.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5F210065F500F35C56 /* Sam.c */; };
+		14351FB4210071AF00F35C56 /* SecureInfo.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E65210065F500F35C56 /* SecureInfo.c */; };
+		14351FB5210071AF00F35C56 /* SecureNAT.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E2E210065F500F35C56 /* SecureNAT.c */; };
+		14351FB6210071AF00F35C56 /* SeLowUser.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E24210065F500F35C56 /* SeLowUser.c */; };
+		14351FB7210071AF00F35C56 /* Server.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E4F210065F500F35C56 /* Server.c */; };
+		14351FB8210071AF00F35C56 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
+		14351FBB210071AF00F35C56 /* UdpAccel.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E46210065F500F35C56 /* UdpAccel.c */; };
+		14351FBC210071AF00F35C56 /* VG.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E3A210065F500F35C56 /* VG.c */; };
+		14351FBD210071AF00F35C56 /* Virtual.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E80210065F500F35C56 /* Virtual.c */; };
+		14351FBE210071AF00F35C56 /* VLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E20210065F500F35C56 /* VLan.c */; };
+		14351FBF210071AF00F35C56 /* VLanUnix.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E55210065F500F35C56 /* VLanUnix.c */; };
+		14351FC0210071AF00F35C56 /* VLanWin32.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E87210065F500F35C56 /* VLanWin32.c */; };
+		14351FC1210071AF00F35C56 /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E21210065F500F35C56 /* WaterMark.c */; };
+		14351FC2210071AF00F35C56 /* WebUI.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E43210065F500F35C56 /* WebUI.c */; };
+		14351FC3210071AF00F35C56 /* Wpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E17210065F500F35C56 /* Wpc.c */; };
+		14351FCC2100729D00F35C56 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351FCB2100729D00F35C56 /* PacketTunnelProvider.swift */; };
+		14351FD12100729D00F35C56 /* SoftEtherNE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14351FC92100729D00F35C56 /* SoftEtherNE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		14351FD6210072AF00F35C56 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; };
+		14351FDA210073D600F35C56 /* Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E72210065F500F35C56 /* Cedar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435201C210075BF00F35C56 /* Mayaqua.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6F210065A900F35C56 /* Mayaqua.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435201D2100778000F35C56 /* Microsoft.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF4210065A900F35C56 /* Microsoft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435201E2100778000F35C56 /* Pack.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF7210065A900F35C56 /* Pack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435201F2100778000F35C56 /* TcpIp.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF8210065A900F35C56 /* TcpIp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520202100778000F35C56 /* Internat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D4C210065A900F35C56 /* Internat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520212100778000F35C56 /* OS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D50210065A900F35C56 /* OS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520222100778000F35C56 /* MayaType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D55210065A900F35C56 /* MayaType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520232100778000F35C56 /* Tick64.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D60210065A900F35C56 /* Tick64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520242100778000F35C56 /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D62210065A900F35C56 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520252100778000F35C56 /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D64210065A900F35C56 /* Tracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520262100778000F35C56 /* Kernel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D68210065A900F35C56 /* Kernel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520272100778000F35C56 /* FileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D69210065A900F35C56 /* FileIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520282100778000F35C56 /* Memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6A210065A900F35C56 /* Memory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		143520292100778000F35C56 /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6B210065A900F35C56 /* Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202A2100778000F35C56 /* Table.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6C210065A900F35C56 /* Table.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202B2100778000F35C56 /* Str.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6D210065A900F35C56 /* Str.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202C2100778000F35C56 /* Cfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D71210065A900F35C56 /* Cfg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202D210077AE00F35C56 /* Encrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D70210065A900F35C56 /* Encrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202E210077B600F35C56 /* Secure.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D75210065A900F35C56 /* Secure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435202F210077CE00F35C56 /* Unix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D74210065A900F35C56 /* Unix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14352030210078CB00F35C56 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
+		1435203121007A3A00F35C56 /* CedarType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E52210065F500F35C56 /* CedarType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203221007C4100F35C56 /* Admin.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E8E210065F500F35C56 /* Admin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203321007C4100F35C56 /* AzureClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E42210065F500F35C56 /* AzureClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203421007C4100F35C56 /* AzureServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6B210065F500F35C56 /* AzureServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203521007C4100F35C56 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1E210065F500F35C56 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203621007C4100F35C56 /* BridgeUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5A210065F500F35C56 /* BridgeUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203721007C4100F35C56 /* BridgeWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E58210065F500F35C56 /* BridgeWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203821007C4100F35C56 /* CedarPch.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E25210065F500F35C56 /* CedarPch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203921007C4100F35C56 /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1C210065F500F35C56 /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203A21007C4100F35C56 /* CM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4B210065F500F35C56 /* CM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203B21007C4100F35C56 /* CMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5D210065F500F35C56 /* CMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203C21007C4100F35C56 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E7C210065F500F35C56 /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203D21007C4100F35C56 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF6210065F500F35C56 /* Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203E21007C4100F35C56 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFA210065F500F35C56 /* Console.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435203F21007C4100F35C56 /* Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E63210065F500F35C56 /* Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204021007C4100F35C56 /* DDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E56210065F500F35C56 /* DDNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204121007C4100F35C56 /* EM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6A210065F500F35C56 /* EM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204221007C4100F35C56 /* EMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E30210065F500F35C56 /* EMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204321007C4200F35C56 /* EtherLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E32210065F500F35C56 /* EtherLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204421007C4200F35C56 /* Hub.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E66210065F500F35C56 /* Hub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204521007C4200F35C56 /* Interop_OpenVPN.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3E210065F500F35C56 /* Interop_OpenVPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204621007C4200F35C56 /* Interop_SSTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFB210065F500F35C56 /* Interop_SSTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204721007C4200F35C56 /* IPsec_EtherIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4D210065F500F35C56 /* IPsec_EtherIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204821007C4200F35C56 /* IPsec_IKE.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3D210065F500F35C56 /* IPsec_IKE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204921007C4200F35C56 /* IPsec_IkePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF9210065F500F35C56 /* IPsec_IkePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204A21007C4200F35C56 /* IPsec_IPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E26210065F500F35C56 /* IPsec_IPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204B21007C4200F35C56 /* IPsec_L2TP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E45210065F500F35C56 /* IPsec_L2TP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204C21007C4200F35C56 /* IPsec_PPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E27210065F500F35C56 /* IPsec_PPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204D21007C4200F35C56 /* IPsec_Win7.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E49210065F500F35C56 /* IPsec_Win7.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204E21007C4200F35C56 /* IPsec_Win7Inner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2D210065F500F35C56 /* IPsec_Win7Inner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435204F21007C4200F35C56 /* IPsec.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1B210065F500F35C56 /* IPsec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205021007C4200F35C56 /* Layer3.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E47210065F500F35C56 /* Layer3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205121007C4200F35C56 /* Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E84210065F500F35C56 /* Link.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205221007C4200F35C56 /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E23210065F500F35C56 /* Listener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205321007C4200F35C56 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4E210065F500F35C56 /* Logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205421007C4200F35C56 /* Nat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E31210065F500F35C56 /* Nat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205521007C4200F35C56 /* NativeStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E22210065F500F35C56 /* NativeStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205621007C4200F35C56 /* netcfgn.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF7210065F500F35C56 /* netcfgn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205721007C4200F35C56 /* netcfgx.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E29210065F500F35C56 /* netcfgx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205821007C4200F35C56 /* NM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E85210065F500F35C56 /* NM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205921007C4200F35C56 /* NMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E39210065F500F35C56 /* NMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205A21007C4200F35C56 /* NullLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E82210065F500F35C56 /* NullLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205B21007C4200F35C56 /* Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF8210065F500F35C56 /* Protocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205C21007C4200F35C56 /* Radius.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E28210065F500F35C56 /* Radius.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205D21007C4200F35C56 /* Remote.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E51210065F500F35C56 /* Remote.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205E21007C4200F35C56 /* Sam.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF5210065F500F35C56 /* Sam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435205F21007C4200F35C56 /* SecureInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E34210065F500F35C56 /* SecureInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206021007C4200F35C56 /* SecureNAT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E64210065F500F35C56 /* SecureNAT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206121007C4200F35C56 /* SeLowUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6D210065F500F35C56 /* SeLowUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206221007C4200F35C56 /* Server.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E86210065F500F35C56 /* Server.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206321007C4200F35C56 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E57210065F500F35C56 /* Session.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206421007C4200F35C56 /* SM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E89210065F500F35C56 /* SM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206521007C4200F35C56 /* SMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4A210065F500F35C56 /* SMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206621007C4200F35C56 /* SW.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3F210065F500F35C56 /* SW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206721007C4200F35C56 /* SWInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E41210065F500F35C56 /* SWInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206821007C4200F35C56 /* UdpAccel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E90210065F500F35C56 /* UdpAccel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206921007C4200F35C56 /* UT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E83210065F500F35C56 /* UT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206A21007C4200F35C56 /* VG.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E81210065F500F35C56 /* VG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206B21007C4200F35C56 /* Virtual.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3B210065F500F35C56 /* Virtual.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206C21007C4200F35C56 /* VLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E73210065F500F35C56 /* VLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206D21007C4200F35C56 /* VLanUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1A210065F500F35C56 /* VLanUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206E21007C4200F35C56 /* VLanWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E50210065F500F35C56 /* VLanWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435206F21007C4200F35C56 /* WaterMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E74210065F500F35C56 /* WaterMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435207021007C4200F35C56 /* WebUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E79210065F500F35C56 /* WebUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435207121007C4200F35C56 /* Win32Com.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E68210065F500F35C56 /* Win32Com.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435207221007C7D00F35C56 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2C210065F500F35C56 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435207321007C9D00F35C56 /* WinUi.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1D210065F500F35C56 /* WinUi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1435207421007C9D00F35C56 /* Wpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E59210065F500F35C56 /* Wpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29BCB1BDBA4E5D0754B96FE3 /* Pods_Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */; };
+		46A3F69DD88DD5518A5634F7 /* Pods_SoftEtherVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */; };
+		61096F2D2105F08F008F10AD /* ClientDummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F2C2105F08F008F10AD /* ClientDummy.c */; };
+		61096F352106BCB1008F10AD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61096F342106BCB1008F10AD /* main.swift */; };
+		61096F402106C081008F10AD /* Mayaqua.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6F210065A900F35C56 /* Mayaqua.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F412106C081008F10AD /* Microsoft.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF4210065A900F35C56 /* Microsoft.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F422106C081008F10AD /* Pack.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF7210065A900F35C56 /* Pack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F432106C081008F10AD /* TcpIp.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF8210065A900F35C56 /* TcpIp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F442106C081008F10AD /* Internat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D4C210065A900F35C56 /* Internat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F452106C081008F10AD /* OS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D50210065A900F35C56 /* OS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F462106C081008F10AD /* MayaType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D55210065A900F35C56 /* MayaType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F472106C081008F10AD /* Tick64.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D60210065A900F35C56 /* Tick64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F482106C081008F10AD /* Network.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D62210065A900F35C56 /* Network.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F492106C081008F10AD /* Tracking.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D64210065A900F35C56 /* Tracking.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4A2106C081008F10AD /* Kernel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D68210065A900F35C56 /* Kernel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4B2106C081008F10AD /* FileIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D69210065A900F35C56 /* FileIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4C2106C081008F10AD /* Secure.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D75210065A900F35C56 /* Secure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4D2106C081008F10AD /* Encrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D70210065A900F35C56 /* Encrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4E2106C081008F10AD /* Memory.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6A210065A900F35C56 /* Memory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F4F2106C081008F10AD /* Object.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6B210065A900F35C56 /* Object.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F502106C081008F10AD /* Table.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6C210065A900F35C56 /* Table.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F512106C081008F10AD /* Str.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6D210065A900F35C56 /* Str.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F522106C081008F10AD /* Cfg.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D71210065A900F35C56 /* Cfg.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F532106C081008F10AD /* Unix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D74210065A900F35C56 /* Unix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61096F552106C081008F10AD /* Object.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFA210065A900F35C56 /* Object.c */; };
+		61096F562106C081008F10AD /* Unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D56210065A900F35C56 /* Unix.c */; };
+		61096F572106C081008F10AD /* Mayaqua.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D51210065A900F35C56 /* Mayaqua.c */; };
+		61096F582106C081008F10AD /* Win32.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D72210065A900F35C56 /* Win32.c */; };
+		61096F592106C081008F10AD /* Table.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF9210065A900F35C56 /* Table.c */; };
+		61096F5A2106C081008F10AD /* Microsoft.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D63210065A900F35C56 /* Microsoft.c */; };
+		61096F5B2106C081008F10AD /* Str.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D52210065A900F35C56 /* Str.c */; };
+		61096F5C2106C081008F10AD /* Internat.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D66210065A900F35C56 /* Internat.c */; };
+		61096F5D2106C081008F10AD /* Secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D54210065A900F35C56 /* Secure.c */; };
+		61096F5E2106C081008F10AD /* Pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D5C210065A900F35C56 /* Pack.c */; };
+		61096F5F2106C081008F10AD /* TcpIp.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D5B210065A900F35C56 /* TcpIp.c */; };
+		61096F602106C081008F10AD /* Tick64.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF6210065A900F35C56 /* Tick64.c */; };
+		61096F612106C081008F10AD /* FileIO.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFC210065A900F35C56 /* FileIO.c */; };
+		61096F622106C081008F10AD /* Kernel.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFD210065A900F35C56 /* Kernel.c */; };
+		61096F632106C081008F10AD /* OS.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D6E210065A900F35C56 /* OS.c */; };
+		61096F642106C081008F10AD /* Encrypt.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4F210065A900F35C56 /* Encrypt.c */; };
+		61096F652106C081008F10AD /* Memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFB210065A900F35C56 /* Memory.c */; };
+		61096F662106C081008F10AD /* Cfg.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4E210065A900F35C56 /* Cfg.c */; };
+		61096F672106C081008F10AD /* Tracking.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4D210065A900F35C56 /* Tracking.c */; };
+		61096F682106C081008F10AD /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF5210065A900F35C56 /* Network.c */; };
+		61096F6A2106C081008F10AD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F2E210066F200F35C56 /* libiconv.tbd */; };
+		61096F722106C411008F10AD /* Cedar Strip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83B0F2105E1AC00191202 /* Cedar Strip.framework */; };
+		61096F742106C5B5008F10AD /* Mayaqua_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61096F702106C081008F10AD /* Mayaqua_macOS.framework */; };
+		61096F752106CBB8008F10AD /* NullLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E37210065F500F35C56 /* NullLan.c */; };
+		61096F772106CCFD008F10AD /* AppleFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F762106CCFD008F10AD /* AppleFunc.c */; };
+		61CD40112105E87D009E0438 /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
+		61F83A7921058FA400191202 /* SE_Func.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F83A7721058FA400191202 /* SE_Func.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A7C21058FA400191202 /* SE_Func.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83A7521058FA300191202 /* SE_Func.framework */; };
+		61F83A7D21058FA400191202 /* SE_Func.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83A7521058FA300191202 /* SE_Func.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		61F83A812105907800191202 /* Client.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E53210065F500F35C56 /* Client.c */; };
+		61F83A822105A90300191202 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
+		61F83A832105A91100191202 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
+		61F83A842105DCDF00191202 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
+		61F83A892105E1A700191202 /* Hub.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E33210065F500F35C56 /* Hub.c */; };
+		61F83A8A2105E1A700191202 /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
+		61F83A8D2105E1AC00191202 /* Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E72210065F500F35C56 /* Cedar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A8E2105E1AC00191202 /* CedarType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E52210065F500F35C56 /* CedarType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A8F2105E1AC00191202 /* Admin.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E8E210065F500F35C56 /* Admin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A902105E1AC00191202 /* AzureClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E42210065F500F35C56 /* AzureClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A912105E1AC00191202 /* AzureServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6B210065F500F35C56 /* AzureServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A922105E1AC00191202 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1E210065F500F35C56 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A932105E1AC00191202 /* BridgeUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5A210065F500F35C56 /* BridgeUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A942105E1AC00191202 /* BridgeWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E58210065F500F35C56 /* BridgeWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A952105E1AC00191202 /* CedarPch.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E25210065F500F35C56 /* CedarPch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A962105E1AC00191202 /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1C210065F500F35C56 /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A972105E1AC00191202 /* CM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4B210065F500F35C56 /* CM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A982105E1AC00191202 /* CMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5D210065F500F35C56 /* CMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A992105E1AC00191202 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E7C210065F500F35C56 /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9A2105E1AC00191202 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF6210065F500F35C56 /* Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9B2105E1AC00191202 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFA210065F500F35C56 /* Console.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9C2105E1AC00191202 /* Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E63210065F500F35C56 /* Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9D2105E1AC00191202 /* DDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E56210065F500F35C56 /* DDNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9E2105E1AC00191202 /* EM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6A210065F500F35C56 /* EM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83A9F2105E1AC00191202 /* EMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E30210065F500F35C56 /* EMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA02105E1AC00191202 /* EtherLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E32210065F500F35C56 /* EtherLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA12105E1AC00191202 /* Hub.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E66210065F500F35C56 /* Hub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA22105E1AC00191202 /* Interop_OpenVPN.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3E210065F500F35C56 /* Interop_OpenVPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA32105E1AC00191202 /* Interop_SSTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFB210065F500F35C56 /* Interop_SSTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA42105E1AC00191202 /* IPsec_EtherIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4D210065F500F35C56 /* IPsec_EtherIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA52105E1AC00191202 /* IPsec_IKE.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3D210065F500F35C56 /* IPsec_IKE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA62105E1AC00191202 /* IPsec_IkePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF9210065F500F35C56 /* IPsec_IkePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA72105E1AC00191202 /* IPsec_IPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E26210065F500F35C56 /* IPsec_IPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA82105E1AC00191202 /* IPsec_L2TP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E45210065F500F35C56 /* IPsec_L2TP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AA92105E1AC00191202 /* IPsec_PPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E27210065F500F35C56 /* IPsec_PPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAA2105E1AC00191202 /* IPsec_Win7.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E49210065F500F35C56 /* IPsec_Win7.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAB2105E1AC00191202 /* IPsec_Win7Inner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2D210065F500F35C56 /* IPsec_Win7Inner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAC2105E1AC00191202 /* IPsec.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1B210065F500F35C56 /* IPsec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAD2105E1AC00191202 /* Layer3.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E47210065F500F35C56 /* Layer3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAE2105E1AC00191202 /* Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E84210065F500F35C56 /* Link.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AAF2105E1AC00191202 /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E23210065F500F35C56 /* Listener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB02105E1AC00191202 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4E210065F500F35C56 /* Logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB12105E1AC00191202 /* Nat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E31210065F500F35C56 /* Nat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB22105E1AC00191202 /* NativeStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E22210065F500F35C56 /* NativeStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB32105E1AC00191202 /* netcfgn.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF7210065F500F35C56 /* netcfgn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB42105E1AC00191202 /* netcfgx.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E29210065F500F35C56 /* netcfgx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB52105E1AC00191202 /* NM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E85210065F500F35C56 /* NM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB62105E1AC00191202 /* NMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E39210065F500F35C56 /* NMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB72105E1AC00191202 /* NullLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E82210065F500F35C56 /* NullLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB82105E1AC00191202 /* Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF8210065F500F35C56 /* Protocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AB92105E1AC00191202 /* Radius.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E28210065F500F35C56 /* Radius.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABA2105E1AC00191202 /* Remote.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E51210065F500F35C56 /* Remote.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABB2105E1AC00191202 /* Sam.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF5210065F500F35C56 /* Sam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABC2105E1AC00191202 /* SecureInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E34210065F500F35C56 /* SecureInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABD2105E1AC00191202 /* SecureNAT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E64210065F500F35C56 /* SecureNAT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABE2105E1AC00191202 /* SeLowUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6D210065F500F35C56 /* SeLowUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ABF2105E1AC00191202 /* Server.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E86210065F500F35C56 /* Server.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC02105E1AC00191202 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E57210065F500F35C56 /* Session.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC12105E1AC00191202 /* SM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E89210065F500F35C56 /* SM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC22105E1AC00191202 /* SMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4A210065F500F35C56 /* SMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC32105E1AC00191202 /* SW.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3F210065F500F35C56 /* SW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC42105E1AC00191202 /* SWInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E41210065F500F35C56 /* SWInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC52105E1AC00191202 /* UdpAccel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E90210065F500F35C56 /* UdpAccel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC62105E1AC00191202 /* UT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E83210065F500F35C56 /* UT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC72105E1AC00191202 /* VG.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E81210065F500F35C56 /* VG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC82105E1AC00191202 /* Virtual.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3B210065F500F35C56 /* Virtual.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AC92105E1AC00191202 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2C210065F500F35C56 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ACA2105E1AC00191202 /* VLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E73210065F500F35C56 /* VLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ACB2105E1AC00191202 /* WinUi.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1D210065F500F35C56 /* WinUi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ACC2105E1AC00191202 /* Wpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E59210065F500F35C56 /* Wpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ACD2105E1AC00191202 /* VLanUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1A210065F500F35C56 /* VLanUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83ACE2105E1AC00191202 /* AppleSock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F83A852105DE9100191202 /* AppleSock.h */; };
+		61F83ACF2105E1AC00191202 /* VLanWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E50210065F500F35C56 /* VLanWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AD02105E1AC00191202 /* WaterMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E74210065F500F35C56 /* WaterMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AD12105E1AC00191202 /* WebUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E79210065F500F35C56 /* WebUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AD22105E1AC00191202 /* Win32Com.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E68210065F500F35C56 /* Win32Com.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		61F83AD82105E1AC00191202 /* AzureClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7F210065F500F35C56 /* AzureClient.c */; };
+		61F83ADD2105E1AC00191202 /* Cedar.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E1F210065F500F35C56 /* Cedar.c */; };
+		61F83ADE2105E1AC00191202 /* CedarPch.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E6C210065F500F35C56 /* CedarPch.c */; };
+		61F83ADF2105E1AC00191202 /* Client.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E53210065F500F35C56 /* Client.c */; };
+		61F83AE12105E1AC00191202 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
+		61F83AF22105E1AC00191202 /* Listener.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E78210065F500F35C56 /* Listener.c */; };
+		61F83AF32105E1AC00191202 /* Logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8B210065F500F35C56 /* Logging.c */; };
+		61F83AF82105E1AC00191202 /* AppleSock.c in Sources */ = {isa = PBXBuildFile; fileRef = 61F83A862105DE9100191202 /* AppleSock.c */; };
+		61F83AF92105E1AC00191202 /* Remote.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E18210065F500F35C56 /* Remote.c */; };
+		61F83AFF2105E1AC00191202 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
+		61F83B062105E1AC00191202 /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E21210065F500F35C56 /* WaterMark.c */; };
+		824D198CB1CA2DDEED493096 /* Pods_Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */; };
+		E77D1510675DEFE67473E51E /* Pods_Mayaqua_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F0EA44646EEEA9DCE841E9 /* Pods_Mayaqua_macOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14351CEC2100658D00F35C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14351CE62100658D00F35C56;
+			remoteInfo = Mayaqua;
+		};
+		14351F7D2100707C00F35C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14351F772100707C00F35C56;
+			remoteInfo = Cedar;
+		};
+		14351FCF2100729D00F35C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14351FC82100729D00F35C56;
+			remoteInfo = SoftEtherNE;
+		};
+		61F83A7A21058FA400191202 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61F83A7421058FA300191202;
+			remoteInfo = "SE-Func";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		14351CDC2100655200F35C56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14351F802100707C00F35C56 /* Cedar.framework in Embed Frameworks */,
+				61F83A7D21058FA400191202 /* SE_Func.framework in Embed Frameworks */,
+				14351CEF2100658D00F35C56 /* Mayaqua.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351FD52100729D00F35C56 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				14351FD12100729D00F35C56 /* SoftEtherNE.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F302106BCB1008F10AD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14351CA52100648A00F35C56 /* SoftEtherVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftEtherVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14351CBD210064D700F35C56 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		14351CBE210064D700F35C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14351CC0210064D700F35C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14351CC2210064D700F35C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14351CC3210064D700F35C56 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14351CC4210064D700F35C56 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		14351CC5210064D700F35C56 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14351CE72100658D00F35C56 /* Mayaqua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mayaqua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14351CF4210065A900F35C56 /* Microsoft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Microsoft.h; sourceTree = "<group>"; };
+		14351CF5210065A900F35C56 /* Network.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Network.c; sourceTree = "<group>"; };
+		14351CF6210065A900F35C56 /* Tick64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tick64.c; sourceTree = "<group>"; };
+		14351CF7210065A900F35C56 /* Pack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pack.h; sourceTree = "<group>"; };
+		14351CF8210065A900F35C56 /* TcpIp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TcpIp.h; sourceTree = "<group>"; };
+		14351CF9210065A900F35C56 /* Table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Table.c; sourceTree = "<group>"; };
+		14351CFA210065A900F35C56 /* Object.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
+		14351CFB210065A900F35C56 /* Memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Memory.c; sourceTree = "<group>"; };
+		14351CFC210065A900F35C56 /* FileIO.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileIO.c; sourceTree = "<group>"; };
+		14351CFD210065A900F35C56 /* Kernel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Kernel.c; sourceTree = "<group>"; };
+		14351D00210065A900F35C56 /* pem2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		14351D01210065A900F35C56 /* pem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		14351D02210065A900F35C56 /* ssl3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		14351D03210065A900F35C56 /* ossl_typ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		14351D04210065A900F35C56 /* dtls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		14351D05210065A900F35C56 /* err.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		14351D06210065A900F35C56 /* bn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		14351D07210065A900F35C56 /* blowfish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		14351D08210065A900F35C56 /* cms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		14351D09210065A900F35C56 /* engine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		14351D0A210065A900F35C56 /* conf_api.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		14351D0B210065A900F35C56 /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		14351D0C210065A900F35C56 /* asn1_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		14351D0D210065A900F35C56 /* ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		14351D0E210065A900F35C56 /* kssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		14351D0F210065A900F35C56 /* sha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		14351D10210065A900F35C56 /* symhacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		14351D11210065A900F35C56 /* asn1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		14351D12210065A900F35C56 /* opensslconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		14351D13210065A900F35C56 /* bio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		14351D14210065A900F35C56 /* rc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		14351D15210065A900F35C56 /* dh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		14351D16210065A900F35C56 /* ui_compat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		14351D17210065A900F35C56 /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		14351D18210065A900F35C56 /* ssl23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		14351D19210065A900F35C56 /* conf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		14351D1A210065A900F35C56 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		14351D1B210065A900F35C56 /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		14351D1C210065A900F35C56 /* txt_db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		14351D1D210065A900F35C56 /* safestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		14351D1E210065A900F35C56 /* ecdsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		14351D1F210065A900F35C56 /* objects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		14351D20210065A900F35C56 /* pkcs12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		14351D21210065A900F35C56 /* crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		14351D22210065A900F35C56 /* opensslv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		14351D23210065A900F35C56 /* pkcs7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		14351D24210065A900F35C56 /* obj_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		14351D25210065A900F35C56 /* buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		14351D26210065A900F35C56 /* ssl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		14351D27210065A900F35C56 /* srp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		14351D28210065A900F35C56 /* camellia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		14351D29210065A900F35C56 /* evp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		14351D2A210065A900F35C56 /* e_os2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		14351D2B210065A900F35C56 /* md4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		14351D2C210065A900F35C56 /* hmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		14351D2D210065A900F35C56 /* aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		14351D2E210065A900F35C56 /* comp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		14351D2F210065A900F35C56 /* cast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		14351D30210065A900F35C56 /* rc4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		14351D31210065A900F35C56 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		14351D32210065A900F35C56 /* des.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		14351D33210065A900F35C56 /* ocsp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		14351D34210065A900F35C56 /* ec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		14351D35210065A900F35C56 /* ecdh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		14351D36210065A900F35C56 /* rand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		14351D37210065A900F35C56 /* ts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		14351D38210065A900F35C56 /* pqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		14351D39210065A900F35C56 /* dso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		14351D3A210065A900F35C56 /* seed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		14351D3B210065A900F35C56 /* modes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		14351D3C210065A900F35C56 /* ssl2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		14351D3D210065A900F35C56 /* rsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		14351D3E210065A900F35C56 /* krb5_asn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		14351D3F210065A900F35C56 /* des_old.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		14351D40210065A900F35C56 /* ripemd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		14351D41210065A900F35C56 /* whrlpool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		14351D42210065A900F35C56 /* tls1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		14351D43210065A900F35C56 /* mdc2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		14351D44210065A900F35C56 /* dsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		14351D45210065A900F35C56 /* srtp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		14351D46210065A900F35C56 /* asn1t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		14351D47210065A900F35C56 /* cmac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		14351D48210065A900F35C56 /* ebcdic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		14351D49210065A900F35C56 /* idea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		14351D4A210065A900F35C56 /* lhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		14351D4B210065A900F35C56 /* pkcs11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs11.h; sourceTree = "<group>"; };
+		14351D4C210065A900F35C56 /* Internat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Internat.h; sourceTree = "<group>"; };
+		14351D4D210065A900F35C56 /* Tracking.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Tracking.c; sourceTree = "<group>"; };
+		14351D4E210065A900F35C56 /* Cfg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cfg.c; sourceTree = "<group>"; };
+		14351D4F210065A900F35C56 /* Encrypt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Encrypt.c; sourceTree = "<group>"; };
+		14351D50210065A900F35C56 /* OS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OS.h; sourceTree = "<group>"; };
+		14351D51210065A900F35C56 /* Mayaqua.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Mayaqua.c; sourceTree = "<group>"; };
+		14351D52210065A900F35C56 /* Str.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Str.c; sourceTree = "<group>"; };
+		14351D53210065A900F35C56 /* Mayaqua.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Mayaqua.vcproj; sourceTree = "<group>"; };
+		14351D54210065A900F35C56 /* Secure.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Secure.c; sourceTree = "<group>"; };
+		14351D55210065A900F35C56 /* MayaType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MayaType.h; sourceTree = "<group>"; };
+		14351D56210065A900F35C56 /* Unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Unix.c; sourceTree = "<group>"; };
+		14351D5A210065A900F35C56 /* Win32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Win32.h; sourceTree = "<group>"; };
+		14351D5B210065A900F35C56 /* TcpIp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = TcpIp.c; sourceTree = "<group>"; };
+		14351D5C210065A900F35C56 /* Pack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Pack.c; sourceTree = "<group>"; };
+		14351D5E210065A900F35C56 /* iaesni.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iaesni.h; sourceTree = "<group>"; };
+		14351D5F210065A900F35C56 /* pkcs11t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs11t.h; sourceTree = "<group>"; };
+		14351D60210065A900F35C56 /* Tick64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tick64.h; sourceTree = "<group>"; };
+		14351D61210065A900F35C56 /* TunTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TunTap.h; sourceTree = "<group>"; };
+		14351D62210065A900F35C56 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		14351D63210065A900F35C56 /* Microsoft.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Microsoft.c; sourceTree = "<group>"; };
+		14351D64210065A900F35C56 /* Tracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
+		14351D65210065A900F35C56 /* cryptoki.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cryptoki.h; sourceTree = "<group>"; };
+		14351D66210065A900F35C56 /* Internat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Internat.c; sourceTree = "<group>"; };
+		14351D67210065A900F35C56 /* pkcs11f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pkcs11f.h; sourceTree = "<group>"; };
+		14351D68210065A900F35C56 /* Kernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kernel.h; sourceTree = "<group>"; };
+		14351D69210065A900F35C56 /* FileIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileIO.h; sourceTree = "<group>"; };
+		14351D6A210065A900F35C56 /* Memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		14351D6B210065A900F35C56 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		14351D6C210065A900F35C56 /* Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		14351D6D210065A900F35C56 /* Str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Str.h; sourceTree = "<group>"; };
+		14351D6E210065A900F35C56 /* OS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = OS.c; sourceTree = "<group>"; };
+		14351D6F210065A900F35C56 /* Mayaqua.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mayaqua.h; sourceTree = "<group>"; };
+		14351D70210065A900F35C56 /* Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Encrypt.h; sourceTree = "<group>"; };
+		14351D71210065A900F35C56 /* Cfg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cfg.h; sourceTree = "<group>"; };
+		14351D72210065A900F35C56 /* Win32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Win32.c; sourceTree = "<group>"; };
+		14351D73210065A900F35C56 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14351D74210065A900F35C56 /* Unix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Unix.h; sourceTree = "<group>"; };
+		14351D75210065A900F35C56 /* Secure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Secure.h; sourceTree = "<group>"; };
+		14351DF5210065F500F35C56 /* Sam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sam.h; sourceTree = "<group>"; };
+		14351DF6210065F500F35C56 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		14351DF7210065F500F35C56 /* netcfgn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netcfgn.h; sourceTree = "<group>"; };
+		14351DF8210065F500F35C56 /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		14351DF9210065F500F35C56 /* IPsec_IkePacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_IkePacket.h; sourceTree = "<group>"; };
+		14351DFA210065F500F35C56 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		14351DFB210065F500F35C56 /* Interop_SSTP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interop_SSTP.h; sourceTree = "<group>"; };
+		14351DFD210065F500F35C56 /* semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = semaphore.h; sourceTree = "<group>"; };
+		14351DFE210065F500F35C56 /* time_calls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = time_calls.h; sourceTree = "<group>"; };
+		14351DFF210065F500F35C56 /* pcap-int.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pcap-int.h"; sourceTree = "<group>"; };
+		14351E00210065F500F35C56 /* Devioctl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Devioctl.h; sourceTree = "<group>"; };
+		14351E01210065F500F35C56 /* memory_t.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_t.h; sourceTree = "<group>"; };
+		14351E02210065F500F35C56 /* tme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tme.h; sourceTree = "<group>"; };
+		14351E03210065F500F35C56 /* tcp_session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tcp_session.h; sourceTree = "<group>"; };
+		14351E04210065F500F35C56 /* pcap-bpf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pcap-bpf.h"; sourceTree = "<group>"; };
+		14351E05210065F500F35C56 /* bucket_lookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bucket_lookup.h; sourceTree = "<group>"; };
+		14351E06210065F500F35C56 /* Win32-Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Win32-Extensions.h"; sourceTree = "<group>"; };
+		14351E07210065F500F35C56 /* Ntddpack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ntddpack.h; sourceTree = "<group>"; };
+		14351E08210065F500F35C56 /* Ntddndis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ntddndis.h; sourceTree = "<group>"; };
+		14351E09210065F500F35C56 /* remote-ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "remote-ext.h"; sourceTree = "<group>"; };
+		14351E0A210065F500F35C56 /* Packet32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packet32.h; sourceTree = "<group>"; };
+		14351E0B210065F500F35C56 /* bittypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bittypes.h; sourceTree = "<group>"; };
+		14351E0C210065F500F35C56 /* count_packets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = count_packets.h; sourceTree = "<group>"; };
+		14351E0D210065F500F35C56 /* ip6_misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ip6_misc.h; sourceTree = "<group>"; };
+		14351E0E210065F500F35C56 /* sched.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sched.h; sourceTree = "<group>"; };
+		14351E0F210065F500F35C56 /* pcap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pcap.h; sourceTree = "<group>"; };
+		14351E10210065F500F35C56 /* pthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pthread.h; sourceTree = "<group>"; };
+		14351E11210065F500F35C56 /* normal_lookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = normal_lookup.h; sourceTree = "<group>"; };
+		14351E12210065F500F35C56 /* pcap-stdinc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "pcap-stdinc.h"; sourceTree = "<group>"; };
+		14351E13210065F500F35C56 /* Gnuc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gnuc.h; sourceTree = "<group>"; };
+		14351E14210065F500F35C56 /* BridgeWin32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BridgeWin32.c; sourceTree = "<group>"; };
+		14351E15210065F500F35C56 /* Session.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Session.c; sourceTree = "<group>"; };
+		14351E16210065F500F35C56 /* BridgeUnix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BridgeUnix.c; sourceTree = "<group>"; };
+		14351E17210065F500F35C56 /* Wpc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Wpc.c; sourceTree = "<group>"; };
+		14351E18210065F500F35C56 /* Remote.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Remote.c; sourceTree = "<group>"; };
+		14351E19210065F500F35C56 /* DDNS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DDNS.c; sourceTree = "<group>"; };
+		14351E1A210065F500F35C56 /* VLanUnix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLanUnix.h; sourceTree = "<group>"; };
+		14351E1B210065F500F35C56 /* IPsec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec.h; sourceTree = "<group>"; };
+		14351E1C210065F500F35C56 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		14351E1D210065F500F35C56 /* WinUi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinUi.h; sourceTree = "<group>"; };
+		14351E1E210065F500F35C56 /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		14351E1F210065F500F35C56 /* Cedar.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Cedar.c; sourceTree = "<group>"; };
+		14351E20210065F500F35C56 /* VLan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VLan.c; sourceTree = "<group>"; };
+		14351E21210065F500F35C56 /* WaterMark.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WaterMark.c; sourceTree = "<group>"; };
+		14351E22210065F500F35C56 /* NativeStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NativeStack.h; sourceTree = "<group>"; };
+		14351E23210065F500F35C56 /* Listener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
+		14351E24210065F500F35C56 /* SeLowUser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SeLowUser.c; sourceTree = "<group>"; };
+		14351E25210065F500F35C56 /* CedarPch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarPch.h; sourceTree = "<group>"; };
+		14351E26210065F500F35C56 /* IPsec_IPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_IPC.h; sourceTree = "<group>"; };
+		14351E27210065F500F35C56 /* IPsec_PPP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_PPP.h; sourceTree = "<group>"; };
+		14351E28210065F500F35C56 /* Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Radius.h; sourceTree = "<group>"; };
+		14351E29210065F500F35C56 /* netcfgx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = netcfgx.h; sourceTree = "<group>"; };
+		14351E2A210065F500F35C56 /* EM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EM.c; sourceTree = "<group>"; };
+		14351E2B210065F500F35C56 /* AzureServer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AzureServer.c; sourceTree = "<group>"; };
+		14351E2C210065F500F35C56 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		14351E2D210065F500F35C56 /* IPsec_Win7Inner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_Win7Inner.h; sourceTree = "<group>"; };
+		14351E2E210065F500F35C56 /* SecureNAT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SecureNAT.c; sourceTree = "<group>"; };
+		14351E2F210065F500F35C56 /* Database.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Database.c; sourceTree = "<group>"; };
+		14351E30210065F500F35C56 /* EMInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMInner.h; sourceTree = "<group>"; };
+		14351E31210065F500F35C56 /* Nat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nat.h; sourceTree = "<group>"; };
+		14351E32210065F500F35C56 /* EtherLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EtherLog.h; sourceTree = "<group>"; };
+		14351E33210065F500F35C56 /* Hub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Hub.c; sourceTree = "<group>"; };
+		14351E34210065F500F35C56 /* SecureInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureInfo.h; sourceTree = "<group>"; };
+		14351E35210065F500F35C56 /* Link.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Link.c; sourceTree = "<group>"; };
+		14351E36210065F500F35C56 /* UT.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UT.c; sourceTree = "<group>"; };
+		14351E37210065F500F35C56 /* NullLan.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NullLan.c; sourceTree = "<group>"; };
+		14351E38210065F500F35C56 /* NM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NM.c; sourceTree = "<group>"; };
+		14351E39210065F500F35C56 /* NMInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMInner.h; sourceTree = "<group>"; };
+		14351E3A210065F500F35C56 /* VG.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VG.c; sourceTree = "<group>"; };
+		14351E3B210065F500F35C56 /* Virtual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Virtual.h; sourceTree = "<group>"; };
+		14351E3C210065F500F35C56 /* WinJumpList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WinJumpList.cpp; sourceTree = "<group>"; };
+		14351E3D210065F500F35C56 /* IPsec_IKE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_IKE.h; sourceTree = "<group>"; };
+		14351E3E210065F500F35C56 /* Interop_OpenVPN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Interop_OpenVPN.h; sourceTree = "<group>"; };
+		14351E3F210065F500F35C56 /* SW.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SW.h; sourceTree = "<group>"; };
+		14351E40210065F500F35C56 /* Command.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Command.c; sourceTree = "<group>"; };
+		14351E41210065F500F35C56 /* SWInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWInner.h; sourceTree = "<group>"; };
+		14351E42210065F500F35C56 /* AzureClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AzureClient.h; sourceTree = "<group>"; };
+		14351E43210065F500F35C56 /* WebUI.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WebUI.c; sourceTree = "<group>"; };
+		14351E44210065F500F35C56 /* Cedar.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Cedar.vcproj; sourceTree = "<group>"; };
+		14351E45210065F500F35C56 /* IPsec_L2TP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_L2TP.h; sourceTree = "<group>"; };
+		14351E46210065F500F35C56 /* UdpAccel.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = UdpAccel.c; sourceTree = "<group>"; };
+		14351E47210065F500F35C56 /* Layer3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer3.h; sourceTree = "<group>"; };
+		14351E48210065F500F35C56 /* Admin.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Admin.c; sourceTree = "<group>"; };
+		14351E49210065F500F35C56 /* IPsec_Win7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_Win7.h; sourceTree = "<group>"; };
+		14351E4A210065F500F35C56 /* SMInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMInner.h; sourceTree = "<group>"; };
+		14351E4B210065F500F35C56 /* CM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CM.h; sourceTree = "<group>"; };
+		14351E4C210065F500F35C56 /* SM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SM.c; sourceTree = "<group>"; };
+		14351E4D210065F500F35C56 /* IPsec_EtherIP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPsec_EtherIP.h; sourceTree = "<group>"; };
+		14351E4E210065F500F35C56 /* Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		14351E4F210065F500F35C56 /* Server.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Server.c; sourceTree = "<group>"; };
+		14351E50210065F500F35C56 /* VLanWin32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLanWin32.h; sourceTree = "<group>"; };
+		14351E51210065F500F35C56 /* Remote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
+		14351E52210065F500F35C56 /* CedarType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CedarType.h; sourceTree = "<group>"; };
+		14351E53210065F500F35C56 /* Client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Client.c; sourceTree = "<group>"; };
+		14351E54210065F500F35C56 /* IPsec.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec.c; sourceTree = "<group>"; };
+		14351E55210065F500F35C56 /* VLanUnix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VLanUnix.c; sourceTree = "<group>"; };
+		14351E56210065F500F35C56 /* DDNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNS.h; sourceTree = "<group>"; };
+		14351E57210065F500F35C56 /* Session.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		14351E58210065F500F35C56 /* BridgeWin32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeWin32.h; sourceTree = "<group>"; };
+		14351E59210065F500F35C56 /* Wpc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wpc.h; sourceTree = "<group>"; };
+		14351E5A210065F500F35C56 /* BridgeUnix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeUnix.h; sourceTree = "<group>"; };
+		14351E5B210065F500F35C56 /* Interop_SSTP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Interop_SSTP.c; sourceTree = "<group>"; };
+		14351E5C210065F500F35C56 /* Console.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Console.c; sourceTree = "<group>"; };
+		14351E5D210065F500F35C56 /* CMInner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMInner.h; sourceTree = "<group>"; };
+		14351E5E210065F500F35C56 /* Connection.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Connection.c; sourceTree = "<group>"; };
+		14351E5F210065F500F35C56 /* Sam.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Sam.c; sourceTree = "<group>"; };
+		14351E60210065F500F35C56 /* IPsec_IkePacket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_IkePacket.c; sourceTree = "<group>"; };
+		14351E61210065F500F35C56 /* Protocol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Protocol.c; sourceTree = "<group>"; };
+		14351E62210065F500F35C56 /* Nat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Nat.c; sourceTree = "<group>"; };
+		14351E63210065F500F35C56 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		14351E64210065F500F35C56 /* SecureNAT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureNAT.h; sourceTree = "<group>"; };
+		14351E65210065F500F35C56 /* SecureInfo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SecureInfo.c; sourceTree = "<group>"; };
+		14351E66210065F500F35C56 /* Hub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hub.h; sourceTree = "<group>"; };
+		14351E67210065F500F35C56 /* EtherLog.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EtherLog.c; sourceTree = "<group>"; };
+		14351E68210065F500F35C56 /* Win32Com.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Win32Com.h; sourceTree = "<group>"; };
+		14351E69210065F500F35C56 /* Account.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Account.c; sourceTree = "<group>"; };
+		14351E6A210065F500F35C56 /* EM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EM.h; sourceTree = "<group>"; };
+		14351E6B210065F500F35C56 /* AzureServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AzureServer.h; sourceTree = "<group>"; };
+		14351E6C210065F500F35C56 /* CedarPch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CedarPch.c; sourceTree = "<group>"; };
+		14351E6D210065F500F35C56 /* SeLowUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeLowUser.h; sourceTree = "<group>"; };
+		14351E6E210065F500F35C56 /* Radius.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Radius.c; sourceTree = "<group>"; };
+		14351E6F210065F500F35C56 /* IPsec_PPP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_PPP.c; sourceTree = "<group>"; };
+		14351E70210065F500F35C56 /* IPsec_IPC.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_IPC.c; sourceTree = "<group>"; };
+		14351E71210065F500F35C56 /* NativeStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = NativeStack.c; sourceTree = "<group>"; };
+		14351E72210065F500F35C56 /* Cedar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cedar.h; sourceTree = "<group>"; };
+		14351E73210065F500F35C56 /* VLan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLan.h; sourceTree = "<group>"; };
+		14351E74210065F500F35C56 /* WaterMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterMark.h; sourceTree = "<group>"; };
+		14351E75210065F500F35C56 /* Bridge.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Bridge.c; sourceTree = "<group>"; };
+		14351E76210065F500F35C56 /* WinUi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WinUi.c; sourceTree = "<group>"; };
+		14351E77210065F500F35C56 /* Win32Com.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Win32Com.cpp; sourceTree = "<group>"; };
+		14351E78210065F500F35C56 /* Listener.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Listener.c; sourceTree = "<group>"; };
+		14351E79210065F500F35C56 /* WebUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUI.h; sourceTree = "<group>"; };
+		14351E7A210065F500F35C56 /* IPsec_L2TP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_L2TP.c; sourceTree = "<group>"; };
+		14351E7B210065F500F35C56 /* SW.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SW.c; sourceTree = "<group>"; };
+		14351E7C210065F500F35C56 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		14351E7D210065F500F35C56 /* Interop_OpenVPN.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Interop_OpenVPN.c; sourceTree = "<group>"; };
+		14351E7E210065F500F35C56 /* IPsec_IKE.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_IKE.c; sourceTree = "<group>"; };
+		14351E7F210065F500F35C56 /* AzureClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AzureClient.c; sourceTree = "<group>"; };
+		14351E80210065F500F35C56 /* Virtual.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Virtual.c; sourceTree = "<group>"; };
+		14351E81210065F500F35C56 /* VG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VG.h; sourceTree = "<group>"; };
+		14351E82210065F500F35C56 /* NullLan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullLan.h; sourceTree = "<group>"; };
+		14351E83210065F500F35C56 /* UT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UT.h; sourceTree = "<group>"; };
+		14351E84210065F500F35C56 /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		14351E85210065F500F35C56 /* NM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NM.h; sourceTree = "<group>"; };
+		14351E86210065F500F35C56 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		14351E87210065F500F35C56 /* VLanWin32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = VLanWin32.c; sourceTree = "<group>"; };
+		14351E88210065F500F35C56 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14351E89210065F500F35C56 /* SM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SM.h; sourceTree = "<group>"; };
+		14351E8A210065F500F35C56 /* CM.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CM.c; sourceTree = "<group>"; };
+		14351E8B210065F500F35C56 /* Logging.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Logging.c; sourceTree = "<group>"; };
+		14351E8C210065F500F35C56 /* IPsec_EtherIP.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_EtherIP.c; sourceTree = "<group>"; };
+		14351E8D210065F500F35C56 /* IPsec_Win7.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPsec_Win7.c; sourceTree = "<group>"; };
+		14351E8E210065F500F35C56 /* Admin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
+		14351E8F210065F500F35C56 /* Layer3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Layer3.c; sourceTree = "<group>"; };
+		14351E90210065F500F35C56 /* UdpAccel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UdpAccel.h; sourceTree = "<group>"; };
+		14351F2E210066F200F35C56 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		14351F782100707C00F35C56 /* Cedar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cedar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14351FC92100729D00F35C56 /* SoftEtherNE.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SoftEtherNE.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		14351FCB2100729D00F35C56 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		14351FCD2100729D00F35C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14351FCE2100729D00F35C56 /* SoftEtherNE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoftEtherNE.entitlements; sourceTree = "<group>"; };
+		14351FD7210072DF00F35C56 /* SoftEtherNE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoftEtherNE-Bridging-Header.h"; sourceTree = "<group>"; };
+		14351FD8210072E000F35C56 /* Includ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Includ.m; sourceTree = "<group>"; };
+		1435207521007EA800F35C56 /* SoftEtherVPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoftEtherVPN-Bridging-Header.h"; sourceTree = "<group>"; };
+		1477A115210572260055DAE5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		17A623721A923EDA0D385584 /* Pods-Cedar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cedar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cedar/Pods-Cedar.debug.xcconfig"; sourceTree = "<group>"; };
+		32F65F5EEF233CEAE41F1F12 /* Pods-Mayaqua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua/Pods-Mayaqua.debug.xcconfig"; sourceTree = "<group>"; };
+		35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoftEtherVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mayaqua.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4098DC099802292E366C3D87 /* Pods-SoftEtherVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEtherVPN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEtherVPN/Pods-SoftEtherVPN.debug.xcconfig"; sourceTree = "<group>"; };
+		44F0EA44646EEEA9DCE841E9 /* Pods_Mayaqua_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mayaqua_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BC51A858958FC24D5F93206 /* Pods-Mayaqua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua/Pods-Mayaqua.release.xcconfig"; sourceTree = "<group>"; };
+		5C8DC4BE7AA9CA5ABE016B15 /* Pods-SoftEtherVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEtherVPN.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEtherVPN/Pods-SoftEtherVPN.release.xcconfig"; sourceTree = "<group>"; };
+		61096F2C2105F08F008F10AD /* ClientDummy.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ClientDummy.c; sourceTree = "<group>"; };
+		61096F322106BCB1008F10AD /* vpnclient_strip */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = vpnclient_strip; sourceTree = BUILT_PRODUCTS_DIR; };
+		61096F342106BCB1008F10AD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		61096F3A2106BCE8008F10AD /* vpnclient_strip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vpnclient_strip-Bridging-Header.h"; sourceTree = "<group>"; };
+		61096F702106C081008F10AD /* Mayaqua_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mayaqua_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61096F712106C082008F10AD /* Mayaqua copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mayaqua copy-Info.plist"; path = "/Users/xy/rand/SoftEtherVPN/src/Mayaqua copy-Info.plist"; sourceTree = "<absolute>"; };
+		61096F762106CCFD008F10AD /* AppleFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppleFunc.c; sourceTree = "<group>"; };
+		61F83A7521058FA300191202 /* SE_Func.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SE_Func.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F83A7721058FA400191202 /* SE_Func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SE_Func.h; sourceTree = "<group>"; };
+		61F83A7821058FA400191202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61F83A852105DE9100191202 /* AppleSock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleSock.h; sourceTree = "<group>"; };
+		61F83A862105DE9100191202 /* AppleSock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppleSock.c; sourceTree = "<group>"; };
+		61F83B0F2105E1AC00191202 /* Cedar Strip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Cedar Strip.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61F83B102105E1AD00191202 /* Cedar copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Cedar copy-Info.plist"; path = "/Users/xy/rand/SoftEtherVPN/src/Cedar copy-Info.plist"; sourceTree = "<absolute>"; };
+		6CAFD6C77B4EEFC6897933FD /* Pods-Mayaqua_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua_macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua_macOS/Pods-Mayaqua_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		78AE2FFD9F9AC506641778C1 /* Pods-Mayaqua_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua_macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua_macOS/Pods-Mayaqua_macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C8CD2FBA46210B2A95385740 /* Pods-Cedar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cedar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cedar/Pods-Cedar.release.xcconfig"; sourceTree = "<group>"; };
+		F82BB7FF2531F516436751ED /* Pods_Cedar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cedar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14351CA22100648A00F35C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A7C21058FA400191202 /* SE_Func.framework in Frameworks */,
+				14351CEE2100658D00F35C56 /* Mayaqua.framework in Frameworks */,
+				46A3F69DD88DD5518A5634F7 /* Pods_SoftEtherVPN.framework in Frameworks */,
+				14351F7F2100707C00F35C56 /* Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351CE42100658D00F35C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351F2F210066F200F35C56 /* libiconv.tbd in Frameworks */,
+				824D198CB1CA2DDEED493096 /* Pods_Mayaqua.framework in Frameworks */,
+				29BCB1BDBA4E5D0754B96FE3 /* Pods_Mayaqua.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351F752100707C00F35C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A842105DCDF00191202 /* Mayaqua.framework in Frameworks */,
+				0BD1D753AB93FE3F81E9538A /* Pods_Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351FC62100729D00F35C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14352030210078CB00F35C56 /* Mayaqua.framework in Frameworks */,
+				14351FD6210072AF00F35C56 /* Cedar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F2F2106BCB1008F10AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F722106C411008F10AD /* Cedar Strip.framework in Frameworks */,
+				61096F742106C5B5008F10AD /* Mayaqua_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F692106C081008F10AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F6A2106C081008F10AD /* libiconv.tbd in Frameworks */,
+				E77D1510675DEFE67473E51E /* Pods_Mayaqua_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83A7221058FA300191202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83B092105E1AC00191202 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14351C9C2100648A00F35C56 = {
+			isa = PBXGroup;
+			children = (
+				14351CE12100655D00F35C56 /* Modules */,
+				14351CBC210064D700F35C56 /* iOS */,
+				14351FCA2100729D00F35C56 /* SoftEtherNE */,
+				1477A114210572260055DAE5 /* vpnserver */,
+				61F83A7621058FA400191202 /* SE-Func */,
+				61096F332106BCB1008F10AD /* vpnclient_strip */,
+				14351CA62100648A00F35C56 /* Products */,
+				14351F2C2100660F00F35C56 /* Frameworks */,
+				A1078EAA5F8FF0C6F71020FD /* Pods */,
+				61F83B102105E1AD00191202 /* Cedar copy-Info.plist */,
+				61096F712106C082008F10AD /* Mayaqua copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		14351CA62100648A00F35C56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14351CA52100648A00F35C56 /* SoftEtherVPN.app */,
+				14351CE72100658D00F35C56 /* Mayaqua.framework */,
+				14351F782100707C00F35C56 /* Cedar.framework */,
+				14351FC92100729D00F35C56 /* SoftEtherNE.appex */,
+				61F83A7521058FA300191202 /* SE_Func.framework */,
+				61F83B0F2105E1AC00191202 /* Cedar Strip.framework */,
+				61096F322106BCB1008F10AD /* vpnclient_strip */,
+				61096F702106C081008F10AD /* Mayaqua_macOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14351CBC210064D700F35C56 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				14351CBD210064D700F35C56 /* DetailViewController.swift */,
+				14351CBE210064D700F35C56 /* Assets.xcassets */,
+				14351CBF210064D700F35C56 /* LaunchScreen.storyboard */,
+				14351CC1210064D700F35C56 /* Main.storyboard */,
+				14351CC3210064D700F35C56 /* AppDelegate.swift */,
+				14351CC4210064D700F35C56 /* MasterViewController.swift */,
+				14351CC5210064D700F35C56 /* Info.plist */,
+				1435207521007EA800F35C56 /* SoftEtherVPN-Bridging-Header.h */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		14351CE12100655D00F35C56 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				14351DF4210065F500F35C56 /* Cedar */,
+				14351CF3210065A900F35C56 /* Mayaqua */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		14351CF3210065A900F35C56 /* Mayaqua */ = {
+			isa = PBXGroup;
+			children = (
+				14351CF4210065A900F35C56 /* Microsoft.h */,
+				14351CF5210065A900F35C56 /* Network.c */,
+				14351CF6210065A900F35C56 /* Tick64.c */,
+				14351CF7210065A900F35C56 /* Pack.h */,
+				14351CF8210065A900F35C56 /* TcpIp.h */,
+				14351CF9210065A900F35C56 /* Table.c */,
+				14351CFA210065A900F35C56 /* Object.c */,
+				14351CFB210065A900F35C56 /* Memory.c */,
+				14351CFC210065A900F35C56 /* FileIO.c */,
+				14351CFD210065A900F35C56 /* Kernel.c */,
+				14351CFE210065A900F35C56 /* win32_inc */,
+				14351D4B210065A900F35C56 /* pkcs11.h */,
+				14351D4C210065A900F35C56 /* Internat.h */,
+				14351D4D210065A900F35C56 /* Tracking.c */,
+				14351D4E210065A900F35C56 /* Cfg.c */,
+				14351D4F210065A900F35C56 /* Encrypt.c */,
+				14351D50210065A900F35C56 /* OS.h */,
+				14351D51210065A900F35C56 /* Mayaqua.c */,
+				14351D52210065A900F35C56 /* Str.c */,
+				14351D53210065A900F35C56 /* Mayaqua.vcproj */,
+				14351D54210065A900F35C56 /* Secure.c */,
+				14351D55210065A900F35C56 /* MayaType.h */,
+				14351D56210065A900F35C56 /* Unix.c */,
+				14351D5A210065A900F35C56 /* Win32.h */,
+				14351D5B210065A900F35C56 /* TcpIp.c */,
+				14351D5C210065A900F35C56 /* Pack.c */,
+				14351D5D210065A900F35C56 /* intelaes */,
+				14351D5F210065A900F35C56 /* pkcs11t.h */,
+				14351D60210065A900F35C56 /* Tick64.h */,
+				14351D61210065A900F35C56 /* TunTap.h */,
+				14351D62210065A900F35C56 /* Network.h */,
+				14351D63210065A900F35C56 /* Microsoft.c */,
+				14351D64210065A900F35C56 /* Tracking.h */,
+				14351D65210065A900F35C56 /* cryptoki.h */,
+				14351D66210065A900F35C56 /* Internat.c */,
+				14351D67210065A900F35C56 /* pkcs11f.h */,
+				14351D68210065A900F35C56 /* Kernel.h */,
+				14351D69210065A900F35C56 /* FileIO.h */,
+				14351D6A210065A900F35C56 /* Memory.h */,
+				14351D6B210065A900F35C56 /* Object.h */,
+				14351D6C210065A900F35C56 /* Table.h */,
+				14351D6D210065A900F35C56 /* Str.h */,
+				14351D6E210065A900F35C56 /* OS.c */,
+				14351D6F210065A900F35C56 /* Mayaqua.h */,
+				14351D70210065A900F35C56 /* Encrypt.h */,
+				14351D71210065A900F35C56 /* Cfg.h */,
+				14351D72210065A900F35C56 /* Win32.c */,
+				14351D73210065A900F35C56 /* Info.plist */,
+				14351D74210065A900F35C56 /* Unix.h */,
+				14351D75210065A900F35C56 /* Secure.h */,
+			);
+			path = Mayaqua;
+			sourceTree = "<group>";
+		};
+		14351CFE210065A900F35C56 /* win32_inc */ = {
+			isa = PBXGroup;
+			children = (
+				14351CFF210065A900F35C56 /* openssl */,
+			);
+			path = win32_inc;
+			sourceTree = "<group>";
+		};
+		14351CFF210065A900F35C56 /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				14351D00210065A900F35C56 /* pem2.h */,
+				14351D01210065A900F35C56 /* pem.h */,
+				14351D02210065A900F35C56 /* ssl3.h */,
+				14351D03210065A900F35C56 /* ossl_typ.h */,
+				14351D04210065A900F35C56 /* dtls1.h */,
+				14351D05210065A900F35C56 /* err.h */,
+				14351D06210065A900F35C56 /* bn.h */,
+				14351D07210065A900F35C56 /* blowfish.h */,
+				14351D08210065A900F35C56 /* cms.h */,
+				14351D09210065A900F35C56 /* engine.h */,
+				14351D0A210065A900F35C56 /* conf_api.h */,
+				14351D0B210065A900F35C56 /* x509.h */,
+				14351D0C210065A900F35C56 /* asn1_mac.h */,
+				14351D0D210065A900F35C56 /* ui.h */,
+				14351D0E210065A900F35C56 /* kssl.h */,
+				14351D0F210065A900F35C56 /* sha.h */,
+				14351D10210065A900F35C56 /* symhacks.h */,
+				14351D11210065A900F35C56 /* asn1.h */,
+				14351D12210065A900F35C56 /* opensslconf.h */,
+				14351D13210065A900F35C56 /* bio.h */,
+				14351D14210065A900F35C56 /* rc2.h */,
+				14351D15210065A900F35C56 /* dh.h */,
+				14351D16210065A900F35C56 /* ui_compat.h */,
+				14351D17210065A900F35C56 /* x509v3.h */,
+				14351D18210065A900F35C56 /* ssl23.h */,
+				14351D19210065A900F35C56 /* conf.h */,
+				14351D1A210065A900F35C56 /* md5.h */,
+				14351D1B210065A900F35C56 /* x509_vfy.h */,
+				14351D1C210065A900F35C56 /* txt_db.h */,
+				14351D1D210065A900F35C56 /* safestack.h */,
+				14351D1E210065A900F35C56 /* ecdsa.h */,
+				14351D1F210065A900F35C56 /* objects.h */,
+				14351D20210065A900F35C56 /* pkcs12.h */,
+				14351D21210065A900F35C56 /* crypto.h */,
+				14351D22210065A900F35C56 /* opensslv.h */,
+				14351D23210065A900F35C56 /* pkcs7.h */,
+				14351D24210065A900F35C56 /* obj_mac.h */,
+				14351D25210065A900F35C56 /* buffer.h */,
+				14351D26210065A900F35C56 /* ssl.h */,
+				14351D27210065A900F35C56 /* srp.h */,
+				14351D28210065A900F35C56 /* camellia.h */,
+				14351D29210065A900F35C56 /* evp.h */,
+				14351D2A210065A900F35C56 /* e_os2.h */,
+				14351D2B210065A900F35C56 /* md4.h */,
+				14351D2C210065A900F35C56 /* hmac.h */,
+				14351D2D210065A900F35C56 /* aes.h */,
+				14351D2E210065A900F35C56 /* comp.h */,
+				14351D2F210065A900F35C56 /* cast.h */,
+				14351D30210065A900F35C56 /* rc4.h */,
+				14351D31210065A900F35C56 /* stack.h */,
+				14351D32210065A900F35C56 /* des.h */,
+				14351D33210065A900F35C56 /* ocsp.h */,
+				14351D34210065A900F35C56 /* ec.h */,
+				14351D35210065A900F35C56 /* ecdh.h */,
+				14351D36210065A900F35C56 /* rand.h */,
+				14351D37210065A900F35C56 /* ts.h */,
+				14351D38210065A900F35C56 /* pqueue.h */,
+				14351D39210065A900F35C56 /* dso.h */,
+				14351D3A210065A900F35C56 /* seed.h */,
+				14351D3B210065A900F35C56 /* modes.h */,
+				14351D3C210065A900F35C56 /* ssl2.h */,
+				14351D3D210065A900F35C56 /* rsa.h */,
+				14351D3E210065A900F35C56 /* krb5_asn.h */,
+				14351D3F210065A900F35C56 /* des_old.h */,
+				14351D40210065A900F35C56 /* ripemd.h */,
+				14351D41210065A900F35C56 /* whrlpool.h */,
+				14351D42210065A900F35C56 /* tls1.h */,
+				14351D43210065A900F35C56 /* mdc2.h */,
+				14351D44210065A900F35C56 /* dsa.h */,
+				14351D45210065A900F35C56 /* srtp.h */,
+				14351D46210065A900F35C56 /* asn1t.h */,
+				14351D47210065A900F35C56 /* cmac.h */,
+				14351D48210065A900F35C56 /* ebcdic.h */,
+				14351D49210065A900F35C56 /* idea.h */,
+				14351D4A210065A900F35C56 /* lhash.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		14351D5D210065A900F35C56 /* intelaes */ = {
+			isa = PBXGroup;
+			children = (
+				14351D5E210065A900F35C56 /* iaesni.h */,
+			);
+			path = intelaes;
+			sourceTree = "<group>";
+		};
+		14351DF4210065F500F35C56 /* Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				14351E69210065F500F35C56 /* Account.c */,
+				14351E2C210065F500F35C56 /* Account.h */,
+				14351E48210065F500F35C56 /* Admin.c */,
+				14351E8E210065F500F35C56 /* Admin.h */,
+				14351E7F210065F500F35C56 /* AzureClient.c */,
+				14351E42210065F500F35C56 /* AzureClient.h */,
+				14351E2B210065F500F35C56 /* AzureServer.c */,
+				14351E6B210065F500F35C56 /* AzureServer.h */,
+				14351E75210065F500F35C56 /* Bridge.c */,
+				14351E1E210065F500F35C56 /* Bridge.h */,
+				14351E16210065F500F35C56 /* BridgeUnix.c */,
+				14351E5A210065F500F35C56 /* BridgeUnix.h */,
+				14351E14210065F500F35C56 /* BridgeWin32.c */,
+				14351E58210065F500F35C56 /* BridgeWin32.h */,
+				14351E1F210065F500F35C56 /* Cedar.c */,
+				14351E72210065F500F35C56 /* Cedar.h */,
+				14351E44210065F500F35C56 /* Cedar.vcproj */,
+				14351E6C210065F500F35C56 /* CedarPch.c */,
+				14351E25210065F500F35C56 /* CedarPch.h */,
+				14351E52210065F500F35C56 /* CedarType.h */,
+				14351E53210065F500F35C56 /* Client.c */,
+				14351E1C210065F500F35C56 /* Client.h */,
+				14351E8A210065F500F35C56 /* CM.c */,
+				14351E4B210065F500F35C56 /* CM.h */,
+				14351E5D210065F500F35C56 /* CMInner.h */,
+				14351E40210065F500F35C56 /* Command.c */,
+				14351E7C210065F500F35C56 /* Command.h */,
+				14351E5E210065F500F35C56 /* Connection.c */,
+				14351DF6210065F500F35C56 /* Connection.h */,
+				14351E5C210065F500F35C56 /* Console.c */,
+				14351DFA210065F500F35C56 /* Console.h */,
+				14351E2F210065F500F35C56 /* Database.c */,
+				14351E63210065F500F35C56 /* Database.h */,
+				14351E19210065F500F35C56 /* DDNS.c */,
+				14351E56210065F500F35C56 /* DDNS.h */,
+				14351E2A210065F500F35C56 /* EM.c */,
+				14351E6A210065F500F35C56 /* EM.h */,
+				14351E30210065F500F35C56 /* EMInner.h */,
+				14351E67210065F500F35C56 /* EtherLog.c */,
+				14351E32210065F500F35C56 /* EtherLog.h */,
+				14351E33210065F500F35C56 /* Hub.c */,
+				14351E66210065F500F35C56 /* Hub.h */,
+				14351E88210065F500F35C56 /* Info.plist */,
+				14351E7D210065F500F35C56 /* Interop_OpenVPN.c */,
+				14351E3E210065F500F35C56 /* Interop_OpenVPN.h */,
+				14351E5B210065F500F35C56 /* Interop_SSTP.c */,
+				14351DFB210065F500F35C56 /* Interop_SSTP.h */,
+				14351E8C210065F500F35C56 /* IPsec_EtherIP.c */,
+				14351E4D210065F500F35C56 /* IPsec_EtherIP.h */,
+				14351E7E210065F500F35C56 /* IPsec_IKE.c */,
+				14351E3D210065F500F35C56 /* IPsec_IKE.h */,
+				14351E60210065F500F35C56 /* IPsec_IkePacket.c */,
+				14351DF9210065F500F35C56 /* IPsec_IkePacket.h */,
+				14351E70210065F500F35C56 /* IPsec_IPC.c */,
+				14351E26210065F500F35C56 /* IPsec_IPC.h */,
+				14351E7A210065F500F35C56 /* IPsec_L2TP.c */,
+				14351E45210065F500F35C56 /* IPsec_L2TP.h */,
+				14351E6F210065F500F35C56 /* IPsec_PPP.c */,
+				14351E27210065F500F35C56 /* IPsec_PPP.h */,
+				14351E8D210065F500F35C56 /* IPsec_Win7.c */,
+				14351E49210065F500F35C56 /* IPsec_Win7.h */,
+				14351E2D210065F500F35C56 /* IPsec_Win7Inner.h */,
+				14351E54210065F500F35C56 /* IPsec.c */,
+				14351E1B210065F500F35C56 /* IPsec.h */,
+				14351E8F210065F500F35C56 /* Layer3.c */,
+				14351E47210065F500F35C56 /* Layer3.h */,
+				14351E35210065F500F35C56 /* Link.c */,
+				14351E84210065F500F35C56 /* Link.h */,
+				14351E78210065F500F35C56 /* Listener.c */,
+				14351E23210065F500F35C56 /* Listener.h */,
+				14351E8B210065F500F35C56 /* Logging.c */,
+				14351E4E210065F500F35C56 /* Logging.h */,
+				14351E62210065F500F35C56 /* Nat.c */,
+				14351E31210065F500F35C56 /* Nat.h */,
+				14351E71210065F500F35C56 /* NativeStack.c */,
+				14351E22210065F500F35C56 /* NativeStack.h */,
+				14351DF7210065F500F35C56 /* netcfgn.h */,
+				14351E29210065F500F35C56 /* netcfgx.h */,
+				14351E38210065F500F35C56 /* NM.c */,
+				14351E85210065F500F35C56 /* NM.h */,
+				14351E39210065F500F35C56 /* NMInner.h */,
+				14351E37210065F500F35C56 /* NullLan.c */,
+				14351E82210065F500F35C56 /* NullLan.h */,
+				14351E61210065F500F35C56 /* Protocol.c */,
+				14351DF8210065F500F35C56 /* Protocol.h */,
+				14351E6E210065F500F35C56 /* Radius.c */,
+				14351E28210065F500F35C56 /* Radius.h */,
+				14351E18210065F500F35C56 /* Remote.c */,
+				14351E51210065F500F35C56 /* Remote.h */,
+				14351E5F210065F500F35C56 /* Sam.c */,
+				14351DF5210065F500F35C56 /* Sam.h */,
+				14351E65210065F500F35C56 /* SecureInfo.c */,
+				14351E34210065F500F35C56 /* SecureInfo.h */,
+				14351E2E210065F500F35C56 /* SecureNAT.c */,
+				14351E64210065F500F35C56 /* SecureNAT.h */,
+				14351E24210065F500F35C56 /* SeLowUser.c */,
+				14351E6D210065F500F35C56 /* SeLowUser.h */,
+				14351E4F210065F500F35C56 /* Server.c */,
+				14351E86210065F500F35C56 /* Server.h */,
+				14351E15210065F500F35C56 /* Session.c */,
+				14351E57210065F500F35C56 /* Session.h */,
+				14351E4C210065F500F35C56 /* SM.c */,
+				14351E89210065F500F35C56 /* SM.h */,
+				14351E4A210065F500F35C56 /* SMInner.h */,
+				14351E7B210065F500F35C56 /* SW.c */,
+				14351E3F210065F500F35C56 /* SW.h */,
+				14351E41210065F500F35C56 /* SWInner.h */,
+				14351E46210065F500F35C56 /* UdpAccel.c */,
+				14351E90210065F500F35C56 /* UdpAccel.h */,
+				14351E36210065F500F35C56 /* UT.c */,
+				14351E83210065F500F35C56 /* UT.h */,
+				14351E3A210065F500F35C56 /* VG.c */,
+				14351E81210065F500F35C56 /* VG.h */,
+				14351E80210065F500F35C56 /* Virtual.c */,
+				14351E3B210065F500F35C56 /* Virtual.h */,
+				14351E20210065F500F35C56 /* VLan.c */,
+				14351E73210065F500F35C56 /* VLan.h */,
+				14351E55210065F500F35C56 /* VLanUnix.c */,
+				14351E1A210065F500F35C56 /* VLanUnix.h */,
+				14351E87210065F500F35C56 /* VLanWin32.c */,
+				14351E50210065F500F35C56 /* VLanWin32.h */,
+				14351E21210065F500F35C56 /* WaterMark.c */,
+				14351E74210065F500F35C56 /* WaterMark.h */,
+				14351E43210065F500F35C56 /* WebUI.c */,
+				14351E79210065F500F35C56 /* WebUI.h */,
+				14351E77210065F500F35C56 /* Win32Com.cpp */,
+				14351E68210065F500F35C56 /* Win32Com.h */,
+				14351E3C210065F500F35C56 /* WinJumpList.cpp */,
+				14351DFC210065F500F35C56 /* winpcap */,
+				14351E76210065F500F35C56 /* WinUi.c */,
+				14351E1D210065F500F35C56 /* WinUi.h */,
+				14351E17210065F500F35C56 /* Wpc.c */,
+				14351E59210065F500F35C56 /* Wpc.h */,
+				61F83A852105DE9100191202 /* AppleSock.h */,
+				61F83A862105DE9100191202 /* AppleSock.c */,
+				61096F2C2105F08F008F10AD /* ClientDummy.c */,
+				61096F762106CCFD008F10AD /* AppleFunc.c */,
+			);
+			path = Cedar;
+			sourceTree = "<group>";
+		};
+		14351DFC210065F500F35C56 /* winpcap */ = {
+			isa = PBXGroup;
+			children = (
+				14351DFD210065F500F35C56 /* semaphore.h */,
+				14351DFE210065F500F35C56 /* time_calls.h */,
+				14351DFF210065F500F35C56 /* pcap-int.h */,
+				14351E00210065F500F35C56 /* Devioctl.h */,
+				14351E01210065F500F35C56 /* memory_t.h */,
+				14351E02210065F500F35C56 /* tme.h */,
+				14351E03210065F500F35C56 /* tcp_session.h */,
+				14351E04210065F500F35C56 /* pcap-bpf.h */,
+				14351E05210065F500F35C56 /* bucket_lookup.h */,
+				14351E06210065F500F35C56 /* Win32-Extensions.h */,
+				14351E07210065F500F35C56 /* Ntddpack.h */,
+				14351E08210065F500F35C56 /* Ntddndis.h */,
+				14351E09210065F500F35C56 /* remote-ext.h */,
+				14351E0A210065F500F35C56 /* Packet32.h */,
+				14351E0B210065F500F35C56 /* bittypes.h */,
+				14351E0C210065F500F35C56 /* count_packets.h */,
+				14351E0D210065F500F35C56 /* ip6_misc.h */,
+				14351E0E210065F500F35C56 /* sched.h */,
+				14351E0F210065F500F35C56 /* pcap.h */,
+				14351E10210065F500F35C56 /* pthread.h */,
+				14351E11210065F500F35C56 /* normal_lookup.h */,
+				14351E12210065F500F35C56 /* pcap-stdinc.h */,
+				14351E13210065F500F35C56 /* Gnuc.h */,
+			);
+			path = winpcap;
+			sourceTree = "<group>";
+		};
+		14351F2C2100660F00F35C56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14351F2E210066F200F35C56 /* libiconv.tbd */,
+				F82BB7FF2531F516436751ED /* Pods_Cedar.framework */,
+				3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */,
+				35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */,
+				44F0EA44646EEEA9DCE841E9 /* Pods_Mayaqua_macOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		14351FCA2100729D00F35C56 /* SoftEtherNE */ = {
+			isa = PBXGroup;
+			children = (
+				14351FCB2100729D00F35C56 /* PacketTunnelProvider.swift */,
+				14351FCD2100729D00F35C56 /* Info.plist */,
+				14351FCE2100729D00F35C56 /* SoftEtherNE.entitlements */,
+				14351FD8210072E000F35C56 /* Includ.m */,
+				14351FD7210072DF00F35C56 /* SoftEtherNE-Bridging-Header.h */,
+			);
+			path = SoftEtherNE;
+			sourceTree = "<group>";
+		};
+		1477A114210572260055DAE5 /* vpnserver */ = {
+			isa = PBXGroup;
+			children = (
+				1477A115210572260055DAE5 /* main.c */,
+			);
+			path = vpnserver;
+			sourceTree = "<group>";
+		};
+		61096F332106BCB1008F10AD /* vpnclient_strip */ = {
+			isa = PBXGroup;
+			children = (
+				61096F342106BCB1008F10AD /* main.swift */,
+				61096F3A2106BCE8008F10AD /* vpnclient_strip-Bridging-Header.h */,
+			);
+			path = vpnclient_strip;
+			sourceTree = "<group>";
+		};
+		61F83A7621058FA400191202 /* SE-Func */ = {
+			isa = PBXGroup;
+			children = (
+				61F83A7721058FA400191202 /* SE_Func.h */,
+				61F83A7821058FA400191202 /* Info.plist */,
+			);
+			path = "SE-Func";
+			sourceTree = "<group>";
+		};
+		A1078EAA5F8FF0C6F71020FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A623721A923EDA0D385584 /* Pods-Cedar.debug.xcconfig */,
+				C8CD2FBA46210B2A95385740 /* Pods-Cedar.release.xcconfig */,
+				4098DC099802292E366C3D87 /* Pods-SoftEtherVPN.debug.xcconfig */,
+				5C8DC4BE7AA9CA5ABE016B15 /* Pods-SoftEtherVPN.release.xcconfig */,
+				32F65F5EEF233CEAE41F1F12 /* Pods-Mayaqua.debug.xcconfig */,
+				5BC51A858958FC24D5F93206 /* Pods-Mayaqua.release.xcconfig */,
+				78AE2FFD9F9AC506641778C1 /* Pods-Mayaqua_macOS.debug.xcconfig */,
+				6CAFD6C77B4EEFC6897933FD /* Pods-Mayaqua_macOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14351CE22100658D00F35C56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1435201C210075BF00F35C56 /* Mayaqua.h in Headers */,
+				1435201D2100778000F35C56 /* Microsoft.h in Headers */,
+				1435201E2100778000F35C56 /* Pack.h in Headers */,
+				1435201F2100778000F35C56 /* TcpIp.h in Headers */,
+				143520202100778000F35C56 /* Internat.h in Headers */,
+				143520212100778000F35C56 /* OS.h in Headers */,
+				143520222100778000F35C56 /* MayaType.h in Headers */,
+				143520232100778000F35C56 /* Tick64.h in Headers */,
+				143520242100778000F35C56 /* Network.h in Headers */,
+				143520252100778000F35C56 /* Tracking.h in Headers */,
+				143520262100778000F35C56 /* Kernel.h in Headers */,
+				143520272100778000F35C56 /* FileIO.h in Headers */,
+				1435202E210077B600F35C56 /* Secure.h in Headers */,
+				1435202D210077AE00F35C56 /* Encrypt.h in Headers */,
+				143520282100778000F35C56 /* Memory.h in Headers */,
+				143520292100778000F35C56 /* Object.h in Headers */,
+				1435202A2100778000F35C56 /* Table.h in Headers */,
+				1435202B2100778000F35C56 /* Str.h in Headers */,
+				1435202C2100778000F35C56 /* Cfg.h in Headers */,
+				1435202F210077CE00F35C56 /* Unix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351F732100707C00F35C56 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351FDA210073D600F35C56 /* Cedar.h in Headers */,
+				1435203121007A3A00F35C56 /* CedarType.h in Headers */,
+				1435203221007C4100F35C56 /* Admin.h in Headers */,
+				1435203321007C4100F35C56 /* AzureClient.h in Headers */,
+				1435203421007C4100F35C56 /* AzureServer.h in Headers */,
+				1435203521007C4100F35C56 /* Bridge.h in Headers */,
+				1435203621007C4100F35C56 /* BridgeUnix.h in Headers */,
+				1435203721007C4100F35C56 /* BridgeWin32.h in Headers */,
+				1435203821007C4100F35C56 /* CedarPch.h in Headers */,
+				1435203921007C4100F35C56 /* Client.h in Headers */,
+				1435203A21007C4100F35C56 /* CM.h in Headers */,
+				1435203B21007C4100F35C56 /* CMInner.h in Headers */,
+				1435203C21007C4100F35C56 /* Command.h in Headers */,
+				1435203D21007C4100F35C56 /* Connection.h in Headers */,
+				1435203E21007C4100F35C56 /* Console.h in Headers */,
+				1435203F21007C4100F35C56 /* Database.h in Headers */,
+				1435204021007C4100F35C56 /* DDNS.h in Headers */,
+				1435204121007C4100F35C56 /* EM.h in Headers */,
+				1435204221007C4100F35C56 /* EMInner.h in Headers */,
+				1435204321007C4200F35C56 /* EtherLog.h in Headers */,
+				1435204421007C4200F35C56 /* Hub.h in Headers */,
+				1435204521007C4200F35C56 /* Interop_OpenVPN.h in Headers */,
+				1435204621007C4200F35C56 /* Interop_SSTP.h in Headers */,
+				1435204721007C4200F35C56 /* IPsec_EtherIP.h in Headers */,
+				1435204821007C4200F35C56 /* IPsec_IKE.h in Headers */,
+				1435204921007C4200F35C56 /* IPsec_IkePacket.h in Headers */,
+				1435204A21007C4200F35C56 /* IPsec_IPC.h in Headers */,
+				1435204B21007C4200F35C56 /* IPsec_L2TP.h in Headers */,
+				1435204C21007C4200F35C56 /* IPsec_PPP.h in Headers */,
+				1435204D21007C4200F35C56 /* IPsec_Win7.h in Headers */,
+				1435204E21007C4200F35C56 /* IPsec_Win7Inner.h in Headers */,
+				1435204F21007C4200F35C56 /* IPsec.h in Headers */,
+				1435205021007C4200F35C56 /* Layer3.h in Headers */,
+				1435205121007C4200F35C56 /* Link.h in Headers */,
+				1435205221007C4200F35C56 /* Listener.h in Headers */,
+				1435205321007C4200F35C56 /* Logging.h in Headers */,
+				1435205421007C4200F35C56 /* Nat.h in Headers */,
+				1435205521007C4200F35C56 /* NativeStack.h in Headers */,
+				1435205621007C4200F35C56 /* netcfgn.h in Headers */,
+				1435205721007C4200F35C56 /* netcfgx.h in Headers */,
+				1435205821007C4200F35C56 /* NM.h in Headers */,
+				1435205921007C4200F35C56 /* NMInner.h in Headers */,
+				1435205A21007C4200F35C56 /* NullLan.h in Headers */,
+				1435205B21007C4200F35C56 /* Protocol.h in Headers */,
+				1435205C21007C4200F35C56 /* Radius.h in Headers */,
+				1435205D21007C4200F35C56 /* Remote.h in Headers */,
+				1435205E21007C4200F35C56 /* Sam.h in Headers */,
+				1435205F21007C4200F35C56 /* SecureInfo.h in Headers */,
+				1435206021007C4200F35C56 /* SecureNAT.h in Headers */,
+				1435206121007C4200F35C56 /* SeLowUser.h in Headers */,
+				1435206221007C4200F35C56 /* Server.h in Headers */,
+				1435206321007C4200F35C56 /* Session.h in Headers */,
+				1435206421007C4200F35C56 /* SM.h in Headers */,
+				1435206521007C4200F35C56 /* SMInner.h in Headers */,
+				1435206621007C4200F35C56 /* SW.h in Headers */,
+				1435206721007C4200F35C56 /* SWInner.h in Headers */,
+				1435206821007C4200F35C56 /* UdpAccel.h in Headers */,
+				1435206921007C4200F35C56 /* UT.h in Headers */,
+				1435206A21007C4200F35C56 /* VG.h in Headers */,
+				1435206B21007C4200F35C56 /* Virtual.h in Headers */,
+				1435207221007C7D00F35C56 /* Account.h in Headers */,
+				1435206C21007C4200F35C56 /* VLan.h in Headers */,
+				1435207321007C9D00F35C56 /* WinUi.h in Headers */,
+				1435207421007C9D00F35C56 /* Wpc.h in Headers */,
+				1435206D21007C4200F35C56 /* VLanUnix.h in Headers */,
+				1435206E21007C4200F35C56 /* VLanWin32.h in Headers */,
+				1435206F21007C4200F35C56 /* WaterMark.h in Headers */,
+				1435207021007C4200F35C56 /* WebUI.h in Headers */,
+				1435207121007C4200F35C56 /* Win32Com.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F3F2106C081008F10AD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F402106C081008F10AD /* Mayaqua.h in Headers */,
+				61096F412106C081008F10AD /* Microsoft.h in Headers */,
+				61096F422106C081008F10AD /* Pack.h in Headers */,
+				61096F432106C081008F10AD /* TcpIp.h in Headers */,
+				61096F442106C081008F10AD /* Internat.h in Headers */,
+				61096F452106C081008F10AD /* OS.h in Headers */,
+				61096F462106C081008F10AD /* MayaType.h in Headers */,
+				61096F472106C081008F10AD /* Tick64.h in Headers */,
+				61096F482106C081008F10AD /* Network.h in Headers */,
+				61096F492106C081008F10AD /* Tracking.h in Headers */,
+				61096F4A2106C081008F10AD /* Kernel.h in Headers */,
+				61096F4B2106C081008F10AD /* FileIO.h in Headers */,
+				61096F4C2106C081008F10AD /* Secure.h in Headers */,
+				61096F4D2106C081008F10AD /* Encrypt.h in Headers */,
+				61096F4E2106C081008F10AD /* Memory.h in Headers */,
+				61096F4F2106C081008F10AD /* Object.h in Headers */,
+				61096F502106C081008F10AD /* Table.h in Headers */,
+				61096F512106C081008F10AD /* Str.h in Headers */,
+				61096F522106C081008F10AD /* Cfg.h in Headers */,
+				61096F532106C081008F10AD /* Unix.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83A7021058FA300191202 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A7921058FA400191202 /* SE_Func.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83A8C2105E1AC00191202 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A8D2105E1AC00191202 /* Cedar.h in Headers */,
+				61F83A8E2105E1AC00191202 /* CedarType.h in Headers */,
+				61F83A8F2105E1AC00191202 /* Admin.h in Headers */,
+				61F83A902105E1AC00191202 /* AzureClient.h in Headers */,
+				61F83A912105E1AC00191202 /* AzureServer.h in Headers */,
+				61F83A922105E1AC00191202 /* Bridge.h in Headers */,
+				61F83A932105E1AC00191202 /* BridgeUnix.h in Headers */,
+				61F83A942105E1AC00191202 /* BridgeWin32.h in Headers */,
+				61F83A952105E1AC00191202 /* CedarPch.h in Headers */,
+				61F83A962105E1AC00191202 /* Client.h in Headers */,
+				61F83A972105E1AC00191202 /* CM.h in Headers */,
+				61F83A982105E1AC00191202 /* CMInner.h in Headers */,
+				61F83A992105E1AC00191202 /* Command.h in Headers */,
+				61F83A9A2105E1AC00191202 /* Connection.h in Headers */,
+				61F83A9B2105E1AC00191202 /* Console.h in Headers */,
+				61F83A9C2105E1AC00191202 /* Database.h in Headers */,
+				61F83A9D2105E1AC00191202 /* DDNS.h in Headers */,
+				61F83A9E2105E1AC00191202 /* EM.h in Headers */,
+				61F83A9F2105E1AC00191202 /* EMInner.h in Headers */,
+				61F83AA02105E1AC00191202 /* EtherLog.h in Headers */,
+				61F83AA12105E1AC00191202 /* Hub.h in Headers */,
+				61F83AA22105E1AC00191202 /* Interop_OpenVPN.h in Headers */,
+				61F83AA32105E1AC00191202 /* Interop_SSTP.h in Headers */,
+				61F83AA42105E1AC00191202 /* IPsec_EtherIP.h in Headers */,
+				61F83AA52105E1AC00191202 /* IPsec_IKE.h in Headers */,
+				61F83AA62105E1AC00191202 /* IPsec_IkePacket.h in Headers */,
+				61F83AA72105E1AC00191202 /* IPsec_IPC.h in Headers */,
+				61F83AA82105E1AC00191202 /* IPsec_L2TP.h in Headers */,
+				61F83AA92105E1AC00191202 /* IPsec_PPP.h in Headers */,
+				61F83AAA2105E1AC00191202 /* IPsec_Win7.h in Headers */,
+				61F83AAB2105E1AC00191202 /* IPsec_Win7Inner.h in Headers */,
+				61F83AAC2105E1AC00191202 /* IPsec.h in Headers */,
+				61F83AAD2105E1AC00191202 /* Layer3.h in Headers */,
+				61F83AAE2105E1AC00191202 /* Link.h in Headers */,
+				61F83AAF2105E1AC00191202 /* Listener.h in Headers */,
+				61F83AB02105E1AC00191202 /* Logging.h in Headers */,
+				61F83AB12105E1AC00191202 /* Nat.h in Headers */,
+				61F83AB22105E1AC00191202 /* NativeStack.h in Headers */,
+				61F83AB32105E1AC00191202 /* netcfgn.h in Headers */,
+				61F83AB42105E1AC00191202 /* netcfgx.h in Headers */,
+				61F83AB52105E1AC00191202 /* NM.h in Headers */,
+				61F83AB62105E1AC00191202 /* NMInner.h in Headers */,
+				61F83AB72105E1AC00191202 /* NullLan.h in Headers */,
+				61F83AB82105E1AC00191202 /* Protocol.h in Headers */,
+				61F83AB92105E1AC00191202 /* Radius.h in Headers */,
+				61F83ABA2105E1AC00191202 /* Remote.h in Headers */,
+				61F83ABB2105E1AC00191202 /* Sam.h in Headers */,
+				61F83ABC2105E1AC00191202 /* SecureInfo.h in Headers */,
+				61F83ABD2105E1AC00191202 /* SecureNAT.h in Headers */,
+				61F83ABE2105E1AC00191202 /* SeLowUser.h in Headers */,
+				61F83ABF2105E1AC00191202 /* Server.h in Headers */,
+				61F83AC02105E1AC00191202 /* Session.h in Headers */,
+				61F83AC12105E1AC00191202 /* SM.h in Headers */,
+				61F83AC22105E1AC00191202 /* SMInner.h in Headers */,
+				61F83AC32105E1AC00191202 /* SW.h in Headers */,
+				61F83AC42105E1AC00191202 /* SWInner.h in Headers */,
+				61F83AC52105E1AC00191202 /* UdpAccel.h in Headers */,
+				61F83AC62105E1AC00191202 /* UT.h in Headers */,
+				61F83AC72105E1AC00191202 /* VG.h in Headers */,
+				61F83AC82105E1AC00191202 /* Virtual.h in Headers */,
+				61F83AC92105E1AC00191202 /* Account.h in Headers */,
+				61F83ACA2105E1AC00191202 /* VLan.h in Headers */,
+				61F83ACB2105E1AC00191202 /* WinUi.h in Headers */,
+				61F83ACC2105E1AC00191202 /* Wpc.h in Headers */,
+				61F83ACD2105E1AC00191202 /* VLanUnix.h in Headers */,
+				61F83ACE2105E1AC00191202 /* AppleSock.h in Headers */,
+				61F83ACF2105E1AC00191202 /* VLanWin32.h in Headers */,
+				61F83AD02105E1AC00191202 /* WaterMark.h in Headers */,
+				61F83AD12105E1AC00191202 /* WebUI.h in Headers */,
+				61F83AD22105E1AC00191202 /* Win32Com.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXLegacyTarget section */
+		1477A1222105747A0055DAE5 /* vpnserver */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-C ../tmp/ vpnserver";
+			buildConfigurationList = 1477A1232105747A0055DAE5 /* Build configuration list for PBXLegacyTarget "vpnserver" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = vpnserver;
+			passBuildSettingsInEnvironment = 0;
+			productName = vpnserver;
+		};
+		61F83A6C2105763500191202 /* vpnclient */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-C ../tmp/ vpnclient";
+			buildConfigurationList = 61F83A6F2105763600191202 /* Build configuration list for PBXLegacyTarget "vpnclient" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = vpnclient;
+			passBuildSettingsInEnvironment = 0;
+			productName = vpnclient;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		14351CA42100648A00F35C56 /* SoftEtherVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14351CB92100648B00F35C56 /* Build configuration list for PBXNativeTarget "SoftEtherVPN" */;
+			buildPhases = (
+				FE8A1A47908BC0744226B632 /* [CP] Check Pods Manifest.lock */,
+				14351CA12100648A00F35C56 /* Sources */,
+				14351CA22100648A00F35C56 /* Frameworks */,
+				14351CA32100648A00F35C56 /* Resources */,
+				14351CDC2100655200F35C56 /* Embed Frameworks */,
+				14351FD52100729D00F35C56 /* Embed App Extensions */,
+				797F263C91BA51F7B69BFA31 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14351CED2100658D00F35C56 /* PBXTargetDependency */,
+				14351F7E2100707C00F35C56 /* PBXTargetDependency */,
+				14351FD02100729D00F35C56 /* PBXTargetDependency */,
+				61F83A7B21058FA400191202 /* PBXTargetDependency */,
+			);
+			name = SoftEtherVPN;
+			productName = SoftEtherVPN;
+			productReference = 14351CA52100648A00F35C56 /* SoftEtherVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		14351CE62100658D00F35C56 /* Mayaqua */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14351CF02100658D00F35C56 /* Build configuration list for PBXNativeTarget "Mayaqua" */;
+			buildPhases = (
+				3537C8E37203595E45DA4A50 /* [CP] Check Pods Manifest.lock */,
+				14351CE22100658D00F35C56 /* Headers */,
+				14351CE32100658D00F35C56 /* Sources */,
+				14351CE42100658D00F35C56 /* Frameworks */,
+				14351CE52100658D00F35C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mayaqua;
+			productName = Mayaqua;
+			productReference = 14351CE72100658D00F35C56 /* Mayaqua.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		14351F772100707C00F35C56 /* Cedar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14351F812100707C00F35C56 /* Build configuration list for PBXNativeTarget "Cedar" */;
+			buildPhases = (
+				D88C7AF88B9EFC929BA19AC3 /* [CP] Check Pods Manifest.lock */,
+				14351F732100707C00F35C56 /* Headers */,
+				14351F742100707C00F35C56 /* Sources */,
+				14351F752100707C00F35C56 /* Frameworks */,
+				14351F762100707C00F35C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cedar;
+			productName = Cedar;
+			productReference = 14351F782100707C00F35C56 /* Cedar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		14351FC82100729D00F35C56 /* SoftEtherNE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14351FD22100729D00F35C56 /* Build configuration list for PBXNativeTarget "SoftEtherNE" */;
+			buildPhases = (
+				14351FC52100729D00F35C56 /* Sources */,
+				14351FC62100729D00F35C56 /* Frameworks */,
+				14351FC72100729D00F35C56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoftEtherNE;
+			productName = SoftEtherNE;
+			productReference = 14351FC92100729D00F35C56 /* SoftEtherNE.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		61096F312106BCB1008F10AD /* vpnclient_strip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61096F362106BCB1008F10AD /* Build configuration list for PBXNativeTarget "vpnclient_strip" */;
+			buildPhases = (
+				61096F2E2106BCB1008F10AD /* Sources */,
+				61096F2F2106BCB1008F10AD /* Frameworks */,
+				61096F302106BCB1008F10AD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = vpnclient_strip;
+			productName = vpnclient_strip;
+			productReference = 61096F322106BCB1008F10AD /* vpnclient_strip */;
+			productType = "com.apple.product-type.tool";
+		};
+		61096F3D2106C081008F10AD /* Mayaqua_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61096F6D2106C081008F10AD /* Build configuration list for PBXNativeTarget "Mayaqua_macOS" */;
+			buildPhases = (
+				3AE13479552DEAB0404A3293 /* [CP] Check Pods Manifest.lock */,
+				61096F3F2106C081008F10AD /* Headers */,
+				61096F542106C081008F10AD /* Sources */,
+				61096F692106C081008F10AD /* Frameworks */,
+				61096F6C2106C081008F10AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mayaqua_macOS;
+			productName = Mayaqua;
+			productReference = 61096F702106C081008F10AD /* Mayaqua_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		61F83A7421058FA300191202 /* SE-Func */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61F83A7E21058FA400191202 /* Build configuration list for PBXNativeTarget "SE-Func" */;
+			buildPhases = (
+				61F83A7021058FA300191202 /* Headers */,
+				61F83A7121058FA300191202 /* Sources */,
+				61F83A7221058FA300191202 /* Frameworks */,
+				61F83A7321058FA300191202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SE-Func";
+			productName = "SE-Func";
+			productReference = 61F83A7521058FA300191202 /* SE_Func.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		61F83A8B2105E1AC00191202 /* Cedar Strip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Strip" */;
+			buildPhases = (
+				61F83A8C2105E1AC00191202 /* Headers */,
+				61F83AD32105E1AC00191202 /* Sources */,
+				61F83B092105E1AC00191202 /* Frameworks */,
+				61F83B0B2105E1AC00191202 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cedar Strip";
+			productName = Cedar;
+			productReference = 61F83B0F2105E1AC00191202 /* Cedar Strip.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14351C9D2100648A00F35C56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					14351CA42100648A00F35C56 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					14351CE62100658D00F35C56 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					14351F772100707C00F35C56 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					14351FC82100729D00F35C56 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					1477A1222105747A0055DAE5 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					61096F312106BCB1008F10AD = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+					};
+					61F83A6C2105763500191202 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					61F83A7421058FA300191202 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 14351CA02100648A00F35C56 /* Build configuration list for PBXProject "SoftEtherVPN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14351C9C2100648A00F35C56;
+			productRefGroup = 14351CA62100648A00F35C56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14351CA42100648A00F35C56 /* SoftEtherVPN */,
+				14351CE62100658D00F35C56 /* Mayaqua */,
+				14351F772100707C00F35C56 /* Cedar */,
+				14351FC82100729D00F35C56 /* SoftEtherNE */,
+				1477A1222105747A0055DAE5 /* vpnserver */,
+				61F83A6C2105763500191202 /* vpnclient */,
+				61F83A7421058FA300191202 /* SE-Func */,
+				61F83A8B2105E1AC00191202 /* Cedar Strip */,
+				61096F312106BCB1008F10AD /* vpnclient_strip */,
+				61096F3D2106C081008F10AD /* Mayaqua_macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14351CA32100648A00F35C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351CC7210064D700F35C56 /* Assets.xcassets in Resources */,
+				14351CCD2100652000F35C56 /* LaunchScreen.storyboard in Resources */,
+				14351CCE2100652000F35C56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351CE52100658D00F35C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351F762100707C00F35C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351FC72100729D00F35C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F6C2106C081008F10AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83A7321058FA300191202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83B0B2105E1AC00191202 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3537C8E37203595E45DA4A50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mayaqua-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3AE13479552DEAB0404A3293 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mayaqua_macOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797F263C91BA51F7B69BFA31 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SoftEtherVPN/Pods-SoftEtherVPN-frameworks.sh",
+				"${PODS_ROOT}/GRKOpenSSLFramework/OpenSSL-iOS/bin/openssl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoftEtherVPN/Pods-SoftEtherVPN-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88C7AF88B9EFC929BA19AC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cedar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8A1A47908BC0744226B632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoftEtherVPN-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14351CA12100648A00F35C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351CCA210064D700F35C56 /* AppDelegate.swift in Sources */,
+				14351CC6210064D700F35C56 /* DetailViewController.swift in Sources */,
+				14351CCB210064D700F35C56 /* MasterViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351CE32100658D00F35C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351D7C210065A900F35C56 /* Object.c in Sources */,
+				14351DD6210065A900F35C56 /* Unix.c in Sources */,
+				14351DD1210065A900F35C56 /* Mayaqua.c in Sources */,
+				14351DF0210065A900F35C56 /* Win32.c in Sources */,
+				14351D7B210065A900F35C56 /* Table.c in Sources */,
+				14351DE1210065A900F35C56 /* Microsoft.c in Sources */,
+				14351DD2210065A900F35C56 /* Str.c in Sources */,
+				14351DE4210065A900F35C56 /* Internat.c in Sources */,
+				14351DD4210065A900F35C56 /* Secure.c in Sources */,
+				14351DDB210065A900F35C56 /* Pack.c in Sources */,
+				14351DDA210065A900F35C56 /* TcpIp.c in Sources */,
+				14351D78210065A900F35C56 /* Tick64.c in Sources */,
+				14351D7E210065A900F35C56 /* FileIO.c in Sources */,
+				14351D7F210065A900F35C56 /* Kernel.c in Sources */,
+				14351DEC210065A900F35C56 /* OS.c in Sources */,
+				14351DCF210065A900F35C56 /* Encrypt.c in Sources */,
+				14351D7D210065A900F35C56 /* Memory.c in Sources */,
+				14351DCE210065A900F35C56 /* Cfg.c in Sources */,
+				14351DCD210065A900F35C56 /* Tracking.c in Sources */,
+				14351D77210065A900F35C56 /* Network.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351F742100707C00F35C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A892105E1A700191202 /* Hub.c in Sources */,
+				61F83A8A2105E1A700191202 /* Protocol.c in Sources */,
+				14351F8B210071AF00F35C56 /* Account.c in Sources */,
+				14351F8C210071AF00F35C56 /* Admin.c in Sources */,
+				14351F8D210071AF00F35C56 /* AzureClient.c in Sources */,
+				14351F8E210071AF00F35C56 /* AzureServer.c in Sources */,
+				14351F8F210071AF00F35C56 /* Bridge.c in Sources */,
+				14351F90210071AF00F35C56 /* BridgeUnix.c in Sources */,
+				14351F91210071AF00F35C56 /* BridgeWin32.c in Sources */,
+				14351F92210071AF00F35C56 /* Cedar.c in Sources */,
+				14351F93210071AF00F35C56 /* CedarPch.c in Sources */,
+				14351F94210071AF00F35C56 /* Client.c in Sources */,
+				14351F96210071AF00F35C56 /* Command.c in Sources */,
+				14351F97210071AF00F35C56 /* Connection.c in Sources */,
+				14351F98210071AF00F35C56 /* Console.c in Sources */,
+				14351F99210071AF00F35C56 /* Database.c in Sources */,
+				14351F9A210071AF00F35C56 /* DDNS.c in Sources */,
+				14351F9C210071AF00F35C56 /* EtherLog.c in Sources */,
+				14351F9E210071AF00F35C56 /* Interop_OpenVPN.c in Sources */,
+				14351F9F210071AF00F35C56 /* Interop_SSTP.c in Sources */,
+				14351FA0210071AF00F35C56 /* IPsec_EtherIP.c in Sources */,
+				14351FA1210071AF00F35C56 /* IPsec_IKE.c in Sources */,
+				14351FA2210071AF00F35C56 /* IPsec_IkePacket.c in Sources */,
+				14351FA3210071AF00F35C56 /* IPsec_IPC.c in Sources */,
+				14351FA4210071AF00F35C56 /* IPsec_L2TP.c in Sources */,
+				14351FA5210071AF00F35C56 /* IPsec_PPP.c in Sources */,
+				14351FA6210071AF00F35C56 /* IPsec_Win7.c in Sources */,
+				14351FA7210071AF00F35C56 /* IPsec.c in Sources */,
+				14351FA8210071AF00F35C56 /* Layer3.c in Sources */,
+				14351FA9210071AF00F35C56 /* Link.c in Sources */,
+				14351FAA210071AF00F35C56 /* Listener.c in Sources */,
+				14351FAB210071AF00F35C56 /* Logging.c in Sources */,
+				14351FAC210071AF00F35C56 /* Nat.c in Sources */,
+				14351FAD210071AF00F35C56 /* NativeStack.c in Sources */,
+				14351FAF210071AF00F35C56 /* NullLan.c in Sources */,
+				14351FB1210071AF00F35C56 /* Radius.c in Sources */,
+				14351FB2210071AF00F35C56 /* Remote.c in Sources */,
+				14351FB3210071AF00F35C56 /* Sam.c in Sources */,
+				14351FB4210071AF00F35C56 /* SecureInfo.c in Sources */,
+				14351FB5210071AF00F35C56 /* SecureNAT.c in Sources */,
+				14351FB6210071AF00F35C56 /* SeLowUser.c in Sources */,
+				14351FB7210071AF00F35C56 /* Server.c in Sources */,
+				14351FB8210071AF00F35C56 /* Session.c in Sources */,
+				14351FBB210071AF00F35C56 /* UdpAccel.c in Sources */,
+				14351FBC210071AF00F35C56 /* VG.c in Sources */,
+				14351FBD210071AF00F35C56 /* Virtual.c in Sources */,
+				14351FBE210071AF00F35C56 /* VLan.c in Sources */,
+				14351FBF210071AF00F35C56 /* VLanUnix.c in Sources */,
+				14351FC0210071AF00F35C56 /* VLanWin32.c in Sources */,
+				14351FC1210071AF00F35C56 /* WaterMark.c in Sources */,
+				14351FC2210071AF00F35C56 /* WebUI.c in Sources */,
+				14351FC3210071AF00F35C56 /* Wpc.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14351FC52100729D00F35C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14351FCC2100729D00F35C56 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F2E2106BCB1008F10AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F352106BCB1008F10AD /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61096F542106C081008F10AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F552106C081008F10AD /* Object.c in Sources */,
+				61096F562106C081008F10AD /* Unix.c in Sources */,
+				61096F572106C081008F10AD /* Mayaqua.c in Sources */,
+				61096F582106C081008F10AD /* Win32.c in Sources */,
+				61096F592106C081008F10AD /* Table.c in Sources */,
+				61096F5A2106C081008F10AD /* Microsoft.c in Sources */,
+				61096F5B2106C081008F10AD /* Str.c in Sources */,
+				61096F5C2106C081008F10AD /* Internat.c in Sources */,
+				61096F5D2106C081008F10AD /* Secure.c in Sources */,
+				61096F5E2106C081008F10AD /* Pack.c in Sources */,
+				61096F5F2106C081008F10AD /* TcpIp.c in Sources */,
+				61096F602106C081008F10AD /* Tick64.c in Sources */,
+				61096F612106C081008F10AD /* FileIO.c in Sources */,
+				61096F622106C081008F10AD /* Kernel.c in Sources */,
+				61096F632106C081008F10AD /* OS.c in Sources */,
+				61096F642106C081008F10AD /* Encrypt.c in Sources */,
+				61096F652106C081008F10AD /* Memory.c in Sources */,
+				61096F662106C081008F10AD /* Cfg.c in Sources */,
+				61096F672106C081008F10AD /* Tracking.c in Sources */,
+				61096F682106C081008F10AD /* Network.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83A7121058FA300191202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61F83A832105A91100191202 /* Session.c in Sources */,
+				61F83A822105A90300191202 /* Connection.c in Sources */,
+				61F83A812105907800191202 /* Client.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61F83AD32105E1AC00191202 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61096F752106CBB8008F10AD /* NullLan.c in Sources */,
+				61CD40112105E87D009E0438 /* Protocol.c in Sources */,
+				61F83AD82105E1AC00191202 /* AzureClient.c in Sources */,
+				61F83ADD2105E1AC00191202 /* Cedar.c in Sources */,
+				61096F2D2105F08F008F10AD /* ClientDummy.c in Sources */,
+				61F83ADE2105E1AC00191202 /* CedarPch.c in Sources */,
+				61F83ADF2105E1AC00191202 /* Client.c in Sources */,
+				61F83AE12105E1AC00191202 /* Connection.c in Sources */,
+				61F83AF22105E1AC00191202 /* Listener.c in Sources */,
+				61096F772106CCFD008F10AD /* AppleFunc.c in Sources */,
+				61F83AF32105E1AC00191202 /* Logging.c in Sources */,
+				61F83AF82105E1AC00191202 /* AppleSock.c in Sources */,
+				61F83AF92105E1AC00191202 /* Remote.c in Sources */,
+				61F83AFF2105E1AC00191202 /* Session.c in Sources */,
+				61F83B062105E1AC00191202 /* WaterMark.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14351CED2100658D00F35C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14351CE62100658D00F35C56 /* Mayaqua */;
+			targetProxy = 14351CEC2100658D00F35C56 /* PBXContainerItemProxy */;
+		};
+		14351F7E2100707C00F35C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14351F772100707C00F35C56 /* Cedar */;
+			targetProxy = 14351F7D2100707C00F35C56 /* PBXContainerItemProxy */;
+		};
+		14351FD02100729D00F35C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14351FC82100729D00F35C56 /* SoftEtherNE */;
+			targetProxy = 14351FCF2100729D00F35C56 /* PBXContainerItemProxy */;
+		};
+		61F83A7B21058FA400191202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61F83A7421058FA300191202 /* SE-Func */;
+			targetProxy = 61F83A7A21058FA400191202 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14351CBF210064D700F35C56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14351CC0210064D700F35C56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		14351CC1210064D700F35C56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14351CC2210064D700F35C56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14351CB72100648B00F35C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"UNIX=1",
+					"NO_VLAN=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14351CB82100648B00F35C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"UNIX=1",
+					"NO_VLAN=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14351CBA2100648B00F35C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4098DC099802292E366C3D87 /* Pods-SoftEtherVPN.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS/SoftEtherVPN-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14351CBB2100648B00F35C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8DC4BE7AA9CA5ABE016B15 /* Pods-SoftEtherVPN.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS/SoftEtherVPN-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14351CF12100658D00F35C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32F65F5EEF233CEAE41F1F12 /* Pods-Mayaqua.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = Mayaqua/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Mayaqua;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14351CF22100658D00F35C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC51A858958FC24D5F93206 /* Pods-Mayaqua.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = Mayaqua/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Mayaqua;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14351F822100707C00F35C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A623721A923EDA0D385584 /* Pods-Cedar.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = Cedar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14351F832100707C00F35C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8CD2FBA46210B2A95385740 /* Pods-Cedar.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = Cedar/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14351FD32100729D00F35C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				INFOPLIST_FILE = SoftEtherNE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN.SoftEtherNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14351FD42100729D00F35C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				INFOPLIST_FILE = SoftEtherNE/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN.SoftEtherNE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1477A1242105747A0055DAE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1477A1252105747A0055DAE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		61096F372106BCB1008F10AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "vpnclient_strip/vpnclient_strip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		61096F382106BCB1008F10AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "vpnclient_strip/vpnclient_strip-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		61096F6E2106C081008F10AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78AE2FFD9F9AC506641778C1 /* Pods-Mayaqua_macOS.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "Mayaqua copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Mayaqua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61096F6F2106C081008F10AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CAFD6C77B4EEFC6897933FD /* Pods-Mayaqua_macOS.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				INFOPLIST_FILE = "Mayaqua copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Mayaqua;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61F83A6D2105763600191202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		61F83A6E2105763600191202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		61F83A7F21058FA400191202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SE-Func/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.nsyd.se.SE-Func";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61F83A8021058FA400191202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SE-Func/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tech.nsyd.se.SE-Func";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		61F83B0D2105E1AC00191202 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = "Cedar copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		61F83B0E2105E1AC00191202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = "Cedar copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14351CA02100648A00F35C56 /* Build configuration list for PBXProject "SoftEtherVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14351CB72100648B00F35C56 /* Debug */,
+				14351CB82100648B00F35C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14351CB92100648B00F35C56 /* Build configuration list for PBXNativeTarget "SoftEtherVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14351CBA2100648B00F35C56 /* Debug */,
+				14351CBB2100648B00F35C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14351CF02100658D00F35C56 /* Build configuration list for PBXNativeTarget "Mayaqua" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14351CF12100658D00F35C56 /* Debug */,
+				14351CF22100658D00F35C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14351F812100707C00F35C56 /* Build configuration list for PBXNativeTarget "Cedar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14351F822100707C00F35C56 /* Debug */,
+				14351F832100707C00F35C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14351FD22100729D00F35C56 /* Build configuration list for PBXNativeTarget "SoftEtherNE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14351FD32100729D00F35C56 /* Debug */,
+				14351FD42100729D00F35C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1477A1232105747A0055DAE5 /* Build configuration list for PBXLegacyTarget "vpnserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1477A1242105747A0055DAE5 /* Debug */,
+				1477A1252105747A0055DAE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61096F362106BCB1008F10AD /* Build configuration list for PBXNativeTarget "vpnclient_strip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61096F372106BCB1008F10AD /* Debug */,
+				61096F382106BCB1008F10AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61096F6D2106C081008F10AD /* Build configuration list for PBXNativeTarget "Mayaqua_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61096F6E2106C081008F10AD /* Debug */,
+				61096F6F2106C081008F10AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61F83A6F2105763600191202 /* Build configuration list for PBXLegacyTarget "vpnclient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61F83A6D2105763600191202 /* Debug */,
+				61F83A6E2105763600191202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61F83A7E21058FA400191202 /* Build configuration list for PBXNativeTarget "SE-Func" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61F83A7F21058FA400191202 /* Debug */,
+				61F83A8021058FA400191202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Strip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61F83B0D2105E1AC00191202 /* Debug */,
+				61F83B0E2105E1AC00191202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14351C9D2100648A00F35C56 /* Project object */;
+}
