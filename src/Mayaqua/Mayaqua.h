@@ -273,11 +273,11 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 #endif	// UNIX_SOLARIS
 #include <sys/poll.h>
 #include <sys/resource.h>
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 #include <pthread.h>
-#else // __IPHONE_OS_VERSION_MIN_REQUIRED
+#else // __APPLE__
 #include <pthread/pthread.h>
-#endif // __IPHONE_OS_VERSION_MIN_REQUIRED
+#endif // __APPLE__
 #ifdef	UNIX_LINUX
 #include <sys/prctl.h>
 #endif	// UNIX_LINUX
@@ -288,11 +288,11 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 //#include <netinet/ip.h>
 #include <netdb.h>
 #include <net/if.h>
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 #include <net/if_arp.h>
 #include <readline/readline.h>
 #include <readline/history.h>
-#endif // __IPHONE_OS_VERSION_MIN_REQUIRED
+#endif // __APPLE__
 //#include <curses.h>
 #ifdef	MAYAQUA_SUPPORTS_GETIFADDRS
 #include <ifaddrs.h>

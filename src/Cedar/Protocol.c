@@ -1254,7 +1254,7 @@ TOKEN_LIST *EnumHub(SESSION *s)
 
 // Server accepts a connection from client
 bool ServerAccept(CONNECTION *c)
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 {
 	bool ret = false;
 	UINT err;
@@ -3863,7 +3863,7 @@ CLEANUP:
 }
 #else
 {return false;}
-#endif  // __IPHONE_OS_VERSION_MIN_REQUIRED
+#endif  // __APPLE__
 
 // Create a Node information
 void CreateNodeInfo(NODE_INFO *info, CONNECTION *c)

@@ -578,7 +578,7 @@ bool UnixGetDiskFree(char *path, UINT64 *free_size, UINT64 *used_size, UINT64 *t
 bool UnixGetDiskFreeMain(char *path, UINT64 *free_size, UINT64 *used_size, UINT64 *total_size)
 {
 #ifndef	USE_STATVFS
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 	struct statfs st;
 	char tmp[MAX_PATH];
 	UINT64 v1 = 0, v2 = 0;
@@ -615,9 +615,9 @@ bool UnixGetDiskFreeMain(char *path, UINT64 *free_size, UINT64 *used_size, UINT6
 	}
 
 	return ret;
-#else  // __IPHONE_OS_VERSION_MIN_REQUIRED
+#else  // __APPLE__
     return false;
-#endif  // __IPHONE_OS_VERSION_MIN_REQUIRED
+#endif  // __APPLE__
 #else	// USE_STATVFS
 	struct statvfs st;
 	char tmp[MAX_PATH];
@@ -2608,7 +2608,7 @@ void UnixStartService(char *name)
 // Stop the Service
 void UnixStopService(char *name)
 {
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 	char *svc_name, *svc_title;
 	char tmp[128];
 	INSTANCE *inst;
@@ -2663,7 +2663,7 @@ void UnixStopService(char *name)
 	}
 
 	FreeSingleInstance(inst);
-#endif // __IPHONE_OS_VERSION_MIN_REQUIRED
+#endif // __APPLE__
 }
 
 // Handler of the stop signal to the process

@@ -120,7 +120,7 @@
 #include <stdarg.h>
 #include <time.h>
 #include <errno.h>
-#ifndef __IPHONE_OS_VERSION_MIN_REQUIRED
+#ifndef __APPLE__
 #include <zlib/zlib.h>
 #else
 #include <zlib.h>

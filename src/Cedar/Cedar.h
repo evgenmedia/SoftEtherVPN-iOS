@@ -1162,8 +1162,10 @@ typedef struct CEDAR
 // Web UI
 #include <Cedar/WebUI.h>
 
+#ifndef __APPLE__
 // VPN Gate Plugin DLL
 #include <VGate/VGateCommon.h>
+#endif
 
 // VPN Gate Main Implementation
 #include <Cedar/VG.h>
