@@ -4409,4 +4409,6 @@ UINT SizeOfSaitama()
 }
 
 
-
+void* GetWaterMark(){
+    return &WaterMark;
+}

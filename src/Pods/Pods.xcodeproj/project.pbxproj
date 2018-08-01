@@ -8,80 +8,85 @@
 
 /* Begin PBXBuildFile section */
 		0325D2743338FD4FE35E010E73290F2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B95749CB04F60F62DDD9D7467DC4D /* Foundation.framework */; };
-		1DC459DD2B2977A99086332A222847F6 /* Pods-SoftEtherVPN-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 616D8238E13A7B9FCE3C49F364B271CA /* Pods-SoftEtherVPN-dummy.m */; };
+		19BDEE1FC35246507BF938401F92F5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B95749CB04F60F62DDD9D7467DC4D /* Foundation.framework */; };
+		1DC459DD2B2977A99086332A222847F6 /* Pods-SoftEtherVPN-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9FBD7F33EA4B5F73980A674ADD4DBE /* Pods-SoftEtherVPN-dummy.m */; };
+		4A894B445BE484CDD8F5E5235E2A26BA /* Pods-SoftEtherNE-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA0C5DC60CC72C1347E45899476B805 /* Pods-SoftEtherNE-dummy.m */; };
 		4F46115BB6816AA22C51FC56B7085F9D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51FC1E5D1F5671E0532D52CB477AC228 /* Cocoa.framework */; };
 		52BFACCFAF8335CEA1BE1A973A1F29F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B95749CB04F60F62DDD9D7467DC4D /* Foundation.framework */; };
-		5AB65B33D102488A3A0C0F3AC6DAE54A /* Pods-Mayaqua-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39516A4490292C0E123585BAB4FE1B6C /* Pods-Mayaqua-dummy.m */; };
-		A1F060EA4F3B8856BF2FB98780D43A43 /* Pods-SoftEtherVPN-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07742C06FCC9F18AA35BEED508B532F1 /* Pods-SoftEtherVPN-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AB65B33D102488A3A0C0F3AC6DAE54A /* Pods-Mayaqua-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B7E54A0F09B8B71351C5700C056FFE /* Pods-Mayaqua-dummy.m */; };
+		94DD84040058B9BCCABE277FF4B499C5 /* Pods-SoftEtherNE-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 87795190823A84CD8741901B3F7ADEAA /* Pods-SoftEtherNE-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A1F060EA4F3B8856BF2FB98780D43A43 /* Pods-SoftEtherVPN-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5550AB571BFE8F552FB87E790D6D813B /* Pods-SoftEtherVPN-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB95F95D9AC27A9FC5B3D67653FCCE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A3B95749CB04F60F62DDD9D7467DC4D /* Foundation.framework */; };
-		BAB949571A225C7F2CB4939F5C3EED74 /* Pods-Cedar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C6AFE039BE7CBC723D7A3A4C092CB1B4 /* Pods-Cedar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D5FB7BD3759011570BB780E3BF54F9F3 /* Pods-Cedar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A84FEA22A4D1F650437222D5A353D00 /* Pods-Cedar-dummy.m */; };
-		D6DF7E8E80F58DEBBE5F9343584043DE /* Pods-Mayaqua_macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8B3D97E0F9C34572FC147B8F5C554EC /* Pods-Mayaqua_macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D72C82B0780F0E88796E424D84E6238D /* Pods-Mayaqua-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 303ABC608B721D76D9993D8CCF1F9A93 /* Pods-Mayaqua-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E87A89E0DC50108ADA957558238D141E /* Pods-Mayaqua_macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9F715A86FA006DD9A5B5CFE5ADF981 /* Pods-Mayaqua_macOS-dummy.m */; };
+		BAB949571A225C7F2CB4939F5C3EED74 /* Pods-Cedar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BA700EE9F7FDA138F1D7D476F3CBBDE0 /* Pods-Cedar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5FB7BD3759011570BB780E3BF54F9F3 /* Pods-Cedar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ADD5210AF236ACFDFC82E73C35C75B76 /* Pods-Cedar-dummy.m */; };
+		D6DF7E8E80F58DEBBE5F9343584043DE /* Pods-Mayaqua_macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D5F48F091C5B8BFD7845E5BCDB2EF8A7 /* Pods-Mayaqua_macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D72C82B0780F0E88796E424D84E6238D /* Pods-Mayaqua-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C7D774183A82ADB8F56ED7787DD7F9C3 /* Pods-Mayaqua-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E87A89E0DC50108ADA957558238D141E /* Pods-Mayaqua_macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2AE6B1FF25AC4C01C0AC14F1F945F4 /* Pods-Mayaqua_macOS-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0062570F7C4F7846FE90DD3172DF1EED /* Pods-Mayaqua-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mayaqua-resources.sh"; sourceTree = "<group>"; };
 		01D3F35A9115F8CFE128546E3D157625 /* dh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dh.h; path = "include-macos/openssl/dh.h"; sourceTree = "<group>"; };
 		054DEE587191A9DF62AA898871E3C133 /* obj_mac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = obj_mac.h; path = "include-macos/openssl/obj_mac.h"; sourceTree = "<group>"; };
-		07742C06FCC9F18AA35BEED508B532F1 /* Pods-SoftEtherVPN-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SoftEtherVPN-umbrella.h"; sourceTree = "<group>"; };
+		06617CFA0743BBB0790B0CA232586808 /* Pods-SoftEtherVPN-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoftEtherVPN-acknowledgements.plist"; sourceTree = "<group>"; };
+		085D70C311E786CC9AA4EC8066FB6F70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		093660471480F29D2968C65487A7B60B /* mdc2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mdc2.h; path = "include-macos/openssl/mdc2.h"; sourceTree = "<group>"; };
 		0F11343FFB5656B18D77DB8E3AC9DF6D /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = "OpenSSL-iOS/bin/openssl.framework"; sourceTree = "<group>"; };
+		0FAB598539C5939BB3AF10EADF20D894 /* Pods-Mayaqua_macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mayaqua_macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0FDD6F6651B6E3A81AD8A9FBA56FA9BF /* Pods-Cedar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cedar.release.xcconfig"; sourceTree = "<group>"; };
 		127AB605C05AB96F52D5E5D34132E2FD /* blowfish.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = blowfish.h; path = "include-macos/openssl/blowfish.h"; sourceTree = "<group>"; };
-		13105441F018E82C413B337EE6CFD81C /* Pods-SoftEtherVPN-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoftEtherVPN-frameworks.sh"; sourceTree = "<group>"; };
+		13260F1DB808D9C3C4C18A58958068D8 /* Pods-Mayaqua_macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mayaqua_macOS-resources.sh"; sourceTree = "<group>"; };
 		16A70E7CDB2C52164E425FB95EE1C6B3 /* stack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = stack.h; path = "include-macos/openssl/stack.h"; sourceTree = "<group>"; };
 		1713BF3AF07B5118160697914267B4C3 /* ocsp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ocsp.h; path = "include-macos/openssl/ocsp.h"; sourceTree = "<group>"; };
 		17627B1DD3F36B55EE2AF3CF3040ADF7 /* crypto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = crypto.h; path = "include-macos/openssl/crypto.h"; sourceTree = "<group>"; };
 		18D742B4DE3A30D4ADD5E2DF15A080E3 /* pem2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pem2.h; path = "include-macos/openssl/pem2.h"; sourceTree = "<group>"; };
+		1A9FBD7F33EA4B5F73980A674ADD4DBE /* Pods-SoftEtherVPN-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SoftEtherVPN-dummy.m"; sourceTree = "<group>"; };
+		1DB65471DD634C380E317F92F0DB0F9A /* Pods-Mayaqua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua.debug.xcconfig"; sourceTree = "<group>"; };
 		24036C720591B1137B7AF5B40235A6E9 /* rc4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rc4.h; path = "include-macos/openssl/rc4.h"; sourceTree = "<group>"; };
-		256BE3ADF9F01C594F5433FA7EE31F94 /* Pods-Mayaqua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua.debug.xcconfig"; sourceTree = "<group>"; };
 		2669B91094C968DD9879460766BF00B0 /* conf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf.h; path = "include-macos/openssl/conf.h"; sourceTree = "<group>"; };
 		2678C18B66269CC71C7EE1A25D04635F /* ui_compat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ui_compat.h; path = "include-macos/openssl/ui_compat.h"; sourceTree = "<group>"; };
 		26D1A9657DEE896CBE571809666BF322 /* pqueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pqueue.h; path = "include-macos/openssl/pqueue.h"; sourceTree = "<group>"; };
-		2B436CA9015372813023A38C066CAB8A /* Pods-Mayaqua_macOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mayaqua_macOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		286A4D659671442DEB68FE2B5049E8E6 /* Pods-SoftEtherVPN-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoftEtherVPN-frameworks.sh"; sourceTree = "<group>"; };
+		2915FAAD4217363AA755AD95576734D2 /* Pods-Cedar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cedar-resources.sh"; sourceTree = "<group>"; };
+		29476F834CDB1EDAD25F6ADCD60D0187 /* Pods-SoftEtherVPN-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoftEtherVPN-resources.sh"; sourceTree = "<group>"; };
 		2C96A2C83E18907C3B6D200DD873C2A1 /* pem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pem.h; path = "include-macos/openssl/pem.h"; sourceTree = "<group>"; };
-		2FE94FFCBC398C0A73FDF7DCE1982B47 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3018966161558AB13365AC8550A40C66 /* cast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cast.h; path = "include-macos/openssl/cast.h"; sourceTree = "<group>"; };
-		303ABC608B721D76D9993D8CCF1F9A93 /* Pods-Mayaqua-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mayaqua-umbrella.h"; sourceTree = "<group>"; };
+		319E2B48370F046571872907A659011F /* Pods-Mayaqua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua.release.xcconfig"; sourceTree = "<group>"; };
+		327477815B5492F5BF8B23252F676CCF /* Pods_Cedar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cedar.framework; path = "Pods-Cedar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		350FC2242A9218F5B4F980B98F248CBD /* md4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md4.h; path = "include-macos/openssl/md4.h"; sourceTree = "<group>"; };
-		36CB2924AB48588C7E50A7C064879714 /* Pods-Cedar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cedar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		35D0BDF7DE84291554D7BCA20911C24C /* Pods-Mayaqua_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua_macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		388274E6BA6116C56F69A41A58651153 /* e_os2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = e_os2.h; path = "include-macos/openssl/e_os2.h"; sourceTree = "<group>"; };
-		39516A4490292C0E123585BAB4FE1B6C /* Pods-Mayaqua-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mayaqua-dummy.m"; sourceTree = "<group>"; };
 		3A0EB4FA2AF198230995856BC7CD859A /* ssl3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl3.h; path = "include-macos/openssl/ssl3.h"; sourceTree = "<group>"; };
-		3BDB60E96415DAC2C49599709CECF0B1 /* Pods-Mayaqua.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mayaqua.modulemap"; sourceTree = "<group>"; };
-		3CBA72C4F5B03C9F534BC87E6D6F0D53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CD3515FDC6B1CFDB3445CC36AB924DD /* Pods-Cedar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cedar.modulemap"; sourceTree = "<group>"; };
 		3F588471B06097FA9401D038DD0C9C44 /* bn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bn.h; path = "include-macos/openssl/bn.h"; sourceTree = "<group>"; };
+		40D7D2C2001400EDEFB4F1222E3AA489 /* Pods-SoftEtherNE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherNE.debug.xcconfig"; sourceTree = "<group>"; };
 		48737E7A231E10A1087BE15C02887A6C /* pkcs12.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pkcs12.h; path = "include-macos/openssl/pkcs12.h"; sourceTree = "<group>"; };
 		4BF96E7D3E30033B990AD30EDCEBDB14 /* kssl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = kssl.h; path = "include-macos/openssl/kssl.h"; sourceTree = "<group>"; };
 		4E7EDA6A277D6E645B1B22884F014C9E /* x509.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509.h; path = "include-macos/openssl/x509.h"; sourceTree = "<group>"; };
+		4F051FBBECFE3C92E83354E3B78CFC7F /* Pods-SoftEtherVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherVPN.debug.xcconfig"; sourceTree = "<group>"; };
 		4FA032BB9F8E77203678E9AA177B4391 /* x509v3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509v3.h; path = "include-macos/openssl/x509v3.h"; sourceTree = "<group>"; };
-		50D416589BE635718BF17ACB5AE884DF /* Pods-Mayaqua_macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mayaqua_macOS.modulemap"; sourceTree = "<group>"; };
 		51FC1E5D1F5671E0532D52CB477AC228 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		53CD4A5A6F82E9F548429788A0231996 /* err.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = err.h; path = "include-macos/openssl/err.h"; sourceTree = "<group>"; };
-		543ADF440A9D6B23663F6DF495B57CAE /* Pods-SoftEtherVPN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherVPN.debug.xcconfig"; sourceTree = "<group>"; };
+		5550AB571BFE8F552FB87E790D6D813B /* Pods-SoftEtherVPN-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SoftEtherVPN-umbrella.h"; sourceTree = "<group>"; };
+		55CA97E0E5549C7E84D463E1015E649F /* Pods-SoftEtherNE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherNE.release.xcconfig"; sourceTree = "<group>"; };
 		5C6D1B231C0936F9780DAF7CF571CAD9 /* idea.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = idea.h; path = "include-macos/openssl/idea.h"; sourceTree = "<group>"; };
-		5C8B2CBCCFEC6CBCF4372108FA17910C /* Pods_Mayaqua_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mayaqua_macOS.framework; path = "Pods-Mayaqua_macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CEC2D84BF66CB6AC5510B5070EC2CA9 /* dtls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dtls1.h; path = "include-macos/openssl/dtls1.h"; sourceTree = "<group>"; };
 		5D80AE3BF1CB6541EC857E201E509D11 /* symhacks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = symhacks.h; path = "include-macos/openssl/symhacks.h"; sourceTree = "<group>"; };
 		5EF1C4B86F00A5E33725C71F19638407 /* libcrypto.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcrypto.a; path = "lib-macos/libcrypto.a"; sourceTree = "<group>"; };
-		616D8238E13A7B9FCE3C49F364B271CA /* Pods-SoftEtherVPN-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SoftEtherVPN-dummy.m"; sourceTree = "<group>"; };
 		651463CA4FFCDDFF8592B972186F7A61 /* opensslconf.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = opensslconf.h; path = "include-macos/openssl/opensslconf.h"; sourceTree = "<group>"; };
-		66D06D568A5F64558329F3619B8C9321 /* Pods-Cedar-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Cedar-resources.sh"; sourceTree = "<group>"; };
 		684CB4922C63B9466DE3A527EA612C43 /* sha.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = sha.h; path = "include-macos/openssl/sha.h"; sourceTree = "<group>"; };
 		68A2A4F8124AF36BE4BA2F1B4766B290 /* ossl_typ.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ossl_typ.h; path = "include-macos/openssl/ossl_typ.h"; sourceTree = "<group>"; };
+		68A38F3073AC6745DABB1464FBFAB516 /* Pods_Mayaqua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mayaqua.framework; path = "Pods-Mayaqua.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3B95749CB04F60F62DDD9D7467DC4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6D9F715A86FA006DD9A5B5CFE5ADF981 /* Pods-Mayaqua_macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mayaqua_macOS-dummy.m"; sourceTree = "<group>"; };
+		6DB1E58D92E12A0264748BDE8472C734 /* Pods-Mayaqua-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mayaqua-resources.sh"; sourceTree = "<group>"; };
+		6DBC4F8578BE9AF895D737F5F565F99D /* Pods_Mayaqua_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mayaqua_macOS.framework; path = "Pods-Mayaqua_macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E80DCA4B9032A6A0DD1B74D30F3F5BC /* conf_api.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = conf_api.h; path = "include-macos/openssl/conf_api.h"; sourceTree = "<group>"; };
 		6FCD573E7E5B5D9946EE310AEDB34149 /* cms.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cms.h; path = "include-macos/openssl/cms.h"; sourceTree = "<group>"; };
-		746E60326D53CE06A1D37410EE4C44D8 /* Pods-SoftEtherVPN-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoftEtherVPN-resources.sh"; sourceTree = "<group>"; };
+		74CFE95455EB4BF32D8B5A794959FC68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7591541C0C2A82A0FD91F8AA977FC9A6 /* dsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dsa.h; path = "include-macos/openssl/dsa.h"; sourceTree = "<group>"; };
 		75ABE946D621CA1175E39B4CF7C16019 /* bio.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bio.h; path = "include-macos/openssl/bio.h"; sourceTree = "<group>"; };
+		774E176C37BD21F9AAD55B8EA4D24200 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79288902EC4688EBA56CD16FE1557F0A /* buffer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = buffer.h; path = "include-macos/openssl/buffer.h"; sourceTree = "<group>"; };
-		79910918D72E48963E2BE9234AFA5BF8 /* Pods_Mayaqua.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Mayaqua.framework; path = "Pods-Mayaqua.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A84FEA22A4D1F650437222D5A353D00 /* Pods-Cedar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cedar-dummy.m"; sourceTree = "<group>"; };
-		7C8B567E7A5C0969E925689388674E78 /* Pods_Cedar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Cedar.framework; path = "Pods-Cedar.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7984FB704CCD6C65F3AA01B38C38DC4B /* Pods-SoftEtherNE.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SoftEtherNE.modulemap"; sourceTree = "<group>"; };
+		7A972B11E91AC0D91542B58DD59212F4 /* Pods-Cedar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cedar.debug.xcconfig"; sourceTree = "<group>"; };
 		82820B2A05AA11A358C261B7E247361A /* seed.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = seed.h; path = "include-macos/openssl/seed.h"; sourceTree = "<group>"; };
 		83DDB699FD1C309063F8984ADC31B690 /* modes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = modes.h; path = "include-macos/openssl/modes.h"; sourceTree = "<group>"; };
 		83EBF0C72934CAC69887A4C8EDCB431B /* krb5_asn.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = krb5_asn.h; path = "include-macos/openssl/krb5_asn.h"; sourceTree = "<group>"; };
@@ -89,59 +94,67 @@
 		852768886DC85BB28DB56FD95BBE9A16 /* rand.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rand.h; path = "include-macos/openssl/rand.h"; sourceTree = "<group>"; };
 		85684D71DF4F9B02A1C08823504E7FC8 /* ebcdic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ebcdic.h; path = "include-macos/openssl/ebcdic.h"; sourceTree = "<group>"; };
 		8705841F9CB1255F37433B92FCED555F /* ui.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ui.h; path = "include-macos/openssl/ui.h"; sourceTree = "<group>"; };
-		87D05DD651F810F26D77111555E3CAB0 /* Pods-Cedar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cedar.debug.xcconfig"; sourceTree = "<group>"; };
+		87795190823A84CD8741901B3F7ADEAA /* Pods-SoftEtherNE-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SoftEtherNE-umbrella.h"; sourceTree = "<group>"; };
 		897A1593B5981833E40C775CFFDDBAE8 /* x509_vfy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = x509_vfy.h; path = "include-macos/openssl/x509_vfy.h"; sourceTree = "<group>"; };
 		8CD470A489B94EB2C9E2A663EADD35F9 /* srtp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = srtp.h; path = "include-macos/openssl/srtp.h"; sourceTree = "<group>"; };
+		8D8C903734A7AB944EE26FB13C503A9A /* Pods-SoftEtherNE-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SoftEtherNE-resources.sh"; sourceTree = "<group>"; };
 		8FB17884F56D52D31F42E4558CFBD3CE /* engine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = engine.h; path = "include-macos/openssl/engine.h"; sourceTree = "<group>"; };
 		900670C48B00AAA089BA3B97AC8FCD05 /* safestack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = safestack.h; path = "include-macos/openssl/safestack.h"; sourceTree = "<group>"; };
-		90B385B6431047EED4F7A053897DE5EF /* Pods-Mayaqua_macOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Mayaqua_macOS-resources.sh"; sourceTree = "<group>"; };
-		937642BC734361D52D70C0E516C71F5F /* Pods-Mayaqua-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mayaqua-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		981F2DAF2EF28FBEE32BC12BE832F2D8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4BBAADE09D0656094BEFEB8B5B0E46 /* ssl23.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl23.h; path = "include-macos/openssl/ssl23.h"; sourceTree = "<group>"; };
+		9F2AE6B1FF25AC4C01C0AC14F1F945F4 /* Pods-Mayaqua_macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mayaqua_macOS-dummy.m"; sourceTree = "<group>"; };
+		A3034EE5689A6ACDD5F698F78DB6C03C /* Pods-SoftEtherVPN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SoftEtherVPN.modulemap"; sourceTree = "<group>"; };
 		A351E0023830AAD75F74940505059057 /* aes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = aes.h; path = "include-macos/openssl/aes.h"; sourceTree = "<group>"; };
 		A3FA2C712C253F2FD49F60B8786C4B57 /* des.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des.h; path = "include-macos/openssl/des.h"; sourceTree = "<group>"; };
 		A7F373B6960DD671912D7F7D02EAAE93 /* asn1_mac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1_mac.h; path = "include-macos/openssl/asn1_mac.h"; sourceTree = "<group>"; };
 		AA3BCD76F9D8D5C4BB783AB5E0DD4F60 /* rsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rsa.h; path = "include-macos/openssl/rsa.h"; sourceTree = "<group>"; };
-		AA95EF822C4E332C24ED24DEABEBB3B8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABA0C5DC60CC72C1347E45899476B805 /* Pods-SoftEtherNE-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SoftEtherNE-dummy.m"; sourceTree = "<group>"; };
+		AD1E723CA1363C1FA30EA99CFCC1A36E /* Pods-Mayaqua_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		ADD5210AF236ACFDFC82E73C35C75B76 /* Pods-Cedar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Cedar-dummy.m"; sourceTree = "<group>"; };
 		ADFAC5484A8E58BB2CD7611DA0954CFD /* pkcs7.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = pkcs7.h; path = "include-macos/openssl/pkcs7.h"; sourceTree = "<group>"; };
 		B2C1BE4AE843614A2341B08F5A975E4C /* cmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = cmac.h; path = "include-macos/openssl/cmac.h"; sourceTree = "<group>"; };
 		B334C38274135373279B04A0B223ED54 /* camellia.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = camellia.h; path = "include-macos/openssl/camellia.h"; sourceTree = "<group>"; };
 		B772D128F369CD283185D727E57D0917 /* ripemd.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ripemd.h; path = "include-macos/openssl/ripemd.h"; sourceTree = "<group>"; };
-		B8A8D07CC72A2CC578140E92BE534431 /* Pods-Mayaqua.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua.release.xcconfig"; sourceTree = "<group>"; };
-		BBF01D06668C4C6BFF586F4F4B2AA9EF /* Pods-SoftEtherVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherVPN.release.xcconfig"; sourceTree = "<group>"; };
-		BE7045C4F50124C1B3AB2C4F40345754 /* Pods-SoftEtherVPN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SoftEtherVPN.modulemap"; sourceTree = "<group>"; };
-		BF40E9A70D8B81D926F27995599A9C7C /* Pods-Mayaqua_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua_macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		BA700EE9F7FDA138F1D7D476F3CBBDE0 /* Pods-Cedar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cedar-umbrella.h"; sourceTree = "<group>"; };
+		BC21C49073BCD1D4A69E61053318B1CC /* Pods-Cedar-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Cedar-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BE4108CE4D6C81C4874AE610927F87CF /* Pods_SoftEtherVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SoftEtherVPN.framework; path = "Pods-SoftEtherVPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C065ECB7166CD661CE1E45409DDF5FC6 /* tls1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tls1.h; path = "include-macos/openssl/tls1.h"; sourceTree = "<group>"; };
 		C398842AD0A5C635C2EB21EA8F7C9041 /* ec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ec.h; path = "include-macos/openssl/ec.h"; sourceTree = "<group>"; };
 		C43F9831FE59BA0C0D3EDCCB5A3FF3D4 /* rc2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rc2.h; path = "include-macos/openssl/rc2.h"; sourceTree = "<group>"; };
 		C56A4A25D137025DD2234ABE786ADD34 /* comp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = comp.h; path = "include-macos/openssl/comp.h"; sourceTree = "<group>"; };
-		C6AFE039BE7CBC723D7A3A4C092CB1B4 /* Pods-Cedar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Cedar-umbrella.h"; sourceTree = "<group>"; };
+		C56E59669EC4499F4877102D9C80F6E4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7D774183A82ADB8F56ED7787DD7F9C3 /* Pods-Mayaqua-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mayaqua-umbrella.h"; sourceTree = "<group>"; };
+		C9C01A8B550B3CBBF4212EC5DF766A28 /* Pods-Mayaqua.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mayaqua.modulemap"; sourceTree = "<group>"; };
 		CB97D4B04DA23F66DCBE21A828455927 /* libssl.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libssl.a; path = "lib-macos/libssl.a"; sourceTree = "<group>"; };
-		D0110F4361F020D134AEE97965531E49 /* Pods-Cedar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Cedar.release.xcconfig"; sourceTree = "<group>"; };
+		CC92D646A98E4DFFF62B6D978489BC1E /* Pods-Cedar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Cedar.modulemap"; sourceTree = "<group>"; };
+		CF1FBF07C7330D4815D5795EC180FB42 /* Pods-Mayaqua-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mayaqua-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D067DAFFF929B73746819DA5D1D6C5DC /* Pods-SoftEtherNE-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SoftEtherNE-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D2B95AD29416EC6E7A3BEB350D319F28 /* Pods-SoftEtherNE-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoftEtherNE-acknowledgements.plist"; sourceTree = "<group>"; };
 		D49F84C5696D4E855FA67088390587C2 /* ssl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl.h; path = "include-macos/openssl/ssl.h"; sourceTree = "<group>"; };
+		D5F48F091C5B8BFD7845E5BCDB2EF8A7 /* Pods-Mayaqua_macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mayaqua_macOS-umbrella.h"; sourceTree = "<group>"; };
 		D8ED37432B00765FC57B9FF25A0D872D /* objects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = objects.h; path = "include-macos/openssl/objects.h"; sourceTree = "<group>"; };
 		DA8A74DBFC6B59A486B6BC0F19BC062D /* ts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ts.h; path = "include-macos/openssl/ts.h"; sourceTree = "<group>"; };
+		DAFDC47C5FC4A1229A43F335D5A9E895 /* Pods-SoftEtherVPN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SoftEtherVPN.release.xcconfig"; sourceTree = "<group>"; };
+		DC3E350551EE787D6D26D04B8A25AA66 /* Pods-Mayaqua_macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Mayaqua_macOS.modulemap"; sourceTree = "<group>"; };
 		DE61239DB891EAE79DB89568C10E7A90 /* ssl2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl2.h; path = "include-macos/openssl/ssl2.h"; sourceTree = "<group>"; };
-		E058977A7E73BF90A4D6CB5AF8DF2767 /* Pods-Cedar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cedar-acknowledgements.plist"; sourceTree = "<group>"; };
 		E0FB35588271AED39392738B00BD6934 /* srp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = srp.h; path = "include-macos/openssl/srp.h"; sourceTree = "<group>"; };
 		E76CDCC0B74840C3C6BA33328A2D5889 /* asn1.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1.h; path = "include-macos/openssl/asn1.h"; sourceTree = "<group>"; };
-		E83CF1578E04C1BAEA4C0E55A6B88714 /* Pods_SoftEtherVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SoftEtherVPN.framework; path = "Pods-SoftEtherVPN.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E958AE2A80A5B26BF494D151416E6CB5 /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = "include-macos/openssl/md5.h"; sourceTree = "<group>"; };
 		E9E63B5AC71A5169BED6F7A8215DC77F /* txt_db.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = txt_db.h; path = "include-macos/openssl/txt_db.h"; sourceTree = "<group>"; };
 		EB05B9AE829D8D27EEC3379955466832 /* ecdsa.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecdsa.h; path = "include-macos/openssl/ecdsa.h"; sourceTree = "<group>"; };
-		ECCA27827C823103DB95F17DA30E2E10 /* Pods-SoftEtherVPN-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SoftEtherVPN-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EDEA91433780CED4AACE7F96E702AA9E /* Pods-Mayaqua_macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mayaqua_macOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		F083E313A594FA7C0D919BD8EC5252BD /* dso.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dso.h; path = "include-macos/openssl/dso.h"; sourceTree = "<group>"; };
+		F0C0679EC1EB60AEB23DBE55EDB716CB /* Pods-Mayaqua-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mayaqua-acknowledgements.plist"; sourceTree = "<group>"; };
+		F2B7E54A0F09B8B71351C5700C056FFE /* Pods-Mayaqua-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Mayaqua-dummy.m"; sourceTree = "<group>"; };
+		F367B2DA23B2F713321C06A20879E506 /* Pods-Cedar-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Cedar-acknowledgements.plist"; sourceTree = "<group>"; };
 		F382CEE2957232B008BD61C1F8116F35 /* whrlpool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = whrlpool.h; path = "include-macos/openssl/whrlpool.h"; sourceTree = "<group>"; };
-		F3BAF0B4628A9D6E5446F4D3C37032A3 /* Pods-Mayaqua-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Mayaqua-acknowledgements.markdown"; sourceTree = "<group>"; };
-		F3D90F1D308D204F0D8570E9C94A6EB8 /* Pods-SoftEtherVPN-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SoftEtherVPN-acknowledgements.plist"; sourceTree = "<group>"; };
 		F456BC9922E68852E9B1C02AF7976EE7 /* lhash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = lhash.h; path = "include-macos/openssl/lhash.h"; sourceTree = "<group>"; };
-		F82FD486B375F41BDF8F826C0AD9E4EB /* Pods-Mayaqua_macOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Mayaqua_macOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		F8B3D97E0F9C34572FC147B8F5C554EC /* Pods-Mayaqua_macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Mayaqua_macOS-umbrella.h"; sourceTree = "<group>"; };
+		F9C2C6C42DFA9CE630E4D636552659A6 /* Pods_SoftEtherNE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SoftEtherNE.framework; path = "Pods-SoftEtherNE.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA1033432EC594A8811CBA8C32BA1A8D /* ecdh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ecdh.h; path = "include-macos/openssl/ecdh.h"; sourceTree = "<group>"; };
 		FA3B61F9F585BA3619992AC8928D621D /* des_old.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = des_old.h; path = "include-macos/openssl/des_old.h"; sourceTree = "<group>"; };
-		FB9D6C7FBBAE6C8A5190B2D5B347F984 /* Pods-Mayaqua_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Mayaqua_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		FB1C4B2624E65D67303AA47965924CF5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD565AC53D4607E82EC4F0F1A37B40A4 /* hmac.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hmac.h; path = "include-macos/openssl/hmac.h"; sourceTree = "<group>"; };
+		FD78554FDDF1B7B8866B90AD6D742F7B /* Pods-SoftEtherVPN-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SoftEtherVPN-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FEBA89A41DCD7F862F36049A6D06C844 /* asn1t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = asn1t.h; path = "include-macos/openssl/asn1t.h"; sourceTree = "<group>"; };
 		FFED3FED1FF4F4BEABD7256105738140 /* evp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = evp.h; path = "include-macos/openssl/evp.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -160,6 +173,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0325D2743338FD4FE35E010E73290F2D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41EB42803E1F2D3291D8710D8C890CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19BDEE1FC35246507BF938401F92F5E5 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,21 +203,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		297718202156583B565CB934A26E18AC /* Pods-Cedar */ = {
+		1B485EF24022BA1EF08CF898002E4BAB /* Pods-SoftEtherNE */ = {
 			isa = PBXGroup;
 			children = (
-				981F2DAF2EF28FBEE32BC12BE832F2D8 /* Info.plist */,
-				3CD3515FDC6B1CFDB3445CC36AB924DD /* Pods-Cedar.modulemap */,
-				36CB2924AB48588C7E50A7C064879714 /* Pods-Cedar-acknowledgements.markdown */,
-				E058977A7E73BF90A4D6CB5AF8DF2767 /* Pods-Cedar-acknowledgements.plist */,
-				7A84FEA22A4D1F650437222D5A353D00 /* Pods-Cedar-dummy.m */,
-				66D06D568A5F64558329F3619B8C9321 /* Pods-Cedar-resources.sh */,
-				C6AFE039BE7CBC723D7A3A4C092CB1B4 /* Pods-Cedar-umbrella.h */,
-				87D05DD651F810F26D77111555E3CAB0 /* Pods-Cedar.debug.xcconfig */,
-				D0110F4361F020D134AEE97965531E49 /* Pods-Cedar.release.xcconfig */,
+				085D70C311E786CC9AA4EC8066FB6F70 /* Info.plist */,
+				7984FB704CCD6C65F3AA01B38C38DC4B /* Pods-SoftEtherNE.modulemap */,
+				D067DAFFF929B73746819DA5D1D6C5DC /* Pods-SoftEtherNE-acknowledgements.markdown */,
+				D2B95AD29416EC6E7A3BEB350D319F28 /* Pods-SoftEtherNE-acknowledgements.plist */,
+				ABA0C5DC60CC72C1347E45899476B805 /* Pods-SoftEtherNE-dummy.m */,
+				8D8C903734A7AB944EE26FB13C503A9A /* Pods-SoftEtherNE-resources.sh */,
+				87795190823A84CD8741901B3F7ADEAA /* Pods-SoftEtherNE-umbrella.h */,
+				40D7D2C2001400EDEFB4F1222E3AA489 /* Pods-SoftEtherNE.debug.xcconfig */,
+				55CA97E0E5549C7E84D463E1015E649F /* Pods-SoftEtherNE.release.xcconfig */,
 			);
-			name = "Pods-Cedar";
-			path = "Target Support Files/Pods-Cedar";
+			name = "Pods-SoftEtherNE";
+			path = "Target Support Files/Pods-SoftEtherNE";
 			sourceTree = "<group>";
 		};
 		2B0BEC1BFF078ACF512ADEE1F6755033 /* Pods */ = {
@@ -309,22 +330,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		73C8C015856EA7809C5144B72E649AB4 /* Pods-SoftEtherVPN */ = {
+		497449017924B3FA058F6A3123AA2B26 /* Pods-SoftEtherVPN */ = {
 			isa = PBXGroup;
 			children = (
-				3CBA72C4F5B03C9F534BC87E6D6F0D53 /* Info.plist */,
-				BE7045C4F50124C1B3AB2C4F40345754 /* Pods-SoftEtherVPN.modulemap */,
-				ECCA27827C823103DB95F17DA30E2E10 /* Pods-SoftEtherVPN-acknowledgements.markdown */,
-				F3D90F1D308D204F0D8570E9C94A6EB8 /* Pods-SoftEtherVPN-acknowledgements.plist */,
-				616D8238E13A7B9FCE3C49F364B271CA /* Pods-SoftEtherVPN-dummy.m */,
-				13105441F018E82C413B337EE6CFD81C /* Pods-SoftEtherVPN-frameworks.sh */,
-				746E60326D53CE06A1D37410EE4C44D8 /* Pods-SoftEtherVPN-resources.sh */,
-				07742C06FCC9F18AA35BEED508B532F1 /* Pods-SoftEtherVPN-umbrella.h */,
-				543ADF440A9D6B23663F6DF495B57CAE /* Pods-SoftEtherVPN.debug.xcconfig */,
-				BBF01D06668C4C6BFF586F4F4B2AA9EF /* Pods-SoftEtherVPN.release.xcconfig */,
+				774E176C37BD21F9AAD55B8EA4D24200 /* Info.plist */,
+				A3034EE5689A6ACDD5F698F78DB6C03C /* Pods-SoftEtherVPN.modulemap */,
+				FD78554FDDF1B7B8866B90AD6D742F7B /* Pods-SoftEtherVPN-acknowledgements.markdown */,
+				06617CFA0743BBB0790B0CA232586808 /* Pods-SoftEtherVPN-acknowledgements.plist */,
+				1A9FBD7F33EA4B5F73980A674ADD4DBE /* Pods-SoftEtherVPN-dummy.m */,
+				286A4D659671442DEB68FE2B5049E8E6 /* Pods-SoftEtherVPN-frameworks.sh */,
+				29476F834CDB1EDAD25F6ADCD60D0187 /* Pods-SoftEtherVPN-resources.sh */,
+				5550AB571BFE8F552FB87E790D6D813B /* Pods-SoftEtherVPN-umbrella.h */,
+				4F051FBBECFE3C92E83354E3B78CFC7F /* Pods-SoftEtherVPN.debug.xcconfig */,
+				DAFDC47C5FC4A1229A43F335D5A9E895 /* Pods-SoftEtherVPN.release.xcconfig */,
 			);
 			name = "Pods-SoftEtherVPN";
 			path = "Target Support Files/Pods-SoftEtherVPN";
+			sourceTree = "<group>";
+		};
+		6EC49440108BFE89C177A180E7B5ADAE /* Pods-Mayaqua_macOS */ = {
+			isa = PBXGroup;
+			children = (
+				74CFE95455EB4BF32D8B5A794959FC68 /* Info.plist */,
+				DC3E350551EE787D6D26D04B8A25AA66 /* Pods-Mayaqua_macOS.modulemap */,
+				0FAB598539C5939BB3AF10EADF20D894 /* Pods-Mayaqua_macOS-acknowledgements.markdown */,
+				EDEA91433780CED4AACE7F96E702AA9E /* Pods-Mayaqua_macOS-acknowledgements.plist */,
+				9F2AE6B1FF25AC4C01C0AC14F1F945F4 /* Pods-Mayaqua_macOS-dummy.m */,
+				13260F1DB808D9C3C4C18A58958068D8 /* Pods-Mayaqua_macOS-resources.sh */,
+				D5F48F091C5B8BFD7845E5BCDB2EF8A7 /* Pods-Mayaqua_macOS-umbrella.h */,
+				35D0BDF7DE84291554D7BCA20911C24C /* Pods-Mayaqua_macOS.debug.xcconfig */,
+				AD1E723CA1363C1FA30EA99CFCC1A36E /* Pods-Mayaqua_macOS.release.xcconfig */,
+			);
+			name = "Pods-Mayaqua_macOS";
+			path = "Target Support Files/Pods-Mayaqua_macOS";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -333,8 +371,8 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				3AEF7D761E8EA8419BB4A7000AB770CB /* Frameworks */,
 				2B0BEC1BFF078ACF512ADEE1F6755033 /* Pods */,
-				CD55E84C32F4C8A11D0B9AF5DBEE56DF /* Products */,
-				D2AF6F4B3B62AFA499DA2A177B9807F6 /* Targets Support Files */,
+				AF180AACA7097825FB5C4D1B6BB156FF /* Products */,
+				FF37F02080AB0DFFA5351C83BE09EFDD /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -346,21 +384,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8960CA445F5F4ADEE05792CE9C6230BA /* Pods-Mayaqua_macOS */ = {
+		85943D62D9BA30B149333C384B44853A /* Pods-Mayaqua */ = {
 			isa = PBXGroup;
 			children = (
-				AA95EF822C4E332C24ED24DEABEBB3B8 /* Info.plist */,
-				50D416589BE635718BF17ACB5AE884DF /* Pods-Mayaqua_macOS.modulemap */,
-				2B436CA9015372813023A38C066CAB8A /* Pods-Mayaqua_macOS-acknowledgements.markdown */,
-				F82FD486B375F41BDF8F826C0AD9E4EB /* Pods-Mayaqua_macOS-acknowledgements.plist */,
-				6D9F715A86FA006DD9A5B5CFE5ADF981 /* Pods-Mayaqua_macOS-dummy.m */,
-				90B385B6431047EED4F7A053897DE5EF /* Pods-Mayaqua_macOS-resources.sh */,
-				F8B3D97E0F9C34572FC147B8F5C554EC /* Pods-Mayaqua_macOS-umbrella.h */,
-				BF40E9A70D8B81D926F27995599A9C7C /* Pods-Mayaqua_macOS.debug.xcconfig */,
-				FB9D6C7FBBAE6C8A5190B2D5B347F984 /* Pods-Mayaqua_macOS.release.xcconfig */,
+				FB1C4B2624E65D67303AA47965924CF5 /* Info.plist */,
+				C9C01A8B550B3CBBF4212EC5DF766A28 /* Pods-Mayaqua.modulemap */,
+				CF1FBF07C7330D4815D5795EC180FB42 /* Pods-Mayaqua-acknowledgements.markdown */,
+				F0C0679EC1EB60AEB23DBE55EDB716CB /* Pods-Mayaqua-acknowledgements.plist */,
+				F2B7E54A0F09B8B71351C5700C056FFE /* Pods-Mayaqua-dummy.m */,
+				6DB1E58D92E12A0264748BDE8472C734 /* Pods-Mayaqua-resources.sh */,
+				C7D774183A82ADB8F56ED7787DD7F9C3 /* Pods-Mayaqua-umbrella.h */,
+				1DB65471DD634C380E317F92F0DB0F9A /* Pods-Mayaqua.debug.xcconfig */,
+				319E2B48370F046571872907A659011F /* Pods-Mayaqua.release.xcconfig */,
 			);
-			name = "Pods-Mayaqua_macOS";
-			path = "Target Support Files/Pods-Mayaqua_macOS";
+			name = "Pods-Mayaqua";
+			path = "Target Support Files/Pods-Mayaqua";
+			sourceTree = "<group>";
+		};
+		8AEF2CB6E8A086C386C91F48147761ED /* Pods-Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				C56E59669EC4499F4877102D9C80F6E4 /* Info.plist */,
+				CC92D646A98E4DFFF62B6D978489BC1E /* Pods-Cedar.modulemap */,
+				BC21C49073BCD1D4A69E61053318B1CC /* Pods-Cedar-acknowledgements.markdown */,
+				F367B2DA23B2F713321C06A20879E506 /* Pods-Cedar-acknowledgements.plist */,
+				ADD5210AF236ACFDFC82E73C35C75B76 /* Pods-Cedar-dummy.m */,
+				2915FAAD4217363AA755AD95576734D2 /* Pods-Cedar-resources.sh */,
+				BA700EE9F7FDA138F1D7D476F3CBBDE0 /* Pods-Cedar-umbrella.h */,
+				7A972B11E91AC0D91542B58DD59212F4 /* Pods-Cedar.debug.xcconfig */,
+				0FDD6F6651B6E3A81AD8A9FBA56FA9BF /* Pods-Cedar.release.xcconfig */,
+			);
+			name = "Pods-Cedar";
+			path = "Target Support Files/Pods-Cedar";
 			sourceTree = "<group>";
 		};
 		96F7210356B4383B11AE35015F3530FB /* GRKOpenSSLFramework */ = {
@@ -372,43 +427,16 @@
 			path = GRKOpenSSLFramework;
 			sourceTree = "<group>";
 		};
-		CC930FB17D3DE9EEFBD25D37DC5518BB /* Pods-Mayaqua */ = {
+		AF180AACA7097825FB5C4D1B6BB156FF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FE94FFCBC398C0A73FDF7DCE1982B47 /* Info.plist */,
-				3BDB60E96415DAC2C49599709CECF0B1 /* Pods-Mayaqua.modulemap */,
-				F3BAF0B4628A9D6E5446F4D3C37032A3 /* Pods-Mayaqua-acknowledgements.markdown */,
-				937642BC734361D52D70C0E516C71F5F /* Pods-Mayaqua-acknowledgements.plist */,
-				39516A4490292C0E123585BAB4FE1B6C /* Pods-Mayaqua-dummy.m */,
-				0062570F7C4F7846FE90DD3172DF1EED /* Pods-Mayaqua-resources.sh */,
-				303ABC608B721D76D9993D8CCF1F9A93 /* Pods-Mayaqua-umbrella.h */,
-				256BE3ADF9F01C594F5433FA7EE31F94 /* Pods-Mayaqua.debug.xcconfig */,
-				B8A8D07CC72A2CC578140E92BE534431 /* Pods-Mayaqua.release.xcconfig */,
-			);
-			name = "Pods-Mayaqua";
-			path = "Target Support Files/Pods-Mayaqua";
-			sourceTree = "<group>";
-		};
-		CD55E84C32F4C8A11D0B9AF5DBEE56DF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7C8B567E7A5C0969E925689388674E78 /* Pods_Cedar.framework */,
-				79910918D72E48963E2BE9234AFA5BF8 /* Pods_Mayaqua.framework */,
-				5C8B2CBCCFEC6CBCF4372108FA17910C /* Pods_Mayaqua_macOS.framework */,
-				E83CF1578E04C1BAEA4C0E55A6B88714 /* Pods_SoftEtherVPN.framework */,
+				327477815B5492F5BF8B23252F676CCF /* Pods_Cedar.framework */,
+				68A38F3073AC6745DABB1464FBFAB516 /* Pods_Mayaqua.framework */,
+				6DBC4F8578BE9AF895D737F5F565F99D /* Pods_Mayaqua_macOS.framework */,
+				F9C2C6C42DFA9CE630E4D636552659A6 /* Pods_SoftEtherNE.framework */,
+				BE4108CE4D6C81C4874AE610927F87CF /* Pods_SoftEtherVPN.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		D2AF6F4B3B62AFA499DA2A177B9807F6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				297718202156583B565CB934A26E18AC /* Pods-Cedar */,
-				CC930FB17D3DE9EEFBD25D37DC5518BB /* Pods-Mayaqua */,
-				8960CA445F5F4ADEE05792CE9C6230BA /* Pods-Mayaqua_macOS */,
-				73C8C015856EA7809C5144B72E649AB4 /* Pods-SoftEtherVPN */,
-			);
-			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		EFC1B8C06980071EEC27467882F49A82 /* Frameworks */ = {
@@ -428,9 +456,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		FF37F02080AB0DFFA5351C83BE09EFDD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8AEF2CB6E8A086C386C91F48147761ED /* Pods-Cedar */,
+				85943D62D9BA30B149333C384B44853A /* Pods-Mayaqua */,
+				6EC49440108BFE89C177A180E7B5ADAE /* Pods-Mayaqua_macOS */,
+				1B485EF24022BA1EF08CF898002E4BAB /* Pods-SoftEtherNE */,
+				497449017924B3FA058F6A3123AA2B26 /* Pods-SoftEtherVPN */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		14913437D609F25CA346493EB585A8C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94DD84040058B9BCCABE277FF4B499C5 /* Pods-SoftEtherNE-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65B68E3CB72C94EE58179CC2A4C9226E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,7 +528,7 @@
 			);
 			name = "Pods-Mayaqua_macOS";
 			productName = "Pods-Mayaqua_macOS";
-			productReference = 5C8B2CBCCFEC6CBCF4372108FA17910C /* Pods_Mayaqua_macOS.framework */;
+			productReference = 6DBC4F8578BE9AF895D737F5F565F99D /* Pods_Mayaqua_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5EA28E76EB8088E105460008A7B192DF /* Pods-Mayaqua */ = {
@@ -497,7 +545,7 @@
 			);
 			name = "Pods-Mayaqua";
 			productName = "Pods-Mayaqua";
-			productReference = 79910918D72E48963E2BE9234AFA5BF8 /* Pods_Mayaqua.framework */;
+			productReference = 68A38F3073AC6745DABB1464FBFAB516 /* Pods_Mayaqua.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9CD3F5BA8C4BC0C5C7C72789C414D7B8 /* Pods-SoftEtherVPN */ = {
@@ -514,7 +562,24 @@
 			);
 			name = "Pods-SoftEtherVPN";
 			productName = "Pods-SoftEtherVPN";
-			productReference = E83CF1578E04C1BAEA4C0E55A6B88714 /* Pods_SoftEtherVPN.framework */;
+			productReference = BE4108CE4D6C81C4874AE610927F87CF /* Pods_SoftEtherVPN.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D313739C55EA8B5B0807FCEEC6CD2A00 /* Pods-SoftEtherNE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB6EF116D1ACF8CF8A7F39A3BA2BB42 /* Build configuration list for PBXNativeTarget "Pods-SoftEtherNE" */;
+			buildPhases = (
+				39B2C82DC59578819CA43E00B6DCCD96 /* Sources */,
+				B41EB42803E1F2D3291D8710D8C890CB /* Frameworks */,
+				14913437D609F25CA346493EB585A8C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SoftEtherNE";
+			productName = "Pods-SoftEtherNE";
+			productReference = F9C2C6C42DFA9CE630E4D636552659A6 /* Pods_SoftEtherNE.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAF27C87FDEF267D321B53EEEEC82768 /* Pods-Cedar */ = {
@@ -531,7 +596,7 @@
 			);
 			name = "Pods-Cedar";
 			productName = "Pods-Cedar";
-			productReference = 7C8B567E7A5C0969E925689388674E78 /* Pods_Cedar.framework */;
+			productReference = 327477815B5492F5BF8B23252F676CCF /* Pods_Cedar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -551,19 +616,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CD55E84C32F4C8A11D0B9AF5DBEE56DF /* Products */;
+			productRefGroup = AF180AACA7097825FB5C4D1B6BB156FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				EAF27C87FDEF267D321B53EEEEC82768 /* Pods-Cedar */,
 				5EA28E76EB8088E105460008A7B192DF /* Pods-Mayaqua */,
 				0ED9CC425FE7F1742C19ED511F21EA79 /* Pods-Mayaqua_macOS */,
+				D313739C55EA8B5B0807FCEEC6CD2A00 /* Pods-SoftEtherNE */,
 				9CD3F5BA8C4BC0C5C7C72789C414D7B8 /* Pods-SoftEtherVPN */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		39B2C82DC59578819CA43E00B6DCCD96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A894B445BE484CDD8F5E5235E2A26BA /* Pods-SoftEtherNE-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83F3A6F788BEDF509EBFC77821360C0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,7 +675,7 @@
 /* Begin XCBuildConfiguration section */
 		006B7FC9D53B31D4880A30E3A7D45AC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB9D6C7FBBAE6C8A5190B2D5B347F984 /* Pods-Mayaqua_macOS.release.xcconfig */;
+			baseConfigurationReference = AD1E723CA1363C1FA30EA99CFCC1A36E /* Pods-Mayaqua_macOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -705,7 +779,7 @@
 		};
 		257B2FA69B6748B7F9335F84CD8C8972 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF40E9A70D8B81D926F27995599A9C7C /* Pods-Mayaqua_macOS.debug.xcconfig */;
+			baseConfigurationReference = 35D0BDF7DE84291554D7BCA20911C24C /* Pods-Mayaqua_macOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD)";
@@ -745,7 +819,7 @@
 		};
 		53C29556F6378811B8D7FFED016552EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8A8D07CC72A2CC578140E92BE534431 /* Pods-Mayaqua.release.xcconfig */;
+			baseConfigurationReference = 319E2B48370F046571872907A659011F /* Pods-Mayaqua.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -782,9 +856,48 @@
 			};
 			name = Release;
 		};
+		5D9E94608B69DA32D1611A7A08F43058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40D7D2C2001400EDEFB4F1222E3AA489 /* Pods-SoftEtherNE.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoftEtherNE/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoftEtherNE/Pods-SoftEtherNE.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		68D3ADD6907DDCAD668A42CA7F60A985 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87D05DD651F810F26D77111555E3CAB0 /* Pods-Cedar.debug.xcconfig */;
+			baseConfigurationReference = 7A972B11E91AC0D91542B58DD59212F4 /* Pods-Cedar.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -822,7 +935,7 @@
 		};
 		7B41A0821BE49C5CF287AA6046D284CC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 256BE3ADF9F01C594F5433FA7EE31F94 /* Pods-Mayaqua.debug.xcconfig */;
+			baseConfigurationReference = 1DB65471DD634C380E317F92F0DB0F9A /* Pods-Mayaqua.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -860,7 +973,7 @@
 		};
 		8B9C4D6BD966883B7BFDE68623758F93 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0110F4361F020D134AEE97965531E49 /* Pods-Cedar.release.xcconfig */;
+			baseConfigurationReference = 0FDD6F6651B6E3A81AD8A9FBA56FA9BF /* Pods-Cedar.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -899,7 +1012,7 @@
 		};
 		8F4AAC2EC37F319520244E75DD5B4318 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 543ADF440A9D6B23663F6DF495B57CAE /* Pods-SoftEtherVPN.debug.xcconfig */;
+			baseConfigurationReference = 4F051FBBECFE3C92E83354E3B78CFC7F /* Pods-SoftEtherVPN.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -937,7 +1050,7 @@
 		};
 		A2078DB8DCF4269E90263745FD9E7E6C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBF01D06668C4C6BFF586F4F4B2AA9EF /* Pods-SoftEtherVPN.release.xcconfig */;
+			baseConfigurationReference = DAFDC47C5FC4A1229A43F335D5A9E895 /* Pods-SoftEtherVPN.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -960,6 +1073,46 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SoftEtherVPN/Pods-SoftEtherVPN.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B5C10CF89676AA1F701963D836EB5AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55CA97E0E5549C7E84D463E1015E649F /* Pods-SoftEtherNE.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoftEtherNE/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoftEtherNE/Pods-SoftEtherNE.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1068,6 +1221,15 @@
 			buildConfigurations = (
 				257B2FA69B6748B7F9335F84CD8C8972 /* Debug */,
 				006B7FC9D53B31D4880A30E3A7D45AC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB6EF116D1ACF8CF8A7F39A3BA2BB42 /* Build configuration list for PBXNativeTarget "Pods-SoftEtherNE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9E94608B69DA32D1611A7A08F43058 /* Debug */,
+				B5C10CF89676AA1F701963D836EB5AAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

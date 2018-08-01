@@ -350,6 +350,10 @@ struct SOCK
 #ifdef	OS_WIN32
 	void *hEvent;				// Event for asynchronous mode
 #endif	// OS_WIN32
+
+#ifdef __APPLE__
+    void *connection;
+#endif
 };
 
 // Underlying protocol description string of socket

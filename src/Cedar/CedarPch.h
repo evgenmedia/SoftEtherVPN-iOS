@@ -124,3 +124,8 @@
 #include <Mayaqua/Mayaqua.h>
 #include <Cedar/Cedar.h>
 
+#ifdef __APPLE__
+
+#include <AppleOverride.h>
+
+#endif  // __APPLE__

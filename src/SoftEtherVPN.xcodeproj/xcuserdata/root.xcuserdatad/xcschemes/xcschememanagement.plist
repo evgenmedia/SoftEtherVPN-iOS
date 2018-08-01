@@ -4,10 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Cedar Client.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Cedar Strip.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>9</integer>
 		</dict>
 		<key>Cedar copy.xcscheme</key>
 		<dict>
@@ -17,7 +22,7 @@
 		<key>Cedar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>5</integer>
 		</dict>
 		<key>Mayaqua copy.xcscheme</key>
 		<dict>
@@ -27,12 +32,12 @@
 		<key>Mayaqua.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Mayaqua_macOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>8</integer>
 		</dict>
 		<key>SE-Func.xcscheme</key>
 		<dict>
@@ -42,12 +47,12 @@
 		<key>SoftEtherNE.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>6</integer>
 		</dict>
 		<key>SoftEtherVPN.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>vpnclient.xcscheme</key>
 		<dict>
@@ -57,7 +62,7 @@
 		<key>vpnclient_strip.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>2</integer>
 		</dict>
 		<key>vpnserver.xcscheme</key>
 		<dict>

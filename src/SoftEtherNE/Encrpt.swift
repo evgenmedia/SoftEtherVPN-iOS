@@ -1,0 +1,18 @@
+//
+//  Encrpt.swift
+//  SoftEtherNE
+//
+//  Created by xy on 2018/7/31.
+//
+
+import Foundation
+
+@_silgen_name("Rand")
+public func Rand(_ buf: UnsafeMutableRawPointer!, _ size: UINT){
+    _ = SecRandomCopyBytes(kSecRandomDefault, Int(size), buf)
+}
+
+@_silgen_name("Rand32")
+public func Rand32() -> UINT{
+    return Random.default.next()
+}

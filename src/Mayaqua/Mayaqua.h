@@ -633,6 +633,12 @@ USHORT CalcChecksum16(void *buf, UINT size);
 #endif
 
 
+#ifdef __APPLE__
+
+#include "AppleOverride.h"
+
+#endif  // __APPLE__
+
 #endif	// MAYAQUA_H
 
 

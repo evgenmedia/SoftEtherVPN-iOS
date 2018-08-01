@@ -130,6 +130,8 @@ extern BYTE Saitama[];
 UINT SizeOfWaterMark();
 UINT SizeOfSaitama();
 
+void* GetWaterMark();
+
 #define	MAX_WATERMARK_SIZE		(SizeOfWaterMark() + HTTP_PACK_RAND_SIZE_MAX * 2)
 
 #endif	// WATERMARK_H

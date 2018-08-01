@@ -25,6 +25,14 @@ target 'SoftEtherVPN' do
 
 end
 
+target 'SoftEtherNE' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for SoftEtherNE
+    pod 'GRKOpenSSLFramework'
+end
+
 target 'Mayaqua_macOS' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!

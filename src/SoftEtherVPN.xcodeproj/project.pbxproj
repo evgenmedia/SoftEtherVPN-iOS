@@ -8,14 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0BD1D753AB93FE3F81E9538A /* Pods_Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F82BB7FF2531F516436751ED /* Pods_Cedar.framework */; };
+		14049AFF210AA95F002ED97F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14049AFE210AA95F002ED97F /* Storyboard.storyboard */; };
+		14049B01210AA9C8002ED97F /* EmptyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14049B00210AA9C8002ED97F /* EmptyController.swift */; };
+		14049B03210AB215002ED97F /* AzureClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7F210065F500F35C56 /* AzureClient.c */; };
+		14049B04210AB215002ED97F /* Cedar.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E1F210065F500F35C56 /* Cedar.c */; };
+		14049B05210AB215002ED97F /* CedarPch.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E6C210065F500F35C56 /* CedarPch.c */; };
+		14049B07210AB215002ED97F /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
+		14049B09210AB215002ED97F /* NullLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E37210065F500F35C56 /* NullLan.c */; };
+		14049B0A210AB215002ED97F /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
+		14049B0B210AB215002ED97F /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
+		14049B0C210AB215002ED97F /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E21210065F500F35C56 /* WaterMark.c */; };
+		14049B0D210AB215002ED97F /* AppleSock.c in Sources */ = {isa = PBXBuildFile; fileRef = 61F83A862105DE9100191202 /* AppleSock.c */; };
+		14049B0E210AB215002ED97F /* ClientDummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F2C2105F08F008F10AD /* ClientDummy.c */; };
+		14049B0F210AB215002ED97F /* AppleFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F762106CCFD008F10AD /* AppleFunc.c */; };
 		14351CC6210064D700F35C56 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CBD210064D700F35C56 /* DetailViewController.swift */; };
 		14351CC7210064D700F35C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14351CBE210064D700F35C56 /* Assets.xcassets */; };
 		14351CCA210064D700F35C56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CC3210064D700F35C56 /* AppDelegate.swift */; };
 		14351CCB210064D700F35C56 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351CC4210064D700F35C56 /* MasterViewController.swift */; };
 		14351CCD2100652000F35C56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14351CBF210064D700F35C56 /* LaunchScreen.storyboard */; };
 		14351CCE2100652000F35C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14351CC1210064D700F35C56 /* Main.storyboard */; };
-		14351CEE2100658D00F35C56 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
-		14351CEF2100658D00F35C56 /* Mayaqua.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14351D77210065A900F35C56 /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF5210065A900F35C56 /* Network.c */; };
 		14351D78210065A900F35C56 /* Tick64.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF6210065A900F35C56 /* Tick64.c */; };
 		14351D7B210065A900F35C56 /* Table.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF9210065A900F35C56 /* Table.c */; };
@@ -37,8 +48,6 @@
 		14351DEC210065A900F35C56 /* OS.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D6E210065A900F35C56 /* OS.c */; };
 		14351DF0210065A900F35C56 /* Win32.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D72210065A900F35C56 /* Win32.c */; };
 		14351F2F210066F200F35C56 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F2E210066F200F35C56 /* libiconv.tbd */; };
-		14351F7F2100707C00F35C56 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; };
-		14351F802100707C00F35C56 /* Cedar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14351F8B210071AF00F35C56 /* Account.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E69210065F500F35C56 /* Account.c */; };
 		14351F8C210071AF00F35C56 /* Admin.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E48210065F500F35C56 /* Admin.c */; };
 		14351F8D210071AF00F35C56 /* AzureClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E7F210065F500F35C56 /* AzureClient.c */; };
@@ -91,7 +100,6 @@
 		14351FC3210071AF00F35C56 /* Wpc.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E17210065F500F35C56 /* Wpc.c */; };
 		14351FCC2100729D00F35C56 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14351FCB2100729D00F35C56 /* PacketTunnelProvider.swift */; };
 		14351FD12100729D00F35C56 /* SoftEtherNE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 14351FC92100729D00F35C56 /* SoftEtherNE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		14351FD6210072AF00F35C56 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F782100707C00F35C56 /* Cedar.framework */; };
 		14351FDA210073D600F35C56 /* Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E72210065F500F35C56 /* Cedar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435201C210075BF00F35C56 /* Mayaqua.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6F210065A900F35C56 /* Mayaqua.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435201D2100778000F35C56 /* Microsoft.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF4210065A900F35C56 /* Microsoft.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -113,7 +121,6 @@
 		1435202D210077AE00F35C56 /* Encrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D70210065A900F35C56 /* Encrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435202E210077B600F35C56 /* Secure.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D75210065A900F35C56 /* Secure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435202F210077CE00F35C56 /* Unix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D74210065A900F35C56 /* Unix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14352030210078CB00F35C56 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
 		1435203121007A3A00F35C56 /* CedarType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E52210065F500F35C56 /* CedarType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435203221007C4100F35C56 /* Admin.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E8E210065F500F35C56 /* Admin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435203321007C4100F35C56 /* AzureClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E42210065F500F35C56 /* AzureClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -182,9 +189,98 @@
 		1435207221007C7D00F35C56 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2C210065F500F35C56 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435207321007C9D00F35C56 /* WinUi.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1D210065F500F35C56 /* WinUi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1435207421007C9D00F35C56 /* Wpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E59210065F500F35C56 /* Wpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29BCB1BDBA4E5D0754B96FE3 /* Pods_Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */; };
+		1444A88A21115D51005A3FB2 /* Str.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D52210065A900F35C56 /* Str.c */; };
+		1444A88B21115F9D005A3FB2 /* Pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D5C210065A900F35C56 /* Pack.c */; };
+		1444A88C21115FCF005A3FB2 /* Memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CFB210065A900F35C56 /* Memory.c */; };
+		1444A88D21115FE1005A3FB2 /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF5210065A900F35C56 /* Network.c */; };
+		1444A88E21116237005A3FB2 /* Internat.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D66210065A900F35C56 /* Internat.c */; };
+		1444A89021118865005A3FB2 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F2E210066F200F35C56 /* libiconv.tbd */; };
+		145E70EE2109BFDC003D5886 /* Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E72210065F500F35C56 /* Cedar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70EF2109BFDC003D5886 /* CedarType.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E52210065F500F35C56 /* CedarType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F02109BFDC003D5886 /* Admin.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E8E210065F500F35C56 /* Admin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F12109BFDC003D5886 /* AzureClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E42210065F500F35C56 /* AzureClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F22109BFDC003D5886 /* AzureServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6B210065F500F35C56 /* AzureServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F32109BFDC003D5886 /* Bridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1E210065F500F35C56 /* Bridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F42109BFDC003D5886 /* BridgeUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5A210065F500F35C56 /* BridgeUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F52109BFDC003D5886 /* BridgeWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E58210065F500F35C56 /* BridgeWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F62109BFDC003D5886 /* CedarPch.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E25210065F500F35C56 /* CedarPch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F72109BFDC003D5886 /* Client.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1C210065F500F35C56 /* Client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F82109BFDC003D5886 /* CM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4B210065F500F35C56 /* CM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70F92109BFDC003D5886 /* CMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E5D210065F500F35C56 /* CMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FA2109BFDC003D5886 /* Command.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E7C210065F500F35C56 /* Command.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FB2109BFDC003D5886 /* Connection.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF6210065F500F35C56 /* Connection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FC2109BFDC003D5886 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFA210065F500F35C56 /* Console.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FD2109BFDC003D5886 /* Database.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E63210065F500F35C56 /* Database.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FE2109BFDC003D5886 /* DDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E56210065F500F35C56 /* DDNS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E70FF2109BFDC003D5886 /* EM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6A210065F500F35C56 /* EM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71002109BFDC003D5886 /* EMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E30210065F500F35C56 /* EMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71012109BFDC003D5886 /* EtherLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E32210065F500F35C56 /* EtherLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71022109BFDC003D5886 /* Hub.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E66210065F500F35C56 /* Hub.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71032109BFDC003D5886 /* Interop_OpenVPN.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3E210065F500F35C56 /* Interop_OpenVPN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71042109BFDC003D5886 /* Interop_SSTP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DFB210065F500F35C56 /* Interop_SSTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71052109BFDC003D5886 /* IPsec_EtherIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4D210065F500F35C56 /* IPsec_EtherIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71062109BFDC003D5886 /* IPsec_IKE.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3D210065F500F35C56 /* IPsec_IKE.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71072109BFDC003D5886 /* IPsec_IkePacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF9210065F500F35C56 /* IPsec_IkePacket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71082109BFDC003D5886 /* IPsec_IPC.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E26210065F500F35C56 /* IPsec_IPC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71092109BFDC003D5886 /* IPsec_L2TP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E45210065F500F35C56 /* IPsec_L2TP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710A2109BFDC003D5886 /* IPsec_PPP.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E27210065F500F35C56 /* IPsec_PPP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710B2109BFDC003D5886 /* IPsec_Win7.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E49210065F500F35C56 /* IPsec_Win7.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710C2109BFDC003D5886 /* IPsec_Win7Inner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2D210065F500F35C56 /* IPsec_Win7Inner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710D2109BFDC003D5886 /* IPsec.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1B210065F500F35C56 /* IPsec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710E2109BFDC003D5886 /* Layer3.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E47210065F500F35C56 /* Layer3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E710F2109BFDC003D5886 /* Link.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E84210065F500F35C56 /* Link.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71102109BFDC003D5886 /* Listener.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E23210065F500F35C56 /* Listener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71112109BFDC003D5886 /* Logging.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4E210065F500F35C56 /* Logging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71122109BFDC003D5886 /* Nat.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E31210065F500F35C56 /* Nat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71132109BFDC003D5886 /* NativeStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E22210065F500F35C56 /* NativeStack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71142109BFDC003D5886 /* netcfgn.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF7210065F500F35C56 /* netcfgn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71152109BFDC003D5886 /* netcfgx.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E29210065F500F35C56 /* netcfgx.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71162109BFDC003D5886 /* NM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E85210065F500F35C56 /* NM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71172109BFDC003D5886 /* NMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E39210065F500F35C56 /* NMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71182109BFDC003D5886 /* NullLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E82210065F500F35C56 /* NullLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71192109BFDC003D5886 /* Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF8210065F500F35C56 /* Protocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711A2109BFDC003D5886 /* Radius.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E28210065F500F35C56 /* Radius.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711B2109BFDC003D5886 /* Remote.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E51210065F500F35C56 /* Remote.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711C2109BFDC003D5886 /* Sam.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351DF5210065F500F35C56 /* Sam.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711D2109BFDC003D5886 /* SecureInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E34210065F500F35C56 /* SecureInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711E2109BFDC003D5886 /* SecureNAT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E64210065F500F35C56 /* SecureNAT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E711F2109BFDC003D5886 /* SeLowUser.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E6D210065F500F35C56 /* SeLowUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71202109BFDC003D5886 /* Server.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E86210065F500F35C56 /* Server.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71212109BFDC003D5886 /* Session.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E57210065F500F35C56 /* Session.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71222109BFDC003D5886 /* SM.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E89210065F500F35C56 /* SM.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71232109BFDC003D5886 /* SMInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E4A210065F500F35C56 /* SMInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71242109BFDC003D5886 /* SW.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3F210065F500F35C56 /* SW.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71252109BFDC003D5886 /* SWInner.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E41210065F500F35C56 /* SWInner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71262109BFDC003D5886 /* UdpAccel.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E90210065F500F35C56 /* UdpAccel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71272109BFDC003D5886 /* UT.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E83210065F500F35C56 /* UT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71282109BFDC003D5886 /* VG.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E81210065F500F35C56 /* VG.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71292109BFDC003D5886 /* Virtual.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E3B210065F500F35C56 /* Virtual.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E712A2109BFDC003D5886 /* Account.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E2C210065F500F35C56 /* Account.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E712B2109BFDC003D5886 /* VLan.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E73210065F500F35C56 /* VLan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E712C2109BFDC003D5886 /* WinUi.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1D210065F500F35C56 /* WinUi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E712D2109BFDC003D5886 /* Wpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E59210065F500F35C56 /* Wpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E712E2109BFDC003D5886 /* VLanUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1A210065F500F35C56 /* VLanUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71302109BFDC003D5886 /* VLanWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E50210065F500F35C56 /* VLanWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71312109BFDC003D5886 /* WaterMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E74210065F500F35C56 /* WaterMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71322109BFDC003D5886 /* WebUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E79210065F500F35C56 /* WebUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71332109BFDC003D5886 /* Win32Com.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E68210065F500F35C56 /* Win32Com.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		145E71362109BFDC003D5886 /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
+		145E713C2109BFDC003D5886 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
+		145E71422109BFDC003D5886 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
+		145E71432109BFDC003D5886 /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E21210065F500F35C56 /* WaterMark.c */; };
+		145E714D2109C09A003D5886 /* Mayaqua_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61096F702106C081008F10AD /* Mayaqua_macOS.framework */; };
+		145E715C2109D4C4003D5886 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145E715B2109D4C4003D5886 /* NetworkExtension.framework */; };
+		145E715D2109D6D7003D5886 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 145E715B2109D4C4003D5886 /* NetworkExtension.framework */; };
+		14A3EE9C210F0C29004928F2 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3EE9B210F0C29004928F2 /* Object.swift */; };
+		14A3EE9E210F25B2004928F2 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3EE9D210F25B2004928F2 /* Memory.swift */; };
+		14A3EEA021105E11004928F2 /* Encrpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A3EE9F21105E10004928F2 /* Encrpt.swift */; };
+		14C7E689210EF8E0007DD690 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7E688210EF8E0007DD690 /* Str.swift */; };
+		14DC7C9E210B0225007F9D36 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DC7C9D210B0225007F9D36 /* Session.swift */; };
+		14DC7CA0210B0DB8007F9D36 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DC7C9F210B0DB8007F9D36 /* Util.swift */; };
+		14DC7CA2210B15FB007F9D36 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DC7CA1210B15FB007F9D36 /* Client.swift */; };
+		14DC7CA4210B1E07007F9D36 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DC7CA3210B1E07007F9D36 /* Connection.swift */; };
+		14FC2355210E967100558917 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FC2354210E967100558917 /* Network.swift */; };
 		46A3F69DD88DD5518A5634F7 /* Pods_SoftEtherVPN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */; };
-		61096F2D2105F08F008F10AD /* ClientDummy.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F2C2105F08F008F10AD /* ClientDummy.c */; };
 		61096F352106BCB1008F10AD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61096F342106BCB1008F10AD /* main.swift */; };
 		61096F402106C081008F10AD /* Mayaqua.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351D6F210065A900F35C56 /* Mayaqua.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61096F412106C081008F10AD /* Microsoft.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351CF4210065A900F35C56 /* Microsoft.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -227,17 +323,10 @@
 		61096F672106C081008F10AD /* Tracking.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351D4D210065A900F35C56 /* Tracking.c */; };
 		61096F682106C081008F10AD /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351CF5210065A900F35C56 /* Network.c */; };
 		61096F6A2106C081008F10AD /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351F2E210066F200F35C56 /* libiconv.tbd */; };
-		61096F722106C411008F10AD /* Cedar Strip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83B0F2105E1AC00191202 /* Cedar Strip.framework */; };
+		61096F722106C411008F10AD /* Cedar Client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83B0F2105E1AC00191202 /* Cedar Client.framework */; };
 		61096F742106C5B5008F10AD /* Mayaqua_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61096F702106C081008F10AD /* Mayaqua_macOS.framework */; };
 		61096F752106CBB8008F10AD /* NullLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E37210065F500F35C56 /* NullLan.c */; };
-		61096F772106CCFD008F10AD /* AppleFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 61096F762106CCFD008F10AD /* AppleFunc.c */; };
 		61CD40112105E87D009E0438 /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
-		61F83A7921058FA400191202 /* SE_Func.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F83A7721058FA400191202 /* SE_Func.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61F83A7C21058FA400191202 /* SE_Func.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83A7521058FA300191202 /* SE_Func.framework */; };
-		61F83A7D21058FA400191202 /* SE_Func.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 61F83A7521058FA300191202 /* SE_Func.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		61F83A812105907800191202 /* Client.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E53210065F500F35C56 /* Client.c */; };
-		61F83A822105A90300191202 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
-		61F83A832105A91100191202 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
 		61F83A842105DCDF00191202 /* Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14351CE72100658D00F35C56 /* Mayaqua.framework */; };
 		61F83A892105E1A700191202 /* Hub.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E33210065F500F35C56 /* Hub.c */; };
 		61F83A8A2105E1A700191202 /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E61210065F500F35C56 /* Protocol.c */; };
@@ -306,7 +395,6 @@
 		61F83ACB2105E1AC00191202 /* WinUi.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1D210065F500F35C56 /* WinUi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61F83ACC2105E1AC00191202 /* Wpc.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E59210065F500F35C56 /* Wpc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61F83ACD2105E1AC00191202 /* VLanUnix.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E1A210065F500F35C56 /* VLanUnix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61F83ACE2105E1AC00191202 /* AppleSock.h in Headers */ = {isa = PBXBuildFile; fileRef = 61F83A852105DE9100191202 /* AppleSock.h */; };
 		61F83ACF2105E1AC00191202 /* VLanWin32.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E50210065F500F35C56 /* VLanWin32.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61F83AD02105E1AC00191202 /* WaterMark.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E74210065F500F35C56 /* WaterMark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		61F83AD12105E1AC00191202 /* WebUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 14351E79210065F500F35C56 /* WebUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -318,42 +406,21 @@
 		61F83AE12105E1AC00191202 /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E5E210065F500F35C56 /* Connection.c */; };
 		61F83AF22105E1AC00191202 /* Listener.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E78210065F500F35C56 /* Listener.c */; };
 		61F83AF32105E1AC00191202 /* Logging.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E8B210065F500F35C56 /* Logging.c */; };
-		61F83AF82105E1AC00191202 /* AppleSock.c in Sources */ = {isa = PBXBuildFile; fileRef = 61F83A862105DE9100191202 /* AppleSock.c */; };
 		61F83AF92105E1AC00191202 /* Remote.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E18210065F500F35C56 /* Remote.c */; };
 		61F83AFF2105E1AC00191202 /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E15210065F500F35C56 /* Session.c */; };
 		61F83B062105E1AC00191202 /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 14351E21210065F500F35C56 /* WaterMark.c */; };
+		77D1A223A50422BDB02D756F /* Pods_SoftEtherNE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6343015B4618BC72A3FE44DD /* Pods_SoftEtherNE.framework */; };
 		824D198CB1CA2DDEED493096 /* Pods_Mayaqua.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */; };
 		E77D1510675DEFE67473E51E /* Pods_Mayaqua_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F0EA44646EEEA9DCE841E9 /* Pods_Mayaqua_macOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		14351CEC2100658D00F35C56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14351CE62100658D00F35C56;
-			remoteInfo = Mayaqua;
-		};
-		14351F7D2100707C00F35C56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 14351F772100707C00F35C56;
-			remoteInfo = Cedar;
-		};
 		14351FCF2100729D00F35C56 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 14351FC82100729D00F35C56;
 			remoteInfo = SoftEtherNE;
-		};
-		61F83A7A21058FA400191202 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 14351C9D2100648A00F35C56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 61F83A7421058FA300191202;
-			remoteInfo = "SE-Func";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -364,9 +431,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				14351F802100707C00F35C56 /* Cedar.framework in Embed Frameworks */,
-				61F83A7D21058FA400191202 /* SE_Func.framework in Embed Frameworks */,
-				14351CEF2100658D00F35C56 /* Mayaqua.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,6 +458,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14049AFE210AA95F002ED97F /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		14049B00210AA9C8002ED97F /* EmptyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyController.swift; sourceTree = "<group>"; };
 		14351CA52100648A00F35C56 /* SoftEtherVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftEtherVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14351CBD210064D700F35C56 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14351CBE210064D700F35C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -689,9 +755,21 @@
 		14351FCD2100729D00F35C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14351FCE2100729D00F35C56 /* SoftEtherNE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoftEtherNE.entitlements; sourceTree = "<group>"; };
 		14351FD7210072DF00F35C56 /* SoftEtherNE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoftEtherNE-Bridging-Header.h"; sourceTree = "<group>"; };
-		14351FD8210072E000F35C56 /* Includ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Includ.m; sourceTree = "<group>"; };
 		1435207521007EA800F35C56 /* SoftEtherVPN-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoftEtherVPN-Bridging-Header.h"; sourceTree = "<group>"; };
-		1477A115210572260055DAE5 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		1444A88F21116714005A3FB2 /* AppleOverride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleOverride.h; sourceTree = SOURCE_ROOT; };
+		145E71492109BFDC003D5886 /* Cedar Strip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Cedar Strip.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		145E71542109D48D003D5886 /* SoftEtherVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoftEtherVPN.entitlements; sourceTree = "<group>"; };
+		145E715B2109D4C4003D5886 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		14A3EE9B210F0C29004928F2 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		14A3EE9D210F25B2004928F2 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		14A3EE9F21105E10004928F2 /* Encrpt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encrpt.swift; sourceTree = "<group>"; };
+		14C7E688210EF8E0007DD690 /* Str.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
+		14DC7C9D210B0225007F9D36 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		14DC7C9F210B0DB8007F9D36 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		14DC7CA1210B15FB007F9D36 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		14DC7CA3210B1E07007F9D36 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		14FC2352210E936C00558917 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		14FC2354210E967100558917 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		17A623721A923EDA0D385584 /* Pods-Cedar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cedar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cedar/Pods-Cedar.debug.xcconfig"; sourceTree = "<group>"; };
 		32F65F5EEF233CEAE41F1F12 /* Pods-Mayaqua.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua/Pods-Mayaqua.debug.xcconfig"; sourceTree = "<group>"; };
 		35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoftEtherVPN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -705,17 +783,15 @@
 		61096F342106BCB1008F10AD /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		61096F3A2106BCE8008F10AD /* vpnclient_strip-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "vpnclient_strip-Bridging-Header.h"; sourceTree = "<group>"; };
 		61096F702106C081008F10AD /* Mayaqua_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mayaqua_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61096F712106C082008F10AD /* Mayaqua copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mayaqua copy-Info.plist"; path = "/Users/xy/rand/SoftEtherVPN/src/Mayaqua copy-Info.plist"; sourceTree = "<absolute>"; };
 		61096F762106CCFD008F10AD /* AppleFunc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppleFunc.c; sourceTree = "<group>"; };
-		61F83A7521058FA300191202 /* SE_Func.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SE_Func.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61F83A7721058FA400191202 /* SE_Func.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SE_Func.h; sourceTree = "<group>"; };
-		61F83A7821058FA400191202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61F83A852105DE9100191202 /* AppleSock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleSock.h; sourceTree = "<group>"; };
 		61F83A862105DE9100191202 /* AppleSock.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AppleSock.c; sourceTree = "<group>"; };
-		61F83B0F2105E1AC00191202 /* Cedar Strip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Cedar Strip.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61F83B102105E1AD00191202 /* Cedar copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Cedar copy-Info.plist"; path = "/Users/xy/rand/SoftEtherVPN/src/Cedar copy-Info.plist"; sourceTree = "<absolute>"; };
+		61F83B0F2105E1AC00191202 /* Cedar Client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Cedar Client.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6343015B4618BC72A3FE44DD /* Pods_SoftEtherNE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoftEtherNE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CAFD6C77B4EEFC6897933FD /* Pods-Mayaqua_macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua_macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua_macOS/Pods-Mayaqua_macOS.release.xcconfig"; sourceTree = "<group>"; };
+		772CF58A41B6E5475E5801FC /* Pods-SoftEtherNE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEtherNE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEtherNE/Pods-SoftEtherNE.release.xcconfig"; sourceTree = "<group>"; };
 		78AE2FFD9F9AC506641778C1 /* Pods-Mayaqua_macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mayaqua_macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mayaqua_macOS/Pods-Mayaqua_macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		89FB48A12B943E1AE0E8874B /* Pods-SoftEtherNE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEtherNE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEtherNE/Pods-SoftEtherNE.debug.xcconfig"; sourceTree = "<group>"; };
 		C8CD2FBA46210B2A95385740 /* Pods-Cedar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cedar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cedar/Pods-Cedar.release.xcconfig"; sourceTree = "<group>"; };
 		F82BB7FF2531F516436751ED /* Pods_Cedar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cedar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -725,10 +801,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61F83A7C21058FA400191202 /* SE_Func.framework in Frameworks */,
-				14351CEE2100658D00F35C56 /* Mayaqua.framework in Frameworks */,
 				46A3F69DD88DD5518A5634F7 /* Pods_SoftEtherVPN.framework in Frameworks */,
-				14351F7F2100707C00F35C56 /* Cedar.framework in Frameworks */,
+				145E715C2109D4C4003D5886 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +812,6 @@
 			files = (
 				14351F2F210066F200F35C56 /* libiconv.tbd in Frameworks */,
 				824D198CB1CA2DDEED493096 /* Pods_Mayaqua.framework in Frameworks */,
-				29BCB1BDBA4E5D0754B96FE3 /* Pods_Mayaqua.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,8 +828,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14352030210078CB00F35C56 /* Mayaqua.framework in Frameworks */,
-				14351FD6210072AF00F35C56 /* Cedar.framework in Frameworks */,
+				1444A89021118865005A3FB2 /* libiconv.tbd in Frameworks */,
+				145E715D2109D6D7003D5886 /* NetworkExtension.framework in Frameworks */,
+				77D1A223A50422BDB02D756F /* Pods_SoftEtherNE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		145E71442109BFDC003D5886 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,7 +845,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61096F722106C411008F10AD /* Cedar Strip.framework in Frameworks */,
+				61096F722106C411008F10AD /* Cedar Client.framework in Frameworks */,
 				61096F742106C5B5008F10AD /* Mayaqua_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,17 +859,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61F83A7221058FA300191202 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		61F83B092105E1AC00191202 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				145E714D2109C09A003D5886 /* Mayaqua_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,17 +873,14 @@
 		14351C9C2100648A00F35C56 = {
 			isa = PBXGroup;
 			children = (
+				145E71542109D48D003D5886 /* SoftEtherVPN.entitlements */,
 				14351CE12100655D00F35C56 /* Modules */,
 				14351CBC210064D700F35C56 /* iOS */,
 				14351FCA2100729D00F35C56 /* SoftEtherNE */,
-				1477A114210572260055DAE5 /* vpnserver */,
-				61F83A7621058FA400191202 /* SE-Func */,
 				61096F332106BCB1008F10AD /* vpnclient_strip */,
 				14351CA62100648A00F35C56 /* Products */,
 				14351F2C2100660F00F35C56 /* Frameworks */,
 				A1078EAA5F8FF0C6F71020FD /* Pods */,
-				61F83B102105E1AD00191202 /* Cedar copy-Info.plist */,
-				61096F712106C082008F10AD /* Mayaqua copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -819,10 +891,10 @@
 				14351CE72100658D00F35C56 /* Mayaqua.framework */,
 				14351F782100707C00F35C56 /* Cedar.framework */,
 				14351FC92100729D00F35C56 /* SoftEtherNE.appex */,
-				61F83A7521058FA300191202 /* SE_Func.framework */,
-				61F83B0F2105E1AC00191202 /* Cedar Strip.framework */,
+				61F83B0F2105E1AC00191202 /* Cedar Client.framework */,
 				61096F322106BCB1008F10AD /* vpnclient_strip */,
 				61096F702106C081008F10AD /* Mayaqua_macOS.framework */,
+				145E71492109BFDC003D5886 /* Cedar Strip.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -838,6 +910,8 @@
 				14351CC4210064D700F35C56 /* MasterViewController.swift */,
 				14351CC5210064D700F35C56 /* Info.plist */,
 				1435207521007EA800F35C56 /* SoftEtherVPN-Bridging-Header.h */,
+				14049AFE210AA95F002ED97F /* Storyboard.storyboard */,
+				14049B00210AA9C8002ED97F /* EmptyController.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -1142,10 +1216,6 @@
 				14351E1D210065F500F35C56 /* WinUi.h */,
 				14351E17210065F500F35C56 /* Wpc.c */,
 				14351E59210065F500F35C56 /* Wpc.h */,
-				61F83A852105DE9100191202 /* AppleSock.h */,
-				61F83A862105DE9100191202 /* AppleSock.c */,
-				61096F2C2105F08F008F10AD /* ClientDummy.c */,
-				61096F762106CCFD008F10AD /* AppleFunc.c */,
 			);
 			path = Cedar;
 			sourceTree = "<group>";
@@ -1183,11 +1253,13 @@
 		14351F2C2100660F00F35C56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				145E715B2109D4C4003D5886 /* NetworkExtension.framework */,
 				14351F2E210066F200F35C56 /* libiconv.tbd */,
 				F82BB7FF2531F516436751ED /* Pods_Cedar.framework */,
 				3E6514A9ACE7BDED37FD375A /* Pods_Mayaqua.framework */,
 				35896A558F5A46A44D1D0731 /* Pods_SoftEtherVPN.framework */,
 				44F0EA44646EEEA9DCE841E9 /* Pods_Mayaqua_macOS.framework */,
+				6343015B4618BC72A3FE44DD /* Pods_SoftEtherNE.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1195,21 +1267,27 @@
 		14351FCA2100729D00F35C56 /* SoftEtherNE */ = {
 			isa = PBXGroup;
 			children = (
+				61F83A852105DE9100191202 /* AppleSock.h */,
+				61F83A862105DE9100191202 /* AppleSock.c */,
+				61096F2C2105F08F008F10AD /* ClientDummy.c */,
+				61096F762106CCFD008F10AD /* AppleFunc.c */,
 				14351FCB2100729D00F35C56 /* PacketTunnelProvider.swift */,
 				14351FCD2100729D00F35C56 /* Info.plist */,
 				14351FCE2100729D00F35C56 /* SoftEtherNE.entitlements */,
-				14351FD8210072E000F35C56 /* Includ.m */,
 				14351FD7210072DF00F35C56 /* SoftEtherNE-Bridging-Header.h */,
+				14DC7C9D210B0225007F9D36 /* Session.swift */,
+				14DC7C9F210B0DB8007F9D36 /* Util.swift */,
+				14DC7CA1210B15FB007F9D36 /* Client.swift */,
+				14DC7CA3210B1E07007F9D36 /* Connection.swift */,
+				14FC2352210E936C00558917 /* Protocol.swift */,
+				14FC2354210E967100558917 /* Network.swift */,
+				14C7E688210EF8E0007DD690 /* Str.swift */,
+				14A3EE9B210F0C29004928F2 /* Object.swift */,
+				14A3EE9D210F25B2004928F2 /* Memory.swift */,
+				14A3EE9F21105E10004928F2 /* Encrpt.swift */,
+				1444A88F21116714005A3FB2 /* AppleOverride.h */,
 			);
 			path = SoftEtherNE;
-			sourceTree = "<group>";
-		};
-		1477A114210572260055DAE5 /* vpnserver */ = {
-			isa = PBXGroup;
-			children = (
-				1477A115210572260055DAE5 /* main.c */,
-			);
-			path = vpnserver;
 			sourceTree = "<group>";
 		};
 		61096F332106BCB1008F10AD /* vpnclient_strip */ = {
@@ -1219,15 +1297,6 @@
 				61096F3A2106BCE8008F10AD /* vpnclient_strip-Bridging-Header.h */,
 			);
 			path = vpnclient_strip;
-			sourceTree = "<group>";
-		};
-		61F83A7621058FA400191202 /* SE-Func */ = {
-			isa = PBXGroup;
-			children = (
-				61F83A7721058FA400191202 /* SE_Func.h */,
-				61F83A7821058FA400191202 /* Info.plist */,
-			);
-			path = "SE-Func";
 			sourceTree = "<group>";
 		};
 		A1078EAA5F8FF0C6F71020FD /* Pods */ = {
@@ -1241,6 +1310,8 @@
 				5BC51A858958FC24D5F93206 /* Pods-Mayaqua.release.xcconfig */,
 				78AE2FFD9F9AC506641778C1 /* Pods-Mayaqua_macOS.debug.xcconfig */,
 				6CAFD6C77B4EEFC6897933FD /* Pods-Mayaqua_macOS.release.xcconfig */,
+				89FB48A12B943E1AE0E8874B /* Pods-SoftEtherNE.debug.xcconfig */,
+				772CF58A41B6E5475E5801FC /* Pods-SoftEtherNE.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1351,6 +1422,82 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		145E70ED2109BFDC003D5886 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145E70EE2109BFDC003D5886 /* Cedar.h in Headers */,
+				145E70EF2109BFDC003D5886 /* CedarType.h in Headers */,
+				145E70F02109BFDC003D5886 /* Admin.h in Headers */,
+				145E70F12109BFDC003D5886 /* AzureClient.h in Headers */,
+				145E70F22109BFDC003D5886 /* AzureServer.h in Headers */,
+				145E70F32109BFDC003D5886 /* Bridge.h in Headers */,
+				145E70F42109BFDC003D5886 /* BridgeUnix.h in Headers */,
+				145E70F52109BFDC003D5886 /* BridgeWin32.h in Headers */,
+				145E70F62109BFDC003D5886 /* CedarPch.h in Headers */,
+				145E70F72109BFDC003D5886 /* Client.h in Headers */,
+				145E70F82109BFDC003D5886 /* CM.h in Headers */,
+				145E70F92109BFDC003D5886 /* CMInner.h in Headers */,
+				145E70FA2109BFDC003D5886 /* Command.h in Headers */,
+				145E70FB2109BFDC003D5886 /* Connection.h in Headers */,
+				145E70FC2109BFDC003D5886 /* Console.h in Headers */,
+				145E70FD2109BFDC003D5886 /* Database.h in Headers */,
+				145E70FE2109BFDC003D5886 /* DDNS.h in Headers */,
+				145E70FF2109BFDC003D5886 /* EM.h in Headers */,
+				145E71002109BFDC003D5886 /* EMInner.h in Headers */,
+				145E71012109BFDC003D5886 /* EtherLog.h in Headers */,
+				145E71022109BFDC003D5886 /* Hub.h in Headers */,
+				145E71032109BFDC003D5886 /* Interop_OpenVPN.h in Headers */,
+				145E71042109BFDC003D5886 /* Interop_SSTP.h in Headers */,
+				145E71052109BFDC003D5886 /* IPsec_EtherIP.h in Headers */,
+				145E71062109BFDC003D5886 /* IPsec_IKE.h in Headers */,
+				145E71072109BFDC003D5886 /* IPsec_IkePacket.h in Headers */,
+				145E71082109BFDC003D5886 /* IPsec_IPC.h in Headers */,
+				145E71092109BFDC003D5886 /* IPsec_L2TP.h in Headers */,
+				145E710A2109BFDC003D5886 /* IPsec_PPP.h in Headers */,
+				145E710B2109BFDC003D5886 /* IPsec_Win7.h in Headers */,
+				145E710C2109BFDC003D5886 /* IPsec_Win7Inner.h in Headers */,
+				145E710D2109BFDC003D5886 /* IPsec.h in Headers */,
+				145E710E2109BFDC003D5886 /* Layer3.h in Headers */,
+				145E710F2109BFDC003D5886 /* Link.h in Headers */,
+				145E71102109BFDC003D5886 /* Listener.h in Headers */,
+				145E71112109BFDC003D5886 /* Logging.h in Headers */,
+				145E71122109BFDC003D5886 /* Nat.h in Headers */,
+				145E71132109BFDC003D5886 /* NativeStack.h in Headers */,
+				145E71142109BFDC003D5886 /* netcfgn.h in Headers */,
+				145E71152109BFDC003D5886 /* netcfgx.h in Headers */,
+				145E71162109BFDC003D5886 /* NM.h in Headers */,
+				145E71172109BFDC003D5886 /* NMInner.h in Headers */,
+				145E71182109BFDC003D5886 /* NullLan.h in Headers */,
+				145E71192109BFDC003D5886 /* Protocol.h in Headers */,
+				145E711A2109BFDC003D5886 /* Radius.h in Headers */,
+				145E711B2109BFDC003D5886 /* Remote.h in Headers */,
+				145E711C2109BFDC003D5886 /* Sam.h in Headers */,
+				145E711D2109BFDC003D5886 /* SecureInfo.h in Headers */,
+				145E711E2109BFDC003D5886 /* SecureNAT.h in Headers */,
+				145E711F2109BFDC003D5886 /* SeLowUser.h in Headers */,
+				145E71202109BFDC003D5886 /* Server.h in Headers */,
+				145E71212109BFDC003D5886 /* Session.h in Headers */,
+				145E71222109BFDC003D5886 /* SM.h in Headers */,
+				145E71232109BFDC003D5886 /* SMInner.h in Headers */,
+				145E71242109BFDC003D5886 /* SW.h in Headers */,
+				145E71252109BFDC003D5886 /* SWInner.h in Headers */,
+				145E71262109BFDC003D5886 /* UdpAccel.h in Headers */,
+				145E71272109BFDC003D5886 /* UT.h in Headers */,
+				145E71282109BFDC003D5886 /* VG.h in Headers */,
+				145E71292109BFDC003D5886 /* Virtual.h in Headers */,
+				145E712A2109BFDC003D5886 /* Account.h in Headers */,
+				145E712B2109BFDC003D5886 /* VLan.h in Headers */,
+				145E712C2109BFDC003D5886 /* WinUi.h in Headers */,
+				145E712D2109BFDC003D5886 /* Wpc.h in Headers */,
+				145E712E2109BFDC003D5886 /* VLanUnix.h in Headers */,
+				145E71302109BFDC003D5886 /* VLanWin32.h in Headers */,
+				145E71312109BFDC003D5886 /* WaterMark.h in Headers */,
+				145E71322109BFDC003D5886 /* WebUI.h in Headers */,
+				145E71332109BFDC003D5886 /* Win32Com.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		61096F3F2106C081008F10AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1375,14 +1522,6 @@
 				61096F512106C081008F10AD /* Str.h in Headers */,
 				61096F522106C081008F10AD /* Cfg.h in Headers */,
 				61096F532106C081008F10AD /* Unix.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		61F83A7021058FA300191202 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				61F83A7921058FA400191202 /* SE_Func.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1455,7 +1594,6 @@
 				61F83ACB2105E1AC00191202 /* WinUi.h in Headers */,
 				61F83ACC2105E1AC00191202 /* Wpc.h in Headers */,
 				61F83ACD2105E1AC00191202 /* VLanUnix.h in Headers */,
-				61F83ACE2105E1AC00191202 /* AppleSock.h in Headers */,
 				61F83ACF2105E1AC00191202 /* VLanWin32.h in Headers */,
 				61F83AD02105E1AC00191202 /* WaterMark.h in Headers */,
 				61F83AD12105E1AC00191202 /* WebUI.h in Headers */,
@@ -1512,10 +1650,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				14351CED2100658D00F35C56 /* PBXTargetDependency */,
-				14351F7E2100707C00F35C56 /* PBXTargetDependency */,
 				14351FD02100729D00F35C56 /* PBXTargetDependency */,
-				61F83A7B21058FA400191202 /* PBXTargetDependency */,
 			);
 			name = SoftEtherVPN;
 			productName = SoftEtherVPN;
@@ -1564,6 +1699,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 14351FD22100729D00F35C56 /* Build configuration list for PBXNativeTarget "SoftEtherNE" */;
 			buildPhases = (
+				3A680EA69777201E87A0BCDE /* [CP] Check Pods Manifest.lock */,
 				14351FC52100729D00F35C56 /* Sources */,
 				14351FC62100729D00F35C56 /* Frameworks */,
 				14351FC72100729D00F35C56 /* Resources */,
@@ -1576,6 +1712,24 @@
 			productName = SoftEtherNE;
 			productReference = 14351FC92100729D00F35C56 /* SoftEtherNE.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		145E70EC2109BFDC003D5886 /* Cedar Strip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 145E71462109BFDC003D5886 /* Build configuration list for PBXNativeTarget "Cedar Strip" */;
+			buildPhases = (
+				145E70ED2109BFDC003D5886 /* Headers */,
+				145E71342109BFDC003D5886 /* Sources */,
+				145E71442109BFDC003D5886 /* Frameworks */,
+				145E71452109BFDC003D5886 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cedar Strip";
+			productName = Cedar;
+			productReference = 145E71492109BFDC003D5886 /* Cedar Strip.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		61096F312106BCB1008F10AD /* vpnclient_strip */ = {
 			isa = PBXNativeTarget;
@@ -1613,27 +1767,9 @@
 			productReference = 61096F702106C081008F10AD /* Mayaqua_macOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		61F83A7421058FA300191202 /* SE-Func */ = {
+		61F83A8B2105E1AC00191202 /* Cedar Client */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61F83A7E21058FA400191202 /* Build configuration list for PBXNativeTarget "SE-Func" */;
-			buildPhases = (
-				61F83A7021058FA300191202 /* Headers */,
-				61F83A7121058FA300191202 /* Sources */,
-				61F83A7221058FA300191202 /* Frameworks */,
-				61F83A7321058FA300191202 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SE-Func";
-			productName = "SE-Func";
-			productReference = 61F83A7521058FA300191202 /* SE_Func.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		61F83A8B2105E1AC00191202 /* Cedar Strip */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Strip" */;
+			buildConfigurationList = 61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Client" */;
 			buildPhases = (
 				61F83A8C2105E1AC00191202 /* Headers */,
 				61F83AD32105E1AC00191202 /* Sources */,
@@ -1644,9 +1780,9 @@
 			);
 			dependencies = (
 			);
-			name = "Cedar Strip";
+			name = "Cedar Client";
 			productName = Cedar;
-			productReference = 61F83B0F2105E1AC00191202 /* Cedar Strip.framework */;
+			productReference = 61F83B0F2105E1AC00191202 /* Cedar Client.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1661,6 +1797,17 @@
 					14351CA42100648A00F35C56 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
 					};
 					14351CE62100658D00F35C56 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1671,6 +1818,11 @@
 					14351FC82100729D00F35C56 = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1477A1222105747A0055DAE5 = {
 						CreatedOnToolsVersion = 10.0;
@@ -1680,9 +1832,6 @@
 						LastSwiftMigration = 1000;
 					};
 					61F83A6C2105763500191202 = {
-						CreatedOnToolsVersion = 10.0;
-					};
-					61F83A7421058FA300191202 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -1706,10 +1855,10 @@
 				14351FC82100729D00F35C56 /* SoftEtherNE */,
 				1477A1222105747A0055DAE5 /* vpnserver */,
 				61F83A6C2105763500191202 /* vpnclient */,
-				61F83A7421058FA300191202 /* SE-Func */,
-				61F83A8B2105E1AC00191202 /* Cedar Strip */,
+				61F83A8B2105E1AC00191202 /* Cedar Client */,
 				61096F312106BCB1008F10AD /* vpnclient_strip */,
 				61096F3D2106C081008F10AD /* Mayaqua_macOS */,
+				145E70EC2109BFDC003D5886 /* Cedar Strip */,
 			);
 		};
 /* End PBXProject section */
@@ -1720,6 +1869,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14351CC7210064D700F35C56 /* Assets.xcassets in Resources */,
+				14049AFF210AA95F002ED97F /* Storyboard.storyboard in Resources */,
 				14351CCD2100652000F35C56 /* LaunchScreen.storyboard in Resources */,
 				14351CCE2100652000F35C56 /* Main.storyboard in Resources */,
 			);
@@ -1746,14 +1896,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61096F6C2106C081008F10AD /* Resources */ = {
+		145E71452109BFDC003D5886 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61F83A7321058FA300191202 /* Resources */ = {
+		61096F6C2106C081008F10AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1782,6 +1932,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Mayaqua-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A680EA69777201E87A0BCDE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoftEtherNE-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1870,6 +2038,7 @@
 				14351CCA210064D700F35C56 /* AppDelegate.swift in Sources */,
 				14351CC6210064D700F35C56 /* DetailViewController.swift in Sources */,
 				14351CCB210064D700F35C56 /* MasterViewController.swift in Sources */,
+				14049B01210AA9C8002ED97F /* EmptyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1963,7 +2132,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1444A88E21116237005A3FB2 /* Internat.c in Sources */,
+				1444A88D21115FE1005A3FB2 /* Network.c in Sources */,
+				1444A88C21115FCF005A3FB2 /* Memory.c in Sources */,
+				1444A88B21115F9D005A3FB2 /* Pack.c in Sources */,
+				1444A88A21115D51005A3FB2 /* Str.c in Sources */,
+				14049B03210AB215002ED97F /* AzureClient.c in Sources */,
+				14049B04210AB215002ED97F /* Cedar.c in Sources */,
+				14049B05210AB215002ED97F /* CedarPch.c in Sources */,
+				14049B07210AB215002ED97F /* Connection.c in Sources */,
+				14049B09210AB215002ED97F /* NullLan.c in Sources */,
+				14049B0A210AB215002ED97F /* Protocol.c in Sources */,
+				14049B0B210AB215002ED97F /* Session.c in Sources */,
+				14049B0C210AB215002ED97F /* WaterMark.c in Sources */,
+				14049B0D210AB215002ED97F /* AppleSock.c in Sources */,
+				14049B0E210AB215002ED97F /* ClientDummy.c in Sources */,
+				14049B0F210AB215002ED97F /* AppleFunc.c in Sources */,
+				14A3EEA021105E11004928F2 /* Encrpt.swift in Sources */,
+				14DC7C9E210B0225007F9D36 /* Session.swift in Sources */,
+				14C7E689210EF8E0007DD690 /* Str.swift in Sources */,
+				14DC7CA2210B15FB007F9D36 /* Client.swift in Sources */,
+				14A3EE9C210F0C29004928F2 /* Object.swift in Sources */,
+				14DC7CA0210B0DB8007F9D36 /* Util.swift in Sources */,
+				14FC2355210E967100558917 /* Network.swift in Sources */,
+				14DC7CA4210B1E07007F9D36 /* Connection.swift in Sources */,
+				14A3EE9E210F25B2004928F2 /* Memory.swift in Sources */,
 				14351FCC2100729D00F35C56 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		145E71342109BFDC003D5886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				145E71362109BFDC003D5886 /* Protocol.c in Sources */,
+				145E713C2109BFDC003D5886 /* Connection.c in Sources */,
+				145E71422109BFDC003D5886 /* Session.c in Sources */,
+				145E71432109BFDC003D5886 /* WaterMark.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2002,16 +2207,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61F83A7121058FA300191202 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				61F83A832105A91100191202 /* Session.c in Sources */,
-				61F83A822105A90300191202 /* Connection.c in Sources */,
-				61F83A812105907800191202 /* Client.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		61F83AD32105E1AC00191202 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2020,14 +2215,11 @@
 				61CD40112105E87D009E0438 /* Protocol.c in Sources */,
 				61F83AD82105E1AC00191202 /* AzureClient.c in Sources */,
 				61F83ADD2105E1AC00191202 /* Cedar.c in Sources */,
-				61096F2D2105F08F008F10AD /* ClientDummy.c in Sources */,
 				61F83ADE2105E1AC00191202 /* CedarPch.c in Sources */,
 				61F83ADF2105E1AC00191202 /* Client.c in Sources */,
 				61F83AE12105E1AC00191202 /* Connection.c in Sources */,
 				61F83AF22105E1AC00191202 /* Listener.c in Sources */,
-				61096F772106CCFD008F10AD /* AppleFunc.c in Sources */,
 				61F83AF32105E1AC00191202 /* Logging.c in Sources */,
-				61F83AF82105E1AC00191202 /* AppleSock.c in Sources */,
 				61F83AF92105E1AC00191202 /* Remote.c in Sources */,
 				61F83AFF2105E1AC00191202 /* Session.c in Sources */,
 				61F83B062105E1AC00191202 /* WaterMark.c in Sources */,
@@ -2037,25 +2229,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		14351CED2100658D00F35C56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14351CE62100658D00F35C56 /* Mayaqua */;
-			targetProxy = 14351CEC2100658D00F35C56 /* PBXContainerItemProxy */;
-		};
-		14351F7E2100707C00F35C56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 14351F772100707C00F35C56 /* Cedar */;
-			targetProxy = 14351F7D2100707C00F35C56 /* PBXContainerItemProxy */;
-		};
 		14351FD02100729D00F35C56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 14351FC82100729D00F35C56 /* SoftEtherNE */;
 			targetProxy = 14351FCF2100729D00F35C56 /* PBXContainerItemProxy */;
-		};
-		61F83A7B21058FA400191202 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 61F83A7421058FA300191202 /* SE-Func */;
-			targetProxy = 61F83A7A21058FA400191202 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2209,6 +2386,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEtherVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = C9U57KL4Q5;
@@ -2233,6 +2411,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEtherVPN.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C9U57KL4Q5;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
@@ -2378,11 +2557,12 @@
 		};
 		14351FD32100729D00F35C56 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89FB48A12B943E1AE0E8874B /* Pods-SoftEtherNE.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEAD_CODE_STRIPPING = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C9U57KL4Q5;
 				INFOPLIST_FILE = SoftEtherNE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2396,12 +2576,15 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		14351FD42100729D00F35C56 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 772CF58A41B6E5475E5801FC /* Pods-SoftEtherNE.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
@@ -2418,38 +2601,85 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
+				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		145E71472109BFDC003D5886 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = "Cedar Strip copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		145E71482109BFDC003D5886 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)  ";
+				INFOPLIST_FILE = "Cedar Strip copy-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.Cedar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 		1477A1242105747A0055DAE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEBUGGING_SYMBOLS = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		1477A1252105747A0055DAE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -2597,66 +2827,6 @@
 			};
 			name = Release;
 		};
-		61F83A7F21058FA400191202 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "SE-Func/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.nsyd.se.SE-Func";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61F83A8021058FA400191202 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "SE-Func/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "tech.nsyd.se.SE-Func";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SYSTEM_HEADER_SEARCH_PATHS = "$(SRCROOT)/";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		61F83B0D2105E1AC00191202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2769,6 +2939,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		145E71462109BFDC003D5886 /* Build configuration list for PBXNativeTarget "Cedar Strip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				145E71472109BFDC003D5886 /* Debug */,
+				145E71482109BFDC003D5886 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1477A1232105747A0055DAE5 /* Build configuration list for PBXLegacyTarget "vpnserver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -2805,16 +2984,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61F83A7E21058FA400191202 /* Build configuration list for PBXNativeTarget "SE-Func" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				61F83A7F21058FA400191202 /* Debug */,
-				61F83A8021058FA400191202 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Strip" */ = {
+		61F83B0C2105E1AC00191202 /* Build configuration list for PBXNativeTarget "Cedar Client" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				61F83B0D2105E1AC00191202 /* Debug */,

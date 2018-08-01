@@ -113,8 +113,7 @@
 
 #ifndef	CEDAR_H
 #define	CEDAR_H
-
-
+#include <Mayaqua/Mayaqua.h>
 //////////////////////////////////////////////////////////////////////
 // 
 // Products related constants
@@ -1265,7 +1264,8 @@ UINT CedarGetQueueBudgetBalance(CEDAR *c);
 UINT CedarGetFifoBudgetBalance(CEDAR *c);
 bool CedarIsThereAnyEapEnabledRadiusConfig(CEDAR *c);
 
-
+void* unimplemented();
 
 #endif	// CEDAR_H
+
 
