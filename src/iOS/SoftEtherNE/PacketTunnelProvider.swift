@@ -26,7 +26,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         //t.start()
         InitStringLibrary()
         let auth = CLIENT_AUTH.setup("asd","asdpas")
-        let opt = CLIENT_OPTION.setup("172.20.18.2", 443)
+        let opt = CLIENT_OPTION.setup("192.168.1.172", 443)
         let acc = ACCOUNT.setup(opt, auth)
         var pa = salloc(PACKET_ADAPTER.self)
         s = SESSION.setup(opt, auth, pa, acc)

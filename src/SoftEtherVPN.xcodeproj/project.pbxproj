@@ -875,7 +875,7 @@
 			children = (
 				145E71542109D48D003D5886 /* SoftEtherVPN.entitlements */,
 				14351CE12100655D00F35C56 /* Modules */,
-				14351CBC210064D700F35C56 /* iOS */,
+				14351CBC210064D700F35C56 /* App */,
 				14351FCA2100729D00F35C56 /* SoftEtherNE */,
 				61096F332106BCB1008F10AD /* vpnclient_strip */,
 				14351CA62100648A00F35C56 /* Products */,
@@ -899,7 +899,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		14351CBC210064D700F35C56 /* iOS */ = {
+		14351CBC210064D700F35C56 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				14351CBD210064D700F35C56 /* DetailViewController.swift */,
@@ -913,6 +913,7 @@
 				14049AFE210AA95F002ED97F /* Storyboard.storyboard */,
 				14049B00210AA9C8002ED97F /* EmptyController.swift */,
 			);
+			name = App;
 			path = iOS;
 			sourceTree = "<group>";
 		};
@@ -1287,7 +1288,8 @@
 				14A3EE9F21105E10004928F2 /* Encrpt.swift */,
 				1444A88F21116714005A3FB2 /* AppleOverride.h */,
 			);
-			path = SoftEtherNE;
+			name = SoftEtherNE;
+			path = iOS/SoftEtherNE;
 			sourceTree = "<group>";
 		};
 		61096F332106BCB1008F10AD /* vpnclient_strip */ = {
@@ -2560,11 +2562,12 @@
 			baseConfigurationReference = 89FB48A12B943E1AE0E8874B /* Pods-SoftEtherNE.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				INFOPLIST_FILE = SoftEtherNE/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/SoftEtherNE/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2572,8 +2575,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN.SoftEtherNE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS/SoftEtherNE/SoftEtherNE-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
@@ -2587,10 +2591,11 @@
 			baseConfigurationReference = 772CF58A41B6E5475E5801FC /* Pods-SoftEtherNE.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_ENTITLEMENTS = iOS/SoftEtherNE/SoftEtherNE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C9U57KL4Q5;
-				INFOPLIST_FILE = SoftEtherNE/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/SoftEtherNE/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2598,8 +2603,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.SoftEtherVPN.SoftEtherNE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "SoftEtherNE/SoftEtherNE-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "iOS/SoftEtherNE/SoftEtherNE-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				SYSTEM_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/\"";
