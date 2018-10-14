@@ -278,9 +278,11 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 //#include <netinet/ip.h>
 #include <netdb.h>
 #include <net/if.h>
+#ifndef UNIX_IOS
 #include <net/if_arp.h>
 #include <readline/readline.h>
 #include <readline/history.h>
+#endif // UNIX_IOS
 //#include <curses.h>
 #ifdef	MAYAQUA_SUPPORTS_GETIFADDRS
 #include <ifaddrs.h>
@@ -620,6 +622,11 @@ USHORT CalcChecksum16(void *buf, UINT size);
 //#define	Disconnect(s)		{Debug("Disconnect() Called: %s %u\n", __FILE__, __LINE__);Disconnect(s);}
 #endif
 
+#ifdef UNIX_IOS
+
+#include "AppleOverride.h"
+
+#endif  // UNIX_IOS
 
 #endif	// MAYAQUA_H
 

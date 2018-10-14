@@ -1,0 +1,1646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E225ABF21664E10007A7280 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E225ABE21664E0F007A7280 /* libiconv.tbd */; };
+		2E225AC221688CBB007A7280 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E225AC121688CBB007A7280 /* NetworkExtension.framework */; };
+		2E391EB72146057800507E4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E391EB62146057800507E4C /* AppDelegate.swift */; };
+		2E391EB92146057800507E4C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E391EB82146057800507E4C /* ViewController.swift */; };
+		2E391EBC2146057800507E4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E391EBA2146057800507E4C /* Main.storyboard */; };
+		2E391EBE2146057900507E4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E391EBD2146057900507E4C /* Assets.xcassets */; };
+		2E391EC12146057900507E4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E391EBF2146057900507E4C /* LaunchScreen.storyboard */; };
+		2E391ECD214605D500507E4C /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E391ECC214605D500507E4C /* PacketTunnelProvider.swift */; };
+		2E391ED2214605D500507E4C /* SENE.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2E391ECA214605D500507E4C /* SENE.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2E391EDA2146064100507E4C /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E391ED92146064100507E4C /* NetworkExtension.framework */; };
+		2E39200121460DBF00507E4C /* ld.src in Resources */ = {isa = PBXBuildFile; fileRef = 2E39200021460DBF00507E4C /* ld.src */; };
+		2E6DEDCF21502DEF00F98A1F /* DummyFunction.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E6DEDCE21502DEF00F98A1F /* DummyFunction.c */; };
+		2E9241C32169F3CD000B026F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2EE855722169D8F00025A2AE /* Localizable.strings */; };
+		2E9241C5216AC2A8000B026F /* Objc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E9241C4216AC2A8000B026F /* Objc.c */; };
+		2EC7A3D82147104B00DF7A5B /* AppleSock.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3D52147104B00DF7A5B /* AppleSock.c */; };
+		2EC7A3D92147104B00DF7A5B /* AppleFunc.c in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3D62147104B00DF7A5B /* AppleFunc.c */; };
+		2EC7A3DF2147105500DF7A5B /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3DA2147105400DF7A5B /* Connection.swift */; };
+		2EC7A3E02147105500DF7A5B /* Encrpt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3DB2147105400DF7A5B /* Encrpt.swift */; };
+		2EC7A3E12147105500DF7A5B /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3DC2147105400DF7A5B /* Memory.swift */; };
+		2EC7A3E22147105500DF7A5B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3DD2147105500DF7A5B /* Network.swift */; };
+		2EC7A3E32147105500DF7A5B /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3DE2147105500DF7A5B /* Client.swift */; };
+		2EC7A3E92147105C00DF7A5B /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3E42147105B00DF7A5B /* Session.swift */; };
+		2EC7A3EA2147105C00DF7A5B /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3E52147105C00DF7A5B /* Object.swift */; };
+		2EC7A3EB2147105C00DF7A5B /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3E62147105C00DF7A5B /* Str.swift */; };
+		2EC7A3EC2147105C00DF7A5B /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3E72147105C00DF7A5B /* Protocol.swift */; };
+		2EC7A3ED2147105C00DF7A5B /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC7A3E82147105C00DF7A5B /* Util.swift */; };
+		2EC7A3EE214710C000DF7A5B /* Internat.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391FEE2146081B00507E4C /* Internat.c */; };
+		2EC7A3EF214710CB00DF7A5B /* Network.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F7F2146081A00507E4C /* Network.c */; };
+		2EC7A3F0214710CF00DF7A5B /* Memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F852146081A00507E4C /* Memory.c */; };
+		2EC7A3F1214710D400DF7A5B /* Pack.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391FE62146081B00507E4C /* Pack.c */; };
+		2EC7A3F2214710D900DF7A5B /* Str.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391FDF2146081B00507E4C /* Str.c */; };
+		2EC7A3F3214710F900DF7A5B /* AzureClient.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F692146081A00507E4C /* AzureClient.c */; };
+		2EC7A3F4214710FD00DF7A5B /* Cedar.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F0A2146081A00507E4C /* Cedar.c */; };
+		2EC7A3F52147110500DF7A5B /* CedarPch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F5A2146081A00507E4C /* CedarPch.c */; };
+		2EC7A3F62147110F00DF7A5B /* Connection.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F4B2146081A00507E4C /* Connection.c */; };
+		2EC7A3F72147111800DF7A5B /* NullLan.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F232146081A00507E4C /* NullLan.c */; };
+		2EC7A3F82147111F00DF7A5B /* Protocol.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F4D2146081A00507E4C /* Protocol.c */; };
+		2EC7A3F92147112F00DF7A5B /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F002146081A00507E4C /* Session.c */; };
+		2EC7A3FA2147113700DF7A5B /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F0C2146081A00507E4C /* WaterMark.c */; };
+		2EE855762169D9870025A2AE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE855752169D9870025A2AE /* Table.swift */; };
+		448751506D0E818E56904009 /* Pods_SENE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C033BF4E9D21CEED91DB402 /* Pods_SENE.framework */; };
+		EF64C6C353584B7B93DEEB5A /* Pods_SoftEther.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17D4107C2BE262D20CBD135 /* Pods_SoftEther.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E391ED0214605D500507E4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E391EA9214604D800507E4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E391EC9214605D500507E4C;
+			remoteInfo = SENE;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E391ED6214605D500507E4C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2E391ED2214605D500507E4C /* SENE.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2A3E20C42BC6F6478DD5C30D /* Pods-SENE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SENE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SENE/Pods-SENE.debug.xcconfig"; sourceTree = "<group>"; };
+		2E13F25221470F8600C08FF0 /* SENE-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SENE-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E225ABE21664E0F007A7280 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/lib/libiconv.tbd; sourceTree = DEVELOPER_DIR; };
+		2E225AC0216698CC007A7280 /* AppleOverride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleOverride.h; sourceTree = "<group>"; };
+		2E225AC121688CBB007A7280 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		2E391EB32146057700507E4C /* SoftEther.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoftEther.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E391EB62146057800507E4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E391EB82146057800507E4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E391EBB2146057800507E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E391EBD2146057900507E4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E391EC02146057900507E4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E391EC22146057900507E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E391ECA214605D500507E4C /* SENE.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SENE.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E391ECC214605D500507E4C /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		2E391ECE214605D500507E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E391ECF214605D500507E4C /* SENE.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SENE.entitlements; sourceTree = "<group>"; };
+		2E391ED72146063700507E4C /* SoftEther.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoftEther.entitlements; sourceTree = "<group>"; };
+		2E391ED92146064100507E4C /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
+		2E391EE12146081A00507E4C /* Sam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sam.h; sourceTree = "<group>"; };
+		2E391EE22146081A00507E4C /* Connection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		2E391EE32146081A00507E4C /* netcfgn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netcfgn.h; sourceTree = "<group>"; };
+		2E391EE42146081A00507E4C /* Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		2E391EE52146081A00507E4C /* Proto_OpenVPN.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_OpenVPN.h; sourceTree = "<group>"; };
+		2E391EE62146081A00507E4C /* Console.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		2E391EE82146081A00507E4C /* semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = semaphore.h; sourceTree = "<group>"; };
+		2E391EE92146081A00507E4C /* time_calls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = time_calls.h; sourceTree = "<group>"; };
+		2E391EEA2146081A00507E4C /* pcap-int.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pcap-int.h"; sourceTree = "<group>"; };
+		2E391EEB2146081A00507E4C /* Devioctl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Devioctl.h; sourceTree = "<group>"; };
+		2E391EEC2146081A00507E4C /* memory_t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = memory_t.h; sourceTree = "<group>"; };
+		2E391EED2146081A00507E4C /* tme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tme.h; sourceTree = "<group>"; };
+		2E391EEE2146081A00507E4C /* tcp_session.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tcp_session.h; sourceTree = "<group>"; };
+		2E391EEF2146081A00507E4C /* pcap-bpf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pcap-bpf.h"; sourceTree = "<group>"; };
+		2E391EF02146081A00507E4C /* bucket_lookup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bucket_lookup.h; sourceTree = "<group>"; };
+		2E391EF12146081A00507E4C /* Win32-Extensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Win32-Extensions.h"; sourceTree = "<group>"; };
+		2E391EF22146081A00507E4C /* Ntddpack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ntddpack.h; sourceTree = "<group>"; };
+		2E391EF32146081A00507E4C /* Ntddndis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ntddndis.h; sourceTree = "<group>"; };
+		2E391EF42146081A00507E4C /* remote-ext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "remote-ext.h"; sourceTree = "<group>"; };
+		2E391EF52146081A00507E4C /* Packet32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Packet32.h; sourceTree = "<group>"; };
+		2E391EF62146081A00507E4C /* bittypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bittypes.h; sourceTree = "<group>"; };
+		2E391EF72146081A00507E4C /* count_packets.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = count_packets.h; sourceTree = "<group>"; };
+		2E391EF82146081A00507E4C /* ip6_misc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ip6_misc.h; sourceTree = "<group>"; };
+		2E391EF92146081A00507E4C /* sched.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sched.h; sourceTree = "<group>"; };
+		2E391EFA2146081A00507E4C /* pcap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pcap.h; sourceTree = "<group>"; };
+		2E391EFB2146081A00507E4C /* pthread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pthread.h; sourceTree = "<group>"; };
+		2E391EFC2146081A00507E4C /* normal_lookup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = normal_lookup.h; sourceTree = "<group>"; };
+		2E391EFD2146081A00507E4C /* pcap-stdinc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pcap-stdinc.h"; sourceTree = "<group>"; };
+		2E391EFE2146081A00507E4C /* Gnuc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gnuc.h; sourceTree = "<group>"; };
+		2E391EFF2146081A00507E4C /* BridgeWin32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BridgeWin32.c; sourceTree = "<group>"; };
+		2E391F002146081A00507E4C /* Session.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Session.c; sourceTree = "<group>"; };
+		2E391F012146081A00507E4C /* BridgeUnix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = BridgeUnix.c; sourceTree = "<group>"; };
+		2E391F022146081A00507E4C /* Wpc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Wpc.c; sourceTree = "<group>"; };
+		2E391F032146081A00507E4C /* Remote.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Remote.c; sourceTree = "<group>"; };
+		2E391F042146081A00507E4C /* DDNS.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = DDNS.c; sourceTree = "<group>"; };
+		2E391F052146081A00507E4C /* VLanUnix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VLanUnix.h; sourceTree = "<group>"; };
+		2E391F062146081A00507E4C /* Proto_IkePacket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_IkePacket.h; sourceTree = "<group>"; };
+		2E391F072146081A00507E4C /* Client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		2E391F082146081A00507E4C /* WinUi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WinUi.h; sourceTree = "<group>"; };
+		2E391F092146081A00507E4C /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		2E391F0A2146081A00507E4C /* Cedar.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Cedar.c; sourceTree = "<group>"; };
+		2E391F0B2146081A00507E4C /* VLan.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = VLan.c; sourceTree = "<group>"; };
+		2E391F0C2146081A00507E4C /* WaterMark.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WaterMark.c; sourceTree = "<group>"; };
+		2E391F0D2146081A00507E4C /* NativeStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NativeStack.h; sourceTree = "<group>"; };
+		2E391F0E2146081A00507E4C /* Listener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Listener.h; sourceTree = "<group>"; };
+		2E391F0F2146081A00507E4C /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		2E391F102146081A00507E4C /* SeLowUser.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SeLowUser.c; sourceTree = "<group>"; };
+		2E391F112146081A00507E4C /* CedarPch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarPch.h; sourceTree = "<group>"; };
+		2E391F122146081A00507E4C /* Radius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Radius.h; sourceTree = "<group>"; };
+		2E391F132146081A00507E4C /* Proto_Win7Inner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_Win7Inner.h; sourceTree = "<group>"; };
+		2E391F142146081A00507E4C /* Proto_SSTP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_SSTP.c; sourceTree = "<group>"; };
+		2E391F152146081A00507E4C /* netcfgx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = netcfgx.h; sourceTree = "<group>"; };
+		2E391F162146081A00507E4C /* EM.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EM.c; sourceTree = "<group>"; };
+		2E391F172146081A00507E4C /* AzureServer.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AzureServer.c; sourceTree = "<group>"; };
+		2E391F182146081A00507E4C /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		2E391F192146081A00507E4C /* Proto_IKE.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_IKE.c; sourceTree = "<group>"; };
+		2E391F1A2146081A00507E4C /* SecureNAT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SecureNAT.c; sourceTree = "<group>"; };
+		2E391F1B2146081A00507E4C /* Database.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Database.c; sourceTree = "<group>"; };
+		2E391F1C2146081A00507E4C /* EMInner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EMInner.h; sourceTree = "<group>"; };
+		2E391F1D2146081A00507E4C /* Nat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Nat.h; sourceTree = "<group>"; };
+		2E391F1E2146081A00507E4C /* EtherLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EtherLog.h; sourceTree = "<group>"; };
+		2E391F1F2146081A00507E4C /* Hub.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Hub.c; sourceTree = "<group>"; };
+		2E391F202146081A00507E4C /* SecureInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureInfo.h; sourceTree = "<group>"; };
+		2E391F212146081A00507E4C /* Link.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Link.c; sourceTree = "<group>"; };
+		2E391F222146081A00507E4C /* UT.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = UT.c; sourceTree = "<group>"; };
+		2E391F232146081A00507E4C /* NullLan.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = NullLan.c; sourceTree = "<group>"; };
+		2E391F242146081A00507E4C /* Proto_Win7.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_Win7.c; sourceTree = "<group>"; };
+		2E391F252146081A00507E4C /* NM.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = NM.c; sourceTree = "<group>"; };
+		2E391F262146081A00507E4C /* Proto_PPP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_PPP.c; sourceTree = "<group>"; };
+		2E391F272146081A00507E4C /* NMInner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMInner.h; sourceTree = "<group>"; };
+		2E391F282146081A00507E4C /* VG.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = VG.c; sourceTree = "<group>"; };
+		2E391F292146081A00507E4C /* Proto_EtherIP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_EtherIP.h; sourceTree = "<group>"; };
+		2E391F2A2146081A00507E4C /* Virtual.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Virtual.h; sourceTree = "<group>"; };
+		2E391F2B2146081A00507E4C /* IPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPC.h; sourceTree = "<group>"; };
+		2E391F2C2146081A00507E4C /* WinJumpList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WinJumpList.cpp; sourceTree = "<group>"; };
+		2E391F2D2146081A00507E4C /* Proto_IPsec.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_IPsec.c; sourceTree = "<group>"; };
+		2E391F2E2146081A00507E4C /* SW.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SW.h; sourceTree = "<group>"; };
+		2E391F2F2146081A00507E4C /* Command.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Command.c; sourceTree = "<group>"; };
+		2E391F302146081A00507E4C /* SWInner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWInner.h; sourceTree = "<group>"; };
+		2E391F312146081A00507E4C /* AzureClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AzureClient.h; sourceTree = "<group>"; };
+		2E391F322146081A00507E4C /* WebUI.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WebUI.c; sourceTree = "<group>"; };
+		2E391F332146081A00507E4C /* Cedar.vcproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Cedar.vcproj; sourceTree = "<group>"; };
+		2E391F342146081A00507E4C /* UdpAccel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = UdpAccel.c; sourceTree = "<group>"; };
+		2E391F352146081A00507E4C /* Layer3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Layer3.h; sourceTree = "<group>"; };
+		2E391F362146081A00507E4C /* Admin.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Admin.c; sourceTree = "<group>"; };
+		2E391F372146081A00507E4C /* SMInner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMInner.h; sourceTree = "<group>"; };
+		2E391F382146081A00507E4C /* CM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CM.h; sourceTree = "<group>"; };
+		2E391F392146081A00507E4C /* SM.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SM.c; sourceTree = "<group>"; };
+		2E391F3A2146081A00507E4C /* Logging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logging.h; sourceTree = "<group>"; };
+		2E391F3B2146081A00507E4C /* Server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Server.c; sourceTree = "<group>"; };
+		2E391F3C2146081A00507E4C /* Proto_L2TP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_L2TP.c; sourceTree = "<group>"; };
+		2E391F3D2146081A00507E4C /* VLanWin32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VLanWin32.h; sourceTree = "<group>"; };
+		2E391F3E2146081A00507E4C /* Remote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Remote.h; sourceTree = "<group>"; };
+		2E391F3F2146081A00507E4C /* CedarType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarType.h; sourceTree = "<group>"; };
+		2E391F402146081A00507E4C /* Proto_IkePacket.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_IkePacket.c; sourceTree = "<group>"; };
+		2E391F412146081A00507E4C /* Client.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Client.c; sourceTree = "<group>"; };
+		2E391F422146081A00507E4C /* VLanUnix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = VLanUnix.c; sourceTree = "<group>"; };
+		2E391F432146081A00507E4C /* DDNS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDNS.h; sourceTree = "<group>"; };
+		2E391F442146081A00507E4C /* Session.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Session.h; sourceTree = "<group>"; };
+		2E391F452146081A00507E4C /* BridgeWin32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeWin32.h; sourceTree = "<group>"; };
+		2E391F462146081A00507E4C /* Wpc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wpc.h; sourceTree = "<group>"; };
+		2E391F472146081A00507E4C /* BridgeUnix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeUnix.h; sourceTree = "<group>"; };
+		2E391F482146081A00507E4C /* Console.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Console.c; sourceTree = "<group>"; };
+		2E391F492146081A00507E4C /* Proto_OpenVPN.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_OpenVPN.c; sourceTree = "<group>"; };
+		2E391F4A2146081A00507E4C /* CMInner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMInner.h; sourceTree = "<group>"; };
+		2E391F4B2146081A00507E4C /* Connection.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Connection.c; sourceTree = "<group>"; };
+		2E391F4C2146081A00507E4C /* Sam.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Sam.c; sourceTree = "<group>"; };
+		2E391F4D2146081A00507E4C /* Protocol.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Protocol.c; sourceTree = "<group>"; };
+		2E391F4E2146081A00507E4C /* Nat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Nat.c; sourceTree = "<group>"; };
+		2E391F4F2146081A00507E4C /* Database.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		2E391F502146081A00507E4C /* SecureNAT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureNAT.h; sourceTree = "<group>"; };
+		2E391F512146081A00507E4C /* SecureInfo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SecureInfo.c; sourceTree = "<group>"; };
+		2E391F522146081A00507E4C /* Hub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Hub.h; sourceTree = "<group>"; };
+		2E391F532146081A00507E4C /* EtherLog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = EtherLog.c; sourceTree = "<group>"; };
+		2E391F542146081A00507E4C /* Win32Com.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Win32Com.h; sourceTree = "<group>"; };
+		2E391F552146081A00507E4C /* Account.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Account.c; sourceTree = "<group>"; };
+		2E391F562146081A00507E4C /* EM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EM.h; sourceTree = "<group>"; };
+		2E391F572146081A00507E4C /* AzureServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AzureServer.h; sourceTree = "<group>"; };
+		2E391F582146081A00507E4C /* Proto_SSTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_SSTP.h; sourceTree = "<group>"; };
+		2E391F592146081A00507E4C /* Proto_IKE.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_IKE.h; sourceTree = "<group>"; };
+		2E391F5A2146081A00507E4C /* CedarPch.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CedarPch.c; sourceTree = "<group>"; };
+		2E391F5B2146081A00507E4C /* SeLowUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SeLowUser.h; sourceTree = "<group>"; };
+		2E391F5C2146081A00507E4C /* Radius.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Radius.c; sourceTree = "<group>"; };
+		2E391F5D2146081A00507E4C /* NativeStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = NativeStack.c; sourceTree = "<group>"; };
+		2E391F5E2146081A00507E4C /* Cedar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cedar.h; sourceTree = "<group>"; };
+		2E391F5F2146081A00507E4C /* VLan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VLan.h; sourceTree = "<group>"; };
+		2E391F602146081A00507E4C /* WaterMark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaterMark.h; sourceTree = "<group>"; };
+		2E391F612146081A00507E4C /* Bridge.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Bridge.c; sourceTree = "<group>"; };
+		2E391F622146081A00507E4C /* WinUi.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = WinUi.c; sourceTree = "<group>"; };
+		2E391F632146081A00507E4C /* Win32Com.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Win32Com.cpp; sourceTree = "<group>"; };
+		2E391F642146081A00507E4C /* Listener.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Listener.c; sourceTree = "<group>"; };
+		2E391F652146081A00507E4C /* WebUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebUI.h; sourceTree = "<group>"; };
+		2E391F662146081A00507E4C /* SW.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SW.c; sourceTree = "<group>"; };
+		2E391F672146081A00507E4C /* Command.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		2E391F682146081A00507E4C /* Proto_IPsec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_IPsec.h; sourceTree = "<group>"; };
+		2E391F692146081A00507E4C /* AzureClient.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = AzureClient.c; sourceTree = "<group>"; };
+		2E391F6A2146081A00507E4C /* Proto_PPP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_PPP.h; sourceTree = "<group>"; };
+		2E391F6B2146081A00507E4C /* IPC.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IPC.c; sourceTree = "<group>"; };
+		2E391F6C2146081A00507E4C /* Virtual.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Virtual.c; sourceTree = "<group>"; };
+		2E391F6D2146081A00507E4C /* Proto_EtherIP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Proto_EtherIP.c; sourceTree = "<group>"; };
+		2E391F6E2146081A00507E4C /* VG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VG.h; sourceTree = "<group>"; };
+		2E391F6F2146081A00507E4C /* NullLan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NullLan.h; sourceTree = "<group>"; };
+		2E391F702146081A00507E4C /* UT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UT.h; sourceTree = "<group>"; };
+		2E391F712146081A00507E4C /* Link.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		2E391F722146081A00507E4C /* NM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NM.h; sourceTree = "<group>"; };
+		2E391F732146081A00507E4C /* Proto_Win7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_Win7.h; sourceTree = "<group>"; };
+		2E391F742146081A00507E4C /* Server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		2E391F752146081A00507E4C /* VLanWin32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = VLanWin32.c; sourceTree = "<group>"; };
+		2E391F762146081A00507E4C /* Proto_L2TP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Proto_L2TP.h; sourceTree = "<group>"; };
+		2E391F772146081A00507E4C /* SM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SM.h; sourceTree = "<group>"; };
+		2E391F782146081A00507E4C /* CM.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = CM.c; sourceTree = "<group>"; };
+		2E391F792146081A00507E4C /* Logging.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Logging.c; sourceTree = "<group>"; };
+		2E391F7A2146081A00507E4C /* Admin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Admin.h; sourceTree = "<group>"; };
+		2E391F7B2146081A00507E4C /* Layer3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Layer3.c; sourceTree = "<group>"; };
+		2E391F7C2146081A00507E4C /* UdpAccel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UdpAccel.h; sourceTree = "<group>"; };
+		2E391F7E2146081A00507E4C /* Microsoft.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Microsoft.h; sourceTree = "<group>"; };
+		2E391F7F2146081A00507E4C /* Network.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Network.c; sourceTree = "<group>"; };
+		2E391F802146081A00507E4C /* Tick64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tick64.c; sourceTree = "<group>"; };
+		2E391F812146081A00507E4C /* Pack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pack.h; sourceTree = "<group>"; };
+		2E391F822146081A00507E4C /* TcpIp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TcpIp.h; sourceTree = "<group>"; };
+		2E391F832146081A00507E4C /* Table.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Table.c; sourceTree = "<group>"; };
+		2E391F842146081A00507E4C /* Object.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Object.c; sourceTree = "<group>"; };
+		2E391F852146081A00507E4C /* Memory.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Memory.c; sourceTree = "<group>"; };
+		2E391F862146081A00507E4C /* CMakeLists.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		2E391F872146081A00507E4C /* FileIO.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileIO.c; sourceTree = "<group>"; };
+		2E391F882146081A00507E4C /* Kernel.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Kernel.c; sourceTree = "<group>"; };
+		2E391F8A2146081A00507E4C /* zlib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zlib.h; sourceTree = "<group>"; };
+		2E391F8C2146081A00507E4C /* pem2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem2.h; sourceTree = "<group>"; };
+		2E391F8D2146081A00507E4C /* pem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pem.h; sourceTree = "<group>"; };
+		2E391F8E2146081A00507E4C /* ssl3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl3.h; sourceTree = "<group>"; };
+		2E391F8F2146081A00507E4C /* ossl_typ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ossl_typ.h; sourceTree = "<group>"; };
+		2E391F902146081A00507E4C /* dtls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dtls1.h; sourceTree = "<group>"; };
+		2E391F912146081A00507E4C /* err.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = err.h; sourceTree = "<group>"; };
+		2E391F922146081B00507E4C /* bn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bn.h; sourceTree = "<group>"; };
+		2E391F932146081B00507E4C /* blowfish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blowfish.h; sourceTree = "<group>"; };
+		2E391F942146081B00507E4C /* cms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cms.h; sourceTree = "<group>"; };
+		2E391F952146081B00507E4C /* engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = engine.h; sourceTree = "<group>"; };
+		2E391F962146081B00507E4C /* conf_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf_api.h; sourceTree = "<group>"; };
+		2E391F972146081B00507E4C /* x509.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
+		2E391F982146081B00507E4C /* asn1_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1_mac.h; sourceTree = "<group>"; };
+		2E391F992146081B00507E4C /* ui.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui.h; sourceTree = "<group>"; };
+		2E391F9A2146081B00507E4C /* kssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kssl.h; sourceTree = "<group>"; };
+		2E391F9B2146081B00507E4C /* sha.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sha.h; sourceTree = "<group>"; };
+		2E391F9C2146081B00507E4C /* symhacks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = symhacks.h; sourceTree = "<group>"; };
+		2E391F9D2146081B00507E4C /* asn1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1.h; sourceTree = "<group>"; };
+		2E391F9E2146081B00507E4C /* opensslconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslconf.h; sourceTree = "<group>"; };
+		2E391F9F2146081B00507E4C /* bio.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bio.h; sourceTree = "<group>"; };
+		2E391FA02146081B00507E4C /* rc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc2.h; sourceTree = "<group>"; };
+		2E391FA12146081B00507E4C /* dh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dh.h; sourceTree = "<group>"; };
+		2E391FA22146081B00507E4C /* ui_compat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ui_compat.h; sourceTree = "<group>"; };
+		2E391FA32146081B00507E4C /* x509v3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		2E391FA42146081B00507E4C /* ssl23.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl23.h; sourceTree = "<group>"; };
+		2E391FA52146081B00507E4C /* conf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = conf.h; sourceTree = "<group>"; };
+		2E391FA62146081B00507E4C /* md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		2E391FA72146081B00507E4C /* x509_vfy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
+		2E391FA82146081B00507E4C /* txt_db.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = txt_db.h; sourceTree = "<group>"; };
+		2E391FA92146081B00507E4C /* safestack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = safestack.h; sourceTree = "<group>"; };
+		2E391FAA2146081B00507E4C /* ecdsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdsa.h; sourceTree = "<group>"; };
+		2E391FAB2146081B00507E4C /* objects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objects.h; sourceTree = "<group>"; };
+		2E391FAC2146081B00507E4C /* pkcs12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs12.h; sourceTree = "<group>"; };
+		2E391FAD2146081B00507E4C /* crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = crypto.h; sourceTree = "<group>"; };
+		2E391FAE2146081B00507E4C /* opensslv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opensslv.h; sourceTree = "<group>"; };
+		2E391FAF2146081B00507E4C /* pkcs7.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs7.h; sourceTree = "<group>"; };
+		2E391FB02146081B00507E4C /* obj_mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = obj_mac.h; sourceTree = "<group>"; };
+		2E391FB12146081B00507E4C /* buffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = buffer.h; sourceTree = "<group>"; };
+		2E391FB22146081B00507E4C /* ssl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl.h; sourceTree = "<group>"; };
+		2E391FB32146081B00507E4C /* srp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srp.h; sourceTree = "<group>"; };
+		2E391FB42146081B00507E4C /* camellia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camellia.h; sourceTree = "<group>"; };
+		2E391FB52146081B00507E4C /* evp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = evp.h; sourceTree = "<group>"; };
+		2E391FB62146081B00507E4C /* e_os2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = e_os2.h; sourceTree = "<group>"; };
+		2E391FB72146081B00507E4C /* md4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = md4.h; sourceTree = "<group>"; };
+		2E391FB82146081B00507E4C /* hmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hmac.h; sourceTree = "<group>"; };
+		2E391FB92146081B00507E4C /* aes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aes.h; sourceTree = "<group>"; };
+		2E391FBA2146081B00507E4C /* comp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = comp.h; sourceTree = "<group>"; };
+		2E391FBB2146081B00507E4C /* cast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cast.h; sourceTree = "<group>"; };
+		2E391FBC2146081B00507E4C /* rc4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rc4.h; sourceTree = "<group>"; };
+		2E391FBD2146081B00507E4C /* stack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		2E391FBE2146081B00507E4C /* des.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des.h; sourceTree = "<group>"; };
+		2E391FBF2146081B00507E4C /* ocsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ocsp.h; sourceTree = "<group>"; };
+		2E391FC02146081B00507E4C /* ec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		2E391FC12146081B00507E4C /* ecdh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ecdh.h; sourceTree = "<group>"; };
+		2E391FC22146081B00507E4C /* rand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rand.h; sourceTree = "<group>"; };
+		2E391FC32146081B00507E4C /* ts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ts.h; sourceTree = "<group>"; };
+		2E391FC42146081B00507E4C /* pqueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pqueue.h; sourceTree = "<group>"; };
+		2E391FC52146081B00507E4C /* dso.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dso.h; sourceTree = "<group>"; };
+		2E391FC62146081B00507E4C /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		2E391FC72146081B00507E4C /* modes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modes.h; sourceTree = "<group>"; };
+		2E391FC82146081B00507E4C /* ssl2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ssl2.h; sourceTree = "<group>"; };
+		2E391FC92146081B00507E4C /* rsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rsa.h; sourceTree = "<group>"; };
+		2E391FCA2146081B00507E4C /* krb5_asn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = krb5_asn.h; sourceTree = "<group>"; };
+		2E391FCB2146081B00507E4C /* des_old.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = des_old.h; sourceTree = "<group>"; };
+		2E391FCC2146081B00507E4C /* ripemd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ripemd.h; sourceTree = "<group>"; };
+		2E391FCD2146081B00507E4C /* whrlpool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whrlpool.h; sourceTree = "<group>"; };
+		2E391FCE2146081B00507E4C /* tls1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tls1.h; sourceTree = "<group>"; };
+		2E391FCF2146081B00507E4C /* mdc2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mdc2.h; sourceTree = "<group>"; };
+		2E391FD02146081B00507E4C /* dsa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dsa.h; sourceTree = "<group>"; };
+		2E391FD12146081B00507E4C /* srtp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = srtp.h; sourceTree = "<group>"; };
+		2E391FD22146081B00507E4C /* asn1t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = asn1t.h; sourceTree = "<group>"; };
+		2E391FD32146081B00507E4C /* cmac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmac.h; sourceTree = "<group>"; };
+		2E391FD42146081B00507E4C /* ebcdic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ebcdic.h; sourceTree = "<group>"; };
+		2E391FD52146081B00507E4C /* idea.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = idea.h; sourceTree = "<group>"; };
+		2E391FD62146081B00507E4C /* lhash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lhash.h; sourceTree = "<group>"; };
+		2E391FD72146081B00507E4C /* zconf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = zconf.h; sourceTree = "<group>"; };
+		2E391FD82146081B00507E4C /* pkcs11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs11.h; sourceTree = "<group>"; };
+		2E391FD92146081B00507E4C /* Internat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Internat.h; sourceTree = "<group>"; };
+		2E391FDA2146081B00507E4C /* Tracking.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tracking.c; sourceTree = "<group>"; };
+		2E391FDB2146081B00507E4C /* Cfg.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Cfg.c; sourceTree = "<group>"; };
+		2E391FDC2146081B00507E4C /* Encrypt.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Encrypt.c; sourceTree = "<group>"; };
+		2E391FDD2146081B00507E4C /* OS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OS.h; sourceTree = "<group>"; };
+		2E391FDE2146081B00507E4C /* Mayaqua.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Mayaqua.c; sourceTree = "<group>"; };
+		2E391FDF2146081B00507E4C /* Str.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Str.c; sourceTree = "<group>"; };
+		2E391FE02146081B00507E4C /* Mayaqua.vcproj */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Mayaqua.vcproj; sourceTree = "<group>"; };
+		2E391FE12146081B00507E4C /* Secure.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Secure.c; sourceTree = "<group>"; };
+		2E391FE22146081B00507E4C /* MayaType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MayaType.h; sourceTree = "<group>"; };
+		2E391FE32146081B00507E4C /* Unix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Unix.c; sourceTree = "<group>"; };
+		2E391FE42146081B00507E4C /* Win32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Win32.h; sourceTree = "<group>"; };
+		2E391FE52146081B00507E4C /* TcpIp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = TcpIp.c; sourceTree = "<group>"; };
+		2E391FE62146081B00507E4C /* Pack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Pack.c; sourceTree = "<group>"; };
+		2E391FE72146081B00507E4C /* pkcs11t.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs11t.h; sourceTree = "<group>"; };
+		2E391FE82146081B00507E4C /* Tick64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tick64.h; sourceTree = "<group>"; };
+		2E391FE92146081B00507E4C /* TunTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TunTap.h; sourceTree = "<group>"; };
+		2E391FEA2146081B00507E4C /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		2E391FEB2146081B00507E4C /* Microsoft.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Microsoft.c; sourceTree = "<group>"; };
+		2E391FEC2146081B00507E4C /* Tracking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tracking.h; sourceTree = "<group>"; };
+		2E391FED2146081B00507E4C /* cryptoki.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cryptoki.h; sourceTree = "<group>"; };
+		2E391FEE2146081B00507E4C /* Internat.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Internat.c; sourceTree = "<group>"; };
+		2E391FEF2146081B00507E4C /* pkcs11f.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pkcs11f.h; sourceTree = "<group>"; };
+		2E391FF02146081B00507E4C /* Kernel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Kernel.h; sourceTree = "<group>"; };
+		2E391FF12146081B00507E4C /* FileIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileIO.h; sourceTree = "<group>"; };
+		2E391FF22146081B00507E4C /* Memory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Memory.h; sourceTree = "<group>"; };
+		2E391FF32146081B00507E4C /* Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		2E391FF42146081B00507E4C /* Table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		2E391FF52146081B00507E4C /* Str.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Str.h; sourceTree = "<group>"; };
+		2E391FF62146081B00507E4C /* OS.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = OS.c; sourceTree = "<group>"; };
+		2E391FF72146081B00507E4C /* Mayaqua.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mayaqua.h; sourceTree = "<group>"; };
+		2E391FF82146081B00507E4C /* Encrypt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Encrypt.h; sourceTree = "<group>"; };
+		2E391FF92146081B00507E4C /* Cfg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cfg.h; sourceTree = "<group>"; };
+		2E391FFA2146081B00507E4C /* Win32.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Win32.c; sourceTree = "<group>"; };
+		2E391FFC2146081B00507E4C /* Unix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Unix.h; sourceTree = "<group>"; };
+		2E391FFD2146081B00507E4C /* Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secure.h; sourceTree = "<group>"; };
+		2E391FFF21460BAA00507E4C /* GenDummy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenDummy.sh; sourceTree = "<group>"; };
+		2E39200021460DBF00507E4C /* ld.src */ = {isa = PBXFileReference; lastKnownFileType = text; path = ld.src; sourceTree = "<group>"; };
+		2E39200921460E3C00507E4C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		2E6DEDCE21502DEF00F98A1F /* DummyFunction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DummyFunction.c; sourceTree = "<group>"; };
+		2E9241C4216AC2A8000B026F /* Objc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Objc.c; sourceTree = "<group>"; };
+		2E9241C6216AC700000B026F /* AppleFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleFunc.h; sourceTree = "<group>"; };
+		2EC7A3D52147104B00DF7A5B /* AppleSock.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AppleSock.c; sourceTree = "<group>"; };
+		2EC7A3D62147104B00DF7A5B /* AppleFunc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AppleFunc.c; sourceTree = "<group>"; };
+		2EC7A3D72147104B00DF7A5B /* AppleSock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleSock.h; sourceTree = "<group>"; };
+		2EC7A3DA2147105400DF7A5B /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		2EC7A3DB2147105400DF7A5B /* Encrpt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encrpt.swift; sourceTree = "<group>"; };
+		2EC7A3DC2147105400DF7A5B /* Memory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		2EC7A3DD2147105500DF7A5B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		2EC7A3DE2147105500DF7A5B /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		2EC7A3E42147105B00DF7A5B /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		2EC7A3E52147105C00DF7A5B /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		2EC7A3E62147105C00DF7A5B /* Str.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Str.swift; sourceTree = "<group>"; };
+		2EC7A3E72147105C00DF7A5B /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		2EC7A3E82147105C00DF7A5B /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		2EE855712169C5930025A2AE /* strtable.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = strtable.py; path = Scripts/strtable.py; sourceTree = SOURCE_ROOT; };
+		2EE855732169D8F00025A2AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2EE855742169D8F60025A2AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2EE855752169D9870025A2AE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		2FC8D0EAE2B1A204A96BF9AA /* Pods-SENE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SENE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SENE/Pods-SENE.release.xcconfig"; sourceTree = "<group>"; };
+		6C033BF4E9D21CEED91DB402 /* Pods_SENE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SENE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78C6E8AC1A9558AE0CEB95C8 /* Pods-SoftEther.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEther.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEther/Pods-SoftEther.debug.xcconfig"; sourceTree = "<group>"; };
+		F17D4107C2BE262D20CBD135 /* Pods_SoftEther.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoftEther.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60B1B800690D5BBCC80E3B6 /* Pods-SoftEther.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEther.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEther/Pods-SoftEther.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E391EB02146057700507E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF64C6C353584B7B93DEEB5A /* Pods_SoftEther.framework in Frameworks */,
+				2E225AC221688CBB007A7280 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E391EC7214605D500507E4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E225ABF21664E10007A7280 /* libiconv.tbd in Frameworks */,
+				2E391EDA2146064100507E4C /* NetworkExtension.framework in Frameworks */,
+				448751506D0E818E56904009 /* Pods_SENE.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E391EA8214604D800507E4C = {
+			isa = PBXGroup;
+			children = (
+				2EE855702169C4FA0025A2AE /* Scripts */,
+				2EE855692169BCDD0025A2AE /* Resources */,
+				2E391EDB214607A300507E4C /* Modules */,
+				2E391ED72146063700507E4C /* SoftEther.entitlements */,
+				2E391EB52146057800507E4C /* App */,
+				2E391ECB214605D500507E4C /* SENE */,
+				2E39200821460E3C00507E4C /* vpnserver */,
+				2E391EB42146057700507E4C /* Products */,
+				2E391ED82146064100507E4C /* Frameworks */,
+				934B130640498C50D8DD8ABE /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		2E391EB42146057700507E4C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E391EB32146057700507E4C /* SoftEther.app */,
+				2E391ECA214605D500507E4C /* SENE.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E391EB52146057800507E4C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2E391EB62146057800507E4C /* AppDelegate.swift */,
+				2E391EB82146057800507E4C /* ViewController.swift */,
+				2E391EBA2146057800507E4C /* Main.storyboard */,
+				2E391EBD2146057900507E4C /* Assets.xcassets */,
+				2E391EBF2146057900507E4C /* LaunchScreen.storyboard */,
+				2E391EC22146057900507E4C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2E391ECB214605D500507E4C /* SENE */ = {
+			isa = PBXGroup;
+			children = (
+				2EC7A3D62147104B00DF7A5B /* AppleFunc.c */,
+				2EC7A3D52147104B00DF7A5B /* AppleSock.c */,
+				2E6DEDCE21502DEF00F98A1F /* DummyFunction.c */,
+				2E9241C4216AC2A8000B026F /* Objc.c */,
+				2E391ECF214605D500507E4C /* SENE.entitlements */,
+				2E225AC0216698CC007A7280 /* AppleOverride.h */,
+				2E9241C6216AC700000B026F /* AppleFunc.h */,
+				2EC7A3D72147104B00DF7A5B /* AppleSock.h */,
+				2E13F25221470F8600C08FF0 /* SENE-Bridging-Header.h */,
+				2E391ECE214605D500507E4C /* Info.plist */,
+				2EC7A3DE2147105500DF7A5B /* Client.swift */,
+				2EC7A3DA2147105400DF7A5B /* Connection.swift */,
+				2EC7A3DB2147105400DF7A5B /* Encrpt.swift */,
+				2EC7A3DC2147105400DF7A5B /* Memory.swift */,
+				2EC7A3DD2147105500DF7A5B /* Network.swift */,
+				2EC7A3E52147105C00DF7A5B /* Object.swift */,
+				2E391ECC214605D500507E4C /* PacketTunnelProvider.swift */,
+				2EC7A3E72147105C00DF7A5B /* Protocol.swift */,
+				2EC7A3E42147105B00DF7A5B /* Session.swift */,
+				2EC7A3E62147105C00DF7A5B /* Str.swift */,
+				2EE855752169D9870025A2AE /* Table.swift */,
+				2EC7A3E82147105C00DF7A5B /* Util.swift */,
+			);
+			path = SENE;
+			sourceTree = "<group>";
+		};
+		2E391ED82146064100507E4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E225AC121688CBB007A7280 /* NetworkExtension.framework */,
+				2E225ABE21664E0F007A7280 /* libiconv.tbd */,
+				2E391ED92146064100507E4C /* NetworkExtension.framework */,
+				6C033BF4E9D21CEED91DB402 /* Pods_SENE.framework */,
+				F17D4107C2BE262D20CBD135 /* Pods_SoftEther.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E391EDB214607A300507E4C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				2E391EE02146081A00507E4C /* Cedar */,
+				2E391F7D2146081A00507E4C /* Mayaqua */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		2E391EE02146081A00507E4C /* Cedar */ = {
+			isa = PBXGroup;
+			children = (
+				2E391F552146081A00507E4C /* Account.c */,
+				2E391F182146081A00507E4C /* Account.h */,
+				2E391F362146081A00507E4C /* Admin.c */,
+				2E391F7A2146081A00507E4C /* Admin.h */,
+				2E391F692146081A00507E4C /* AzureClient.c */,
+				2E391F312146081A00507E4C /* AzureClient.h */,
+				2E391F172146081A00507E4C /* AzureServer.c */,
+				2E391F572146081A00507E4C /* AzureServer.h */,
+				2E391F612146081A00507E4C /* Bridge.c */,
+				2E391F092146081A00507E4C /* Bridge.h */,
+				2E391F012146081A00507E4C /* BridgeUnix.c */,
+				2E391F472146081A00507E4C /* BridgeUnix.h */,
+				2E391EFF2146081A00507E4C /* BridgeWin32.c */,
+				2E391F452146081A00507E4C /* BridgeWin32.h */,
+				2E391F0A2146081A00507E4C /* Cedar.c */,
+				2E391F5E2146081A00507E4C /* Cedar.h */,
+				2E391F332146081A00507E4C /* Cedar.vcproj */,
+				2E391F5A2146081A00507E4C /* CedarPch.c */,
+				2E391F112146081A00507E4C /* CedarPch.h */,
+				2E391F3F2146081A00507E4C /* CedarType.h */,
+				2E391F412146081A00507E4C /* Client.c */,
+				2E391F072146081A00507E4C /* Client.h */,
+				2E391F782146081A00507E4C /* CM.c */,
+				2E391F382146081A00507E4C /* CM.h */,
+				2E391F0F2146081A00507E4C /* CMakeLists.txt */,
+				2E391F4A2146081A00507E4C /* CMInner.h */,
+				2E391F2F2146081A00507E4C /* Command.c */,
+				2E391F672146081A00507E4C /* Command.h */,
+				2E391F4B2146081A00507E4C /* Connection.c */,
+				2E391EE22146081A00507E4C /* Connection.h */,
+				2E391F482146081A00507E4C /* Console.c */,
+				2E391EE62146081A00507E4C /* Console.h */,
+				2E391F1B2146081A00507E4C /* Database.c */,
+				2E391F4F2146081A00507E4C /* Database.h */,
+				2E391F042146081A00507E4C /* DDNS.c */,
+				2E391F432146081A00507E4C /* DDNS.h */,
+				2E391F162146081A00507E4C /* EM.c */,
+				2E391F562146081A00507E4C /* EM.h */,
+				2E391F1C2146081A00507E4C /* EMInner.h */,
+				2E391F532146081A00507E4C /* EtherLog.c */,
+				2E391F1E2146081A00507E4C /* EtherLog.h */,
+				2E391F1F2146081A00507E4C /* Hub.c */,
+				2E391F522146081A00507E4C /* Hub.h */,
+				2E391F6B2146081A00507E4C /* IPC.c */,
+				2E391F2B2146081A00507E4C /* IPC.h */,
+				2E391F7B2146081A00507E4C /* Layer3.c */,
+				2E391F352146081A00507E4C /* Layer3.h */,
+				2E391F212146081A00507E4C /* Link.c */,
+				2E391F712146081A00507E4C /* Link.h */,
+				2E391F642146081A00507E4C /* Listener.c */,
+				2E391F0E2146081A00507E4C /* Listener.h */,
+				2E391F792146081A00507E4C /* Logging.c */,
+				2E391F3A2146081A00507E4C /* Logging.h */,
+				2E391F4E2146081A00507E4C /* Nat.c */,
+				2E391F1D2146081A00507E4C /* Nat.h */,
+				2E391F5D2146081A00507E4C /* NativeStack.c */,
+				2E391F0D2146081A00507E4C /* NativeStack.h */,
+				2E391EE32146081A00507E4C /* netcfgn.h */,
+				2E391F152146081A00507E4C /* netcfgx.h */,
+				2E391F252146081A00507E4C /* NM.c */,
+				2E391F722146081A00507E4C /* NM.h */,
+				2E391F272146081A00507E4C /* NMInner.h */,
+				2E391F232146081A00507E4C /* NullLan.c */,
+				2E391F6F2146081A00507E4C /* NullLan.h */,
+				2E391F6D2146081A00507E4C /* Proto_EtherIP.c */,
+				2E391F292146081A00507E4C /* Proto_EtherIP.h */,
+				2E391F192146081A00507E4C /* Proto_IKE.c */,
+				2E391F592146081A00507E4C /* Proto_IKE.h */,
+				2E391F402146081A00507E4C /* Proto_IkePacket.c */,
+				2E391F062146081A00507E4C /* Proto_IkePacket.h */,
+				2E391F2D2146081A00507E4C /* Proto_IPsec.c */,
+				2E391F682146081A00507E4C /* Proto_IPsec.h */,
+				2E391F3C2146081A00507E4C /* Proto_L2TP.c */,
+				2E391F762146081A00507E4C /* Proto_L2TP.h */,
+				2E391F492146081A00507E4C /* Proto_OpenVPN.c */,
+				2E391EE52146081A00507E4C /* Proto_OpenVPN.h */,
+				2E391F262146081A00507E4C /* Proto_PPP.c */,
+				2E391F6A2146081A00507E4C /* Proto_PPP.h */,
+				2E391F142146081A00507E4C /* Proto_SSTP.c */,
+				2E391F582146081A00507E4C /* Proto_SSTP.h */,
+				2E391F242146081A00507E4C /* Proto_Win7.c */,
+				2E391F732146081A00507E4C /* Proto_Win7.h */,
+				2E391F132146081A00507E4C /* Proto_Win7Inner.h */,
+				2E391F4D2146081A00507E4C /* Protocol.c */,
+				2E391EE42146081A00507E4C /* Protocol.h */,
+				2E391F5C2146081A00507E4C /* Radius.c */,
+				2E391F122146081A00507E4C /* Radius.h */,
+				2E391F032146081A00507E4C /* Remote.c */,
+				2E391F3E2146081A00507E4C /* Remote.h */,
+				2E391F4C2146081A00507E4C /* Sam.c */,
+				2E391EE12146081A00507E4C /* Sam.h */,
+				2E391F512146081A00507E4C /* SecureInfo.c */,
+				2E391F202146081A00507E4C /* SecureInfo.h */,
+				2E391F1A2146081A00507E4C /* SecureNAT.c */,
+				2E391F502146081A00507E4C /* SecureNAT.h */,
+				2E391F102146081A00507E4C /* SeLowUser.c */,
+				2E391F5B2146081A00507E4C /* SeLowUser.h */,
+				2E391F3B2146081A00507E4C /* Server.c */,
+				2E391F742146081A00507E4C /* Server.h */,
+				2E391F002146081A00507E4C /* Session.c */,
+				2E391F442146081A00507E4C /* Session.h */,
+				2E391F392146081A00507E4C /* SM.c */,
+				2E391F772146081A00507E4C /* SM.h */,
+				2E391F372146081A00507E4C /* SMInner.h */,
+				2E391F662146081A00507E4C /* SW.c */,
+				2E391F2E2146081A00507E4C /* SW.h */,
+				2E391F302146081A00507E4C /* SWInner.h */,
+				2E391F342146081A00507E4C /* UdpAccel.c */,
+				2E391F7C2146081A00507E4C /* UdpAccel.h */,
+				2E391F222146081A00507E4C /* UT.c */,
+				2E391F702146081A00507E4C /* UT.h */,
+				2E391F282146081A00507E4C /* VG.c */,
+				2E391F6E2146081A00507E4C /* VG.h */,
+				2E391F6C2146081A00507E4C /* Virtual.c */,
+				2E391F2A2146081A00507E4C /* Virtual.h */,
+				2E391F0B2146081A00507E4C /* VLan.c */,
+				2E391F5F2146081A00507E4C /* VLan.h */,
+				2E391F422146081A00507E4C /* VLanUnix.c */,
+				2E391F052146081A00507E4C /* VLanUnix.h */,
+				2E391F752146081A00507E4C /* VLanWin32.c */,
+				2E391F3D2146081A00507E4C /* VLanWin32.h */,
+				2E391F0C2146081A00507E4C /* WaterMark.c */,
+				2E391F602146081A00507E4C /* WaterMark.h */,
+				2E391F322146081A00507E4C /* WebUI.c */,
+				2E391F652146081A00507E4C /* WebUI.h */,
+				2E391F632146081A00507E4C /* Win32Com.cpp */,
+				2E391F542146081A00507E4C /* Win32Com.h */,
+				2E391F2C2146081A00507E4C /* WinJumpList.cpp */,
+				2E391EE72146081A00507E4C /* winpcap */,
+				2E391F622146081A00507E4C /* WinUi.c */,
+				2E391F082146081A00507E4C /* WinUi.h */,
+				2E391F022146081A00507E4C /* Wpc.c */,
+				2E391F462146081A00507E4C /* Wpc.h */,
+			);
+			name = Cedar;
+			path = ../Cedar;
+			sourceTree = "<group>";
+		};
+		2E391EE72146081A00507E4C /* winpcap */ = {
+			isa = PBXGroup;
+			children = (
+				2E391EE82146081A00507E4C /* semaphore.h */,
+				2E391EE92146081A00507E4C /* time_calls.h */,
+				2E391EEA2146081A00507E4C /* pcap-int.h */,
+				2E391EEB2146081A00507E4C /* Devioctl.h */,
+				2E391EEC2146081A00507E4C /* memory_t.h */,
+				2E391EED2146081A00507E4C /* tme.h */,
+				2E391EEE2146081A00507E4C /* tcp_session.h */,
+				2E391EEF2146081A00507E4C /* pcap-bpf.h */,
+				2E391EF02146081A00507E4C /* bucket_lookup.h */,
+				2E391EF12146081A00507E4C /* Win32-Extensions.h */,
+				2E391EF22146081A00507E4C /* Ntddpack.h */,
+				2E391EF32146081A00507E4C /* Ntddndis.h */,
+				2E391EF42146081A00507E4C /* remote-ext.h */,
+				2E391EF52146081A00507E4C /* Packet32.h */,
+				2E391EF62146081A00507E4C /* bittypes.h */,
+				2E391EF72146081A00507E4C /* count_packets.h */,
+				2E391EF82146081A00507E4C /* ip6_misc.h */,
+				2E391EF92146081A00507E4C /* sched.h */,
+				2E391EFA2146081A00507E4C /* pcap.h */,
+				2E391EFB2146081A00507E4C /* pthread.h */,
+				2E391EFC2146081A00507E4C /* normal_lookup.h */,
+				2E391EFD2146081A00507E4C /* pcap-stdinc.h */,
+				2E391EFE2146081A00507E4C /* Gnuc.h */,
+			);
+			path = winpcap;
+			sourceTree = "<group>";
+		};
+		2E391F7D2146081A00507E4C /* Mayaqua */ = {
+			isa = PBXGroup;
+			children = (
+				2E391FDB2146081B00507E4C /* Cfg.c */,
+				2E391FF92146081B00507E4C /* Cfg.h */,
+				2E391F862146081A00507E4C /* CMakeLists.txt */,
+				2E391FFB2146081B00507E4C /* cpu_features */,
+				2E391FED2146081B00507E4C /* cryptoki.h */,
+				2E391FDC2146081B00507E4C /* Encrypt.c */,
+				2E391FF82146081B00507E4C /* Encrypt.h */,
+				2E391F872146081A00507E4C /* FileIO.c */,
+				2E391FF12146081B00507E4C /* FileIO.h */,
+				2E391FEE2146081B00507E4C /* Internat.c */,
+				2E391FD92146081B00507E4C /* Internat.h */,
+				2E391F882146081A00507E4C /* Kernel.c */,
+				2E391FF02146081B00507E4C /* Kernel.h */,
+				2E391FDE2146081B00507E4C /* Mayaqua.c */,
+				2E391FF72146081B00507E4C /* Mayaqua.h */,
+				2E391FE02146081B00507E4C /* Mayaqua.vcproj */,
+				2E391FE22146081B00507E4C /* MayaType.h */,
+				2E391F852146081A00507E4C /* Memory.c */,
+				2E391FF22146081B00507E4C /* Memory.h */,
+				2E391FEB2146081B00507E4C /* Microsoft.c */,
+				2E391F7E2146081A00507E4C /* Microsoft.h */,
+				2E391F7F2146081A00507E4C /* Network.c */,
+				2E391FEA2146081B00507E4C /* Network.h */,
+				2E391F842146081A00507E4C /* Object.c */,
+				2E391FF32146081B00507E4C /* Object.h */,
+				2E391FF62146081B00507E4C /* OS.c */,
+				2E391FDD2146081B00507E4C /* OS.h */,
+				2E391FE62146081B00507E4C /* Pack.c */,
+				2E391F812146081A00507E4C /* Pack.h */,
+				2E391FD82146081B00507E4C /* pkcs11.h */,
+				2E391FEF2146081B00507E4C /* pkcs11f.h */,
+				2E391FE72146081B00507E4C /* pkcs11t.h */,
+				2E391FE12146081B00507E4C /* Secure.c */,
+				2E391FFD2146081B00507E4C /* Secure.h */,
+				2E391FDF2146081B00507E4C /* Str.c */,
+				2E391FF52146081B00507E4C /* Str.h */,
+				2E391F832146081A00507E4C /* Table.c */,
+				2E391FF42146081B00507E4C /* Table.h */,
+				2E391FE52146081B00507E4C /* TcpIp.c */,
+				2E391F822146081A00507E4C /* TcpIp.h */,
+				2E391F802146081A00507E4C /* Tick64.c */,
+				2E391FE82146081B00507E4C /* Tick64.h */,
+				2E391FDA2146081B00507E4C /* Tracking.c */,
+				2E391FEC2146081B00507E4C /* Tracking.h */,
+				2E391FE92146081B00507E4C /* TunTap.h */,
+				2E391FE32146081B00507E4C /* Unix.c */,
+				2E391FFC2146081B00507E4C /* Unix.h */,
+				2E391F892146081A00507E4C /* win32_inc */,
+				2E391FFA2146081B00507E4C /* Win32.c */,
+				2E391FE42146081B00507E4C /* Win32.h */,
+			);
+			name = Mayaqua;
+			path = ../Mayaqua;
+			sourceTree = "<group>";
+		};
+		2E391F892146081A00507E4C /* win32_inc */ = {
+			isa = PBXGroup;
+			children = (
+				2E391F8A2146081A00507E4C /* zlib.h */,
+				2E391F8B2146081A00507E4C /* openssl */,
+				2E391FD72146081B00507E4C /* zconf.h */,
+			);
+			path = win32_inc;
+			sourceTree = "<group>";
+		};
+		2E391F8B2146081A00507E4C /* openssl */ = {
+			isa = PBXGroup;
+			children = (
+				2E391F8C2146081A00507E4C /* pem2.h */,
+				2E391F8D2146081A00507E4C /* pem.h */,
+				2E391F8E2146081A00507E4C /* ssl3.h */,
+				2E391F8F2146081A00507E4C /* ossl_typ.h */,
+				2E391F902146081A00507E4C /* dtls1.h */,
+				2E391F912146081A00507E4C /* err.h */,
+				2E391F922146081B00507E4C /* bn.h */,
+				2E391F932146081B00507E4C /* blowfish.h */,
+				2E391F942146081B00507E4C /* cms.h */,
+				2E391F952146081B00507E4C /* engine.h */,
+				2E391F962146081B00507E4C /* conf_api.h */,
+				2E391F972146081B00507E4C /* x509.h */,
+				2E391F982146081B00507E4C /* asn1_mac.h */,
+				2E391F992146081B00507E4C /* ui.h */,
+				2E391F9A2146081B00507E4C /* kssl.h */,
+				2E391F9B2146081B00507E4C /* sha.h */,
+				2E391F9C2146081B00507E4C /* symhacks.h */,
+				2E391F9D2146081B00507E4C /* asn1.h */,
+				2E391F9E2146081B00507E4C /* opensslconf.h */,
+				2E391F9F2146081B00507E4C /* bio.h */,
+				2E391FA02146081B00507E4C /* rc2.h */,
+				2E391FA12146081B00507E4C /* dh.h */,
+				2E391FA22146081B00507E4C /* ui_compat.h */,
+				2E391FA32146081B00507E4C /* x509v3.h */,
+				2E391FA42146081B00507E4C /* ssl23.h */,
+				2E391FA52146081B00507E4C /* conf.h */,
+				2E391FA62146081B00507E4C /* md5.h */,
+				2E391FA72146081B00507E4C /* x509_vfy.h */,
+				2E391FA82146081B00507E4C /* txt_db.h */,
+				2E391FA92146081B00507E4C /* safestack.h */,
+				2E391FAA2146081B00507E4C /* ecdsa.h */,
+				2E391FAB2146081B00507E4C /* objects.h */,
+				2E391FAC2146081B00507E4C /* pkcs12.h */,
+				2E391FAD2146081B00507E4C /* crypto.h */,
+				2E391FAE2146081B00507E4C /* opensslv.h */,
+				2E391FAF2146081B00507E4C /* pkcs7.h */,
+				2E391FB02146081B00507E4C /* obj_mac.h */,
+				2E391FB12146081B00507E4C /* buffer.h */,
+				2E391FB22146081B00507E4C /* ssl.h */,
+				2E391FB32146081B00507E4C /* srp.h */,
+				2E391FB42146081B00507E4C /* camellia.h */,
+				2E391FB52146081B00507E4C /* evp.h */,
+				2E391FB62146081B00507E4C /* e_os2.h */,
+				2E391FB72146081B00507E4C /* md4.h */,
+				2E391FB82146081B00507E4C /* hmac.h */,
+				2E391FB92146081B00507E4C /* aes.h */,
+				2E391FBA2146081B00507E4C /* comp.h */,
+				2E391FBB2146081B00507E4C /* cast.h */,
+				2E391FBC2146081B00507E4C /* rc4.h */,
+				2E391FBD2146081B00507E4C /* stack.h */,
+				2E391FBE2146081B00507E4C /* des.h */,
+				2E391FBF2146081B00507E4C /* ocsp.h */,
+				2E391FC02146081B00507E4C /* ec.h */,
+				2E391FC12146081B00507E4C /* ecdh.h */,
+				2E391FC22146081B00507E4C /* rand.h */,
+				2E391FC32146081B00507E4C /* ts.h */,
+				2E391FC42146081B00507E4C /* pqueue.h */,
+				2E391FC52146081B00507E4C /* dso.h */,
+				2E391FC62146081B00507E4C /* seed.h */,
+				2E391FC72146081B00507E4C /* modes.h */,
+				2E391FC82146081B00507E4C /* ssl2.h */,
+				2E391FC92146081B00507E4C /* rsa.h */,
+				2E391FCA2146081B00507E4C /* krb5_asn.h */,
+				2E391FCB2146081B00507E4C /* des_old.h */,
+				2E391FCC2146081B00507E4C /* ripemd.h */,
+				2E391FCD2146081B00507E4C /* whrlpool.h */,
+				2E391FCE2146081B00507E4C /* tls1.h */,
+				2E391FCF2146081B00507E4C /* mdc2.h */,
+				2E391FD02146081B00507E4C /* dsa.h */,
+				2E391FD12146081B00507E4C /* srtp.h */,
+				2E391FD22146081B00507E4C /* asn1t.h */,
+				2E391FD32146081B00507E4C /* cmac.h */,
+				2E391FD42146081B00507E4C /* ebcdic.h */,
+				2E391FD52146081B00507E4C /* idea.h */,
+				2E391FD62146081B00507E4C /* lhash.h */,
+			);
+			path = openssl;
+			sourceTree = "<group>";
+		};
+		2E391FFB2146081B00507E4C /* cpu_features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cpu_features;
+			sourceTree = "<group>";
+		};
+		2E39200221460DC700507E4C /* DummyCode */ = {
+			isa = PBXGroup;
+			children = (
+				2E391FFF21460BAA00507E4C /* GenDummy.sh */,
+				2E39200021460DBF00507E4C /* ld.src */,
+			);
+			path = DummyCode;
+			sourceTree = "<group>";
+		};
+		2E39200821460E3C00507E4C /* vpnserver */ = {
+			isa = PBXGroup;
+			children = (
+				2E39200921460E3C00507E4C /* main.c */,
+			);
+			path = vpnserver;
+			sourceTree = "<group>";
+		};
+		2EE855692169BCDD0025A2AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2EE855722169D8F00025A2AE /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2EE855702169C4FA0025A2AE /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				2EE855712169C5930025A2AE /* strtable.py */,
+				2E39200221460DC700507E4C /* DummyCode */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		934B130640498C50D8DD8ABE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A3E20C42BC6F6478DD5C30D /* Pods-SENE.debug.xcconfig */,
+				2FC8D0EAE2B1A204A96BF9AA /* Pods-SENE.release.xcconfig */,
+				78C6E8AC1A9558AE0CEB95C8 /* Pods-SoftEther.debug.xcconfig */,
+				F60B1B800690D5BBCC80E3B6 /* Pods-SoftEther.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		2E39200E21460E6100507E4C /* vpnserver */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = vpnserver;
+			buildConfigurationList = 2E39200F21460E6100507E4C /* Build configuration list for PBXLegacyTarget "vpnserver" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			buildWorkingDirectory = /Users/shuyi/Files/SoftEtherVPN/tmp;
+			dependencies = (
+			);
+			name = vpnserver;
+			passBuildSettingsInEnvironment = 0;
+			productName = vpnserver;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXNativeTarget section */
+		2E391EB22146057700507E4C /* SoftEther */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E391EC52146057900507E4C /* Build configuration list for PBXNativeTarget "SoftEther" */;
+			buildPhases = (
+				18037672E1BC312B02F30A0A /* [CP] Check Pods Manifest.lock */,
+				2E391EAF2146057700507E4C /* Sources */,
+				2E391EB02146057700507E4C /* Frameworks */,
+				2E391EB12146057700507E4C /* Resources */,
+				2E391ED6214605D500507E4C /* Embed App Extensions */,
+				E8B6B639CD98D9FD2C97C518 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E391ED1214605D500507E4C /* PBXTargetDependency */,
+			);
+			name = SoftEther;
+			productName = SoftEther;
+			productReference = 2E391EB32146057700507E4C /* SoftEther.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E391EC9214605D500507E4C /* SENE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E391ED3214605D500507E4C /* Build configuration list for PBXNativeTarget "SENE" */;
+			buildPhases = (
+				4732718E630C96F39C1D6692 /* [CP] Check Pods Manifest.lock */,
+				2E391FFE214608D700507E4C /* ShellScript */,
+				2E391EC6214605D500507E4C /* Sources */,
+				2E391EC7214605D500507E4C /* Frameworks */,
+				2E391EC8214605D500507E4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SENE;
+			productName = SENE;
+			productReference = 2E391ECA214605D500507E4C /* SENE.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E391EA9214604D800507E4C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					2E391EB22146057700507E4C = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2E391EC9214605D500507E4C = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					2E39200E21460E6100507E4C = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 2E391EAC214604D800507E4C /* Build configuration list for PBXProject "SEVPN" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 2E391EA8214604D800507E4C;
+			productRefGroup = 2E391EB42146057700507E4C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E391EB22146057700507E4C /* SoftEther */,
+				2E391EC9214605D500507E4C /* SENE */,
+				2E39200E21460E6100507E4C /* vpnserver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E391EB12146057700507E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E391EC12146057900507E4C /* LaunchScreen.storyboard in Resources */,
+				2E391EBE2146057900507E4C /* Assets.xcassets in Resources */,
+				2E391EBC2146057800507E4C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E391EC8214605D500507E4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E39200121460DBF00507E4C /* ld.src in Resources */,
+				2E9241C32169F3CD000B026F /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18037672E1BC312B02F30A0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoftEther-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E391FFE214608D700507E4C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#/Users/shuyi/Files/SoftEtherVPN/src/iOS/SENE/DummyCode/GenDummy.sh\n\n";
+		};
+		4732718E630C96F39C1D6692 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SENE-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B6B639CD98D9FD2C97C518 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SoftEther/Pods-SoftEther-frameworks.sh",
+				"${PODS_ROOT}/GRKOpenSSLFramework/OpenSSL-iOS/bin/openssl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoftEther/Pods-SoftEther-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E391EAF2146057700507E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E391EB92146057800507E4C /* ViewController.swift in Sources */,
+				2E391EB72146057800507E4C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E391EC6214605D500507E4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EC7A3EF214710CB00DF7A5B /* Network.c in Sources */,
+				2EC7A3EE214710C000DF7A5B /* Internat.c in Sources */,
+				2EC7A3EA2147105C00DF7A5B /* Object.swift in Sources */,
+				2EC7A3E12147105500DF7A5B /* Memory.swift in Sources */,
+				2EC7A3E02147105500DF7A5B /* Encrpt.swift in Sources */,
+				2EC7A3EB2147105C00DF7A5B /* Str.swift in Sources */,
+				2EC7A3D92147104B00DF7A5B /* AppleFunc.c in Sources */,
+				2EC7A3D82147104B00DF7A5B /* AppleSock.c in Sources */,
+				2E391ECD214605D500507E4C /* PacketTunnelProvider.swift in Sources */,
+				2EC7A3ED2147105C00DF7A5B /* Util.swift in Sources */,
+				2EC7A3E22147105500DF7A5B /* Network.swift in Sources */,
+				2EC7A3E32147105500DF7A5B /* Client.swift in Sources */,
+				2EC7A3DF2147105500DF7A5B /* Connection.swift in Sources */,
+				2EC7A3E92147105C00DF7A5B /* Session.swift in Sources */,
+				2EC7A3EC2147105C00DF7A5B /* Protocol.swift in Sources */,
+				2EC7A3F0214710CF00DF7A5B /* Memory.c in Sources */,
+				2EC7A3F1214710D400DF7A5B /* Pack.c in Sources */,
+				2EC7A3F2214710D900DF7A5B /* Str.c in Sources */,
+				2EC7A3F3214710F900DF7A5B /* AzureClient.c in Sources */,
+				2EC7A3F4214710FD00DF7A5B /* Cedar.c in Sources */,
+				2EC7A3F52147110500DF7A5B /* CedarPch.c in Sources */,
+				2EC7A3F62147110F00DF7A5B /* Connection.c in Sources */,
+				2EE855762169D9870025A2AE /* Table.swift in Sources */,
+				2E9241C5216AC2A8000B026F /* Objc.c in Sources */,
+				2EC7A3F72147111800DF7A5B /* NullLan.c in Sources */,
+				2E6DEDCF21502DEF00F98A1F /* DummyFunction.c in Sources */,
+				2EC7A3F82147111F00DF7A5B /* Protocol.c in Sources */,
+				2EC7A3F92147112F00DF7A5B /* Session.c in Sources */,
+				2EC7A3FA2147113700DF7A5B /* WaterMark.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E391ED1214605D500507E4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E391EC9214605D500507E4C /* SENE */;
+			targetProxy = 2E391ED0214605D500507E4C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E391EBA2146057800507E4C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E391EBB2146057800507E4C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E391EBF2146057900507E4C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E391EC02146057900507E4C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2EE855722169D8F00025A2AE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2EE855732169D8F00025A2AE /* en */,
+				2EE855742169D8F60025A2AE /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E391EAD214604D800507E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+			};
+			name = Debug;
+		};
+		2E391EAE214604D800507E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+			};
+			name = Release;
+		};
+		2E391EC32146057900507E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C6E8AC1A9558AE0CEB95C8 /* Pods-SoftEther.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEther.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E391EC42146057900507E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60B1B800690D5BBCC80E3B6 /* Pods-SoftEther.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SoftEther.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E391ED4214605D500507E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A3E20C42BC6F6478DD5C30D /* Pods-SENE.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SENE/SENE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"UNIX_IOS=1",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../;
+				INFOPLIST_FILE = SENE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.NE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "SENE/SENE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E391ED5214605D500507E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC8D0EAE2B1A204A96BF9AA /* Pods-SENE.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SENE/SENE.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = C9U57KL4Q5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "UNIX_IOS=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = ../;
+				INFOPLIST_FILE = SENE/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.NE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "SENE/SENE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E39201021460E6100507E4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E39201121460E6100507E4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E391EAC214604D800507E4C /* Build configuration list for PBXProject "SEVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E391EAD214604D800507E4C /* Debug */,
+				2E391EAE214604D800507E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E391EC52146057900507E4C /* Build configuration list for PBXNativeTarget "SoftEther" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E391EC32146057900507E4C /* Debug */,
+				2E391EC42146057900507E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E391ED3214605D500507E4C /* Build configuration list for PBXNativeTarget "SENE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E391ED4214605D500507E4C /* Debug */,
+				2E391ED5214605D500507E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E39200F21460E6100507E4C /* Build configuration list for PBXLegacyTarget "vpnserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E39201021460E6100507E4C /* Debug */,
+				2E39201121460E6100507E4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E391EA9214604D800507E4C /* Project object */;
+}

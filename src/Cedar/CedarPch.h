@@ -124,3 +124,8 @@
 #include <Mayaqua/Mayaqua.h>
 #include <Cedar/Cedar.h>
 
+#ifdef UNIX_IOS
+
+#include "AppleOverride.h"
+
+#endif  // UNIX_IOS
