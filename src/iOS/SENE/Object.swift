@@ -45,34 +45,35 @@ class Counter{ // Author: nestserau@github
     
     @_silgen_name("NewCounter")
     public static func CNewCounter() -> UnsafeMutablePointer<COUNTER>!{
-        let i = Unmanaged<Counter>.passRetained(Counter())
-        return i.toOpaque().assumingMemoryBound(to: COUNTER.self)
+        return ToOpaque(Counter())
     }
 
     @_silgen_name("DeleteCounter")
     public static func CDeleteCounter(_ c: UnsafeMutablePointer<COUNTER>!){
-        let obj = Unmanaged<Counter>.fromOpaque(c)
-        obj.release()
+        ReleaseOpaque(c)
     }
 
     @_silgen_name("Count")
     public static func CCount(_ c: UnsafeMutablePointer<COUNTER>!) -> UINT{
-        let ptr = Unmanaged<Counter>.fromOpaque(c)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Counter = GetOpaque(c) else{
+            return 0
+        }
         return obj.value
     }
 
     @_silgen_name("Inc")
     public static func CInc(_ c: UnsafeMutablePointer<COUNTER>!) -> UINT{
-        let ptr = Unmanaged<Counter>.fromOpaque(c)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Counter = GetOpaque(c) else{
+            return 0
+        }
         return obj.incrementAndGet()
     }
 
     @_silgen_name("Dec")
     public static func CDec(_ c: UnsafeMutablePointer<COUNTER>!) -> UINT{
-        let ptr = Unmanaged<Counter>.fromOpaque(c)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Counter = GetOpaque(c) else{
+            return 0
+        }
         return obj.decrementAndGet()
     }
 }
@@ -96,21 +97,20 @@ class Event : NSCondition{
     
     @_silgen_name("NewEvent")
     public static func CNewEvent() -> UnsafeMutablePointer<EVENT>!{
-        let i = Unmanaged<Event>.passRetained(Event())
-        return i.toOpaque().assumingMemoryBound(to: EVENT.self)
+        return ToOpaque(Event())
     }
 
 
     @_silgen_name("ReleaseEvent")
     public static func CReleaseEvent(_ e: UnsafeMutablePointer<EVENT>!){
-        let obj = Unmanaged<Event>.fromOpaque(e)
-        obj.release()
+        ReleaseOpaque(e)
     }
 
     @_silgen_name("Set")
     public static func CSet(_ e: UnsafeMutablePointer<EVENT>!){
-        let ptr = Unmanaged<Event>.fromOpaque(e)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Event = GetOpaque(e) else{
+            return
+        }
         obj.value = 1
         obj.signal()
         
@@ -119,11 +119,9 @@ class Event : NSCondition{
     // return 0 on timeout
     @_silgen_name("Wait")
     public static func CWait(_ e: UnsafeMutablePointer<EVENT>!, _ timeout: UINT) -> bool{
-        if e == nil {
+        guard let obj:Event = GetOpaque(e) else{
             return 0
         }
-        let ptr = Unmanaged<Event>.fromOpaque(e)
-        let obj = ptr.takeUnretainedValue()
         defer {
             obj.value = 0
         }
@@ -151,27 +149,27 @@ class Lock : NSRecursiveLock{
     // value = 0 => ready
     @_silgen_name("NewLock")
     public static func CNewLock() -> UnsafeMutablePointer<LOCK>!{
-        let i = Unmanaged<Lock>.passRetained(Lock())
-        return i.toOpaque().assumingMemoryBound(to: LOCK.self)
+        return ToOpaque(Lock())
     }
     
     @_silgen_name("DeleteLock")
     public static func CDeleteLock(_ lock: UnsafeMutablePointer<LOCK>!){
-        let obj = Unmanaged<Lock>.fromOpaque(lock)
-        obj.release()
+        ReleaseOpaque(lock)
     }
     
     @_silgen_name("UnlockInner")
     public static func CUnlockInner(_ lock: UnsafeMutablePointer<LOCK>!){
-        let ptr = Unmanaged<Lock>.fromOpaque(lock)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Lock = GetOpaque(lock) else{
+            return
+        }
         obj.unlock()
     }
     
     @_silgen_name("LockInner")
     public static func CLockInner(_ lock: UnsafeMutablePointer<LOCK>!) -> bool{
-        let ptr = Unmanaged<Lock>.fromOpaque(lock)
-        let obj = ptr.takeUnretainedValue()
+        guard let obj:Lock = GetOpaque(lock) else{
+            return 0
+        }
         return obj.try() ? 1 : 0
     }
     

@@ -7,6 +7,12 @@
 
 import Foundation
 
+
+extension NSError : LocalizedError{
+    public var errorDescription: String? { return NSLocalizedString("ERR_\(self.code)", comment: "") }
+}
+
+
 var resUni: [String:UnsafeMutablePointer<wchar_t>] = [:]
 var res: [String:UnsafeMutableRawPointer] = [:]
 

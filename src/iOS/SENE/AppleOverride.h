@@ -28,12 +28,15 @@
 #pragma weak Send
 #pragma weak Recv
 #pragma weak Select
-
+#pragma weak Disconnect
+#pragma weak NewCancel
+#pragma weak ReleaseCancel
+#pragma weak Cancel
 
 #include "AppleFunc.h"
 
 #define fputs(msg,pipe) CNSLog((#pipe), msg) 
-#define PROBE_STR(str) CNSLog("PROBE_STR", str)
-#define ConnectionReceive(a,b,c) ReceiveIOS(a,b,c)
+//#define PROBE_STR(str) CNSLog("PROBE_STR", str)
+
 #endif
 #endif /* AppleOverride_h */

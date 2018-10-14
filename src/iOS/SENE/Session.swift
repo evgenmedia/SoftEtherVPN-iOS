@@ -8,26 +8,47 @@
 import Foundation
 import NetworkExtension
 
-class SEClientThread: Thread {
-    var end : ((_ error: Error?) -> Void)
-    var session:SESSION{
-        return sp.pointee
-    }
-    let sp:UnsafeMutablePointer<SESSION>
-    var thread:THREAD{
-        return tp.pointee
-    }
-    let tp:UnsafeMutablePointer<THREAD>
-    init(_ sp:UnsafeMutablePointer<SESSION>, _ handle:@escaping (_ error: Error?) -> Void) {
-        self.sp = sp
-        self.end = handle
-        tp=salloc(THREAD.self)
-        super.init()
+typealias ErrFunc = ((_ error: Error?) -> Void)
+
+class SClientThread: NamedThread {
+    var stratHandler : ErrFunc
+    var endHandler : (()->Void)?
+    let tun:PacketTunnelProvider
+    
+    init(_ tun:PacketTunnelProvider, _ stratHandler:@escaping ErrFunc) {
+        self.tun = tun
+        self.stratHandler = stratHandler
+        super.init(ClientThread, tun.session, "ClientThread")
+        super.exitFunc = onTerminate
     }
     
-    override func main() {
-        ClientThread(tp, sp)
-        end(NSError(domain: "tech.nsyd.se.ClientThread", code: -1, userInfo: nil))
+    func currErr() -> Error{
+        return NSError(domain: "tech.nsyd.se.ne.ClientThread", code: -Int(tun.s.Err), userInfo: nil)
+    }
+    
+    func onTerminate() {
+        if let end = endHandler {
+            end()
+        }else{
+            let e = currErr()
+            NSLog("Exit Error: %@", e.localizedDescription)
+            tun.cancelTunnelWithError(e)
+        }
+    }
+    
+    func Connected() {
+        stratHandler(nil)
+    }
+    
+    @_silgen_name("SessionConnected")
+    static func SConnected(_ t: UnsafeMutablePointer<THREAD>!){
+        guard let thread:Thread = GetOpaque(t) else{
+            return
+        }
+        guard let client = thread as? SClientThread else {
+            return
+        }
+        client.Connected()
     }
 }
 
@@ -84,6 +105,8 @@ extension SESSION{
         rtn.UseCompress = opt.pointee.UseCompress
         rtn.lock = Lock.CNewLock()
         rtn.TrafficLock = Lock.CNewLock()
+        rtn.HaltEvent = Event.CNewEvent()
+        
         // Cedar
         rtn.Cedar=salloc(CEDAR.self)
         rtn.Cedar.pointee.CurrentTcpQueueSizeLock = Lock.CNewLock()

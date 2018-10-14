@@ -107,7 +107,7 @@ func GetGlobalServerFlag(_ index: UINT) -> UINT{
 
 class NamedThread: Thread {
     let mainFunc:THREAD_PROC
-    let exitFunc: (()->())?
+    var exitFunc: (()->())?
     let param:UnsafeMutableRawPointer?
     var ptr:UnsafeMutablePointer<THREAD>?
     let lock = NSCondition()
@@ -121,7 +121,7 @@ class NamedThread: Thread {
         super.init()
         
         super.name=name
-        ptr = Unmanaged<NamedThread>.passRetained(self).toOpaque().assumingMemoryBound(to: THREAD.self)
+        ptr = ToOpaque(self)
         
         super.start()
     }
@@ -134,36 +134,52 @@ class NamedThread: Thread {
         }
     }
     
-    static func GetNamedThread(_ t: UnsafeMutablePointer<THREAD>)->NamedThread{
-        let obj = Unmanaged<NamedThread>.fromOpaque(UnsafeMutableRawPointer(t))
-        return obj.takeUnretainedValue()
-    }
-    
-    
     @_silgen_name("NewThreadNamed")
-    func NewThreadNamed(_ thread_proc: UnsafeMutableRawPointer, _ param:  UnsafeMutableRawPointer, _ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<THREAD>!{
+    static func SNewThreadNamed(_ thread_proc: UnsafeMutableRawPointer, _ param:  UnsafeMutableRawPointer, _ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<THREAD>!{
         return NamedThread(getThreadProc(thread_proc),param,toSWString(name)).ptr!
     }
     
     @_silgen_name("WaitThreadInit")
-    static func WaitThreadInit(_ t: UnsafeMutablePointer<THREAD>!){
-        let nt = GetNamedThread(t)
+    static func SWaitThreadInit(_ t: UnsafeMutablePointer<THREAD>!){
+        guard let nt:NamedThread = GetOpaque(t) else{
+            return
+        }
         while(!nt.hasInit){
             nt.lock.wait()
         }
     }
     
     @_silgen_name("ReleaseThread")
-    static func ReleaseThread(_ t: UnsafeMutablePointer<THREAD>!){
-        //let obj = Unmanaged<NamedThread>.fromOpaque(UnsafeMutableRawPointer(t))
-        //obj.release()
-        
+    static func SReleaseThread(_ t: UnsafeMutablePointer<THREAD>!){
+        //ReleaseOpaque(t)
     }
     
     @_silgen_name("NoticeThreadInit")
-    static func NoticeThreadInit(_ t: UnsafeMutablePointer<THREAD>!){
-        let nt = GetNamedThread(t)
+    static func SNoticeThreadInit(_ t: UnsafeMutablePointer<THREAD>!){
+        guard let nt:NamedThread = GetOpaque(t) else{
+            return
+        }
         nt.hasInit=true
         nt.lock.broadcast()
     }
+}
+
+func GetOpaque<T:AnyObject>(_ ptr: UnsafeRawPointer?)->T?{
+    guard let p = ptr else {
+        return nil
+    }
+    let opq = Unmanaged<T>.fromOpaque(p)
+    return opq.takeUnretainedValue()
+}
+
+func ToOpaque<T:AnyObject,S>(_ obj: T)->UnsafeMutablePointer<S>{
+    let i = Unmanaged<T>.passRetained(obj)
+    return i.toOpaque().assumingMemoryBound(to: S.self)
+}
+
+func ReleaseOpaque(_ ptr: UnsafeRawPointer?){
+    guard let p = ptr else {
+        return
+    }
+    Unmanaged<AnyObject>.fromOpaque(p).release()
 }

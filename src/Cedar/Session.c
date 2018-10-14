@@ -731,6 +731,7 @@ CLEANUP:
 	if (pa_inited)
 	{
 		pa->Free(s);
+        s->Cancel2 = NULL;
 	}
 
 #ifdef	OS_WIN32

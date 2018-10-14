@@ -13,8 +13,8 @@
 void CNSLog(char* pipe, char* msg);
 void SCC_SHA1(const void *data, unsigned int len, unsigned char *md);
 void SCC_MD5(const void *data, unsigned int len, unsigned char *md);
-void InitVars();
-void ReceiveIOS(CONNECTION *c, CANCEL *c1, CANCEL *c2);
+
+void SessionConnected(THREAD *);
 
 
 #endif /* AppleFunc_h */

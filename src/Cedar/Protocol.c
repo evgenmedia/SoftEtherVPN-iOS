@@ -5245,6 +5245,10 @@ REDIRECTED:
 
 	// Connection establishment
 	c->Session->ClientStatus = CLIENT_STATUS_ESTABLISHED;
+    
+#ifdef UNIX_IOS
+    SessionConnected(c->Session->Thread);
+#endif // UNIX_IOS
 
 	// Save the server certificate
 	if (c->ServerX == NULL)

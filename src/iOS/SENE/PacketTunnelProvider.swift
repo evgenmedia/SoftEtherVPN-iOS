@@ -8,9 +8,18 @@
 import NetworkExtension
 
 class PacketTunnelProvider: NEPacketTunnelProvider {
-    var s:UnsafeMutablePointer<SESSION>?
-    var t:SEClientThread?
-    static var instance:PacketTunnelProvider?
+    var session:UnsafeMutablePointer<SESSION>!
+    var connections = [SockHandler]()
+    var s:SESSION{
+        get {
+            return session.pointee
+        }
+        set {
+            session.pointee = newValue
+        }
+    }
+    var t:SClientThread!
+    static var instance:PacketTunnelProvider!
     var pa:PackAdapterInstance?
     override init() {
         super.init()
@@ -19,42 +28,47 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         // Add code here to start the process of connecting the tunnel.
         
-        //        let raw = GetWaterMark()?.bindMemory(to: UInt8.self, capacity: Int(SizeOfWaterMark()))
-        //        var water = Data()
-        //        water.append(raw!, count: Int(SizeOfWaterMark()))
-        //        NSLog(water.hexEncodedString())
-        //t.start()
+//        let endPoint = NWHostEndpoint(hostname: "mac-mini.local", port: "12345")
+//
+//        var tcp = createTCPConnection(to: endPoint, enableTLS: false, tlsParameters: NWTLSParameters(), delegate: nil)
+//        Thread.sleep(until: Date().addingTimeInterval(TimeInterval(2)))
+//        let cnd = NSCondition()
+//        cnd.lock()
+//        while true {
+//            tcp.readMinimumLength(0, maximumLength: 100, completionHandler: { (data, err) in
+//                cnd.lock()
+//                if let d = data{
+//                    let c = (d.count)
+//                }
+//                cnd.broadcast()
+//                cnd.unlock()
+//            })
+//            cnd.wait(until:Date().addingTimeInterval(TimeInterval(10)))
+//            tcp.write("Test\n".data(using: String.Encoding.utf8)!, completionHandler: {_ in })
+//        }
+        
+       
+        
         InitStringLibrary()
         InitNetwork()
         let auth = CLIENT_AUTH.setup("asd","asdpas")
         let opt = CLIENT_OPTION.setup("mac-mini.local", 443)
         let acc = ACCOUNT.setup(opt, auth)
         pa = PackAdapterInstance(packetFlow)//pa!.paPtr
-        s = SESSION.setup(opt, auth, NullGetPacketAdapter(), acc)
-        
-        
-        let thread = NamedThread(ClientThread,s,"ClientThread",{
-            let err = Int(self.s!.pointee.Err)
-            if err != 0{
-                NSLog("Exit Error: %@", NSLocalizedString("ERR_\(err)", comment: ""))
-                self.cancelTunnelWithError(NSError(domain: "tech.nsyd.se.ClientThread", code: -err, userInfo: nil))
-            }
-        })
-        
-        //t=SEClientThread(s!,self.cancelTunnelWithError)
-        print("Hello World!")
-        NSLog("%@", "Hello Log!")
-        //t?.start()
-        
-        completionHandler(nil)
+        session = SESSION.setup(opt, auth, NullGetPacketAdapter(), acc)
+
+        t = SClientThread(self, completionHandler)
+    
     }
     
     
     
     override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         // Add code here to start the process of stopping the tunnel.
-        StopSession(s)
         completionHandler()
+        t.endHandler = completionHandler
+        
+        StopSession(session)
     }
     
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)?) {

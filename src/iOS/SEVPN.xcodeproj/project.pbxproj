@@ -376,7 +376,6 @@
 		2E391FFD2146081B00507E4C /* Secure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secure.h; sourceTree = "<group>"; };
 		2E391FFF21460BAA00507E4C /* GenDummy.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = GenDummy.sh; sourceTree = "<group>"; };
 		2E39200021460DBF00507E4C /* ld.src */ = {isa = PBXFileReference; lastKnownFileType = text; path = ld.src; sourceTree = "<group>"; };
-		2E39200921460E3C00507E4C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		2E6DEDCE21502DEF00F98A1F /* DummyFunction.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = DummyFunction.c; sourceTree = "<group>"; };
 		2E9241C4216AC2A8000B026F /* Objc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Objc.c; sourceTree = "<group>"; };
 		2E9241C6216AC700000B026F /* AppleFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppleFunc.h; sourceTree = "<group>"; };
@@ -436,7 +435,6 @@
 				2E391ED72146063700507E4C /* SoftEther.entitlements */,
 				2E391EB52146057800507E4C /* App */,
 				2E391ECB214605D500507E4C /* SENE */,
-				2E39200821460E3C00507E4C /* vpnserver */,
 				2E391EB42146057700507E4C /* Products */,
 				2E391ED82146064100507E4C /* Frameworks */,
 				934B130640498C50D8DD8ABE /* Pods */,
@@ -850,14 +848,6 @@
 				2E39200021460DBF00507E4C /* ld.src */,
 			);
 			path = DummyCode;
-			sourceTree = "<group>";
-		};
-		2E39200821460E3C00507E4C /* vpnserver */ = {
-			isa = PBXGroup;
-			children = (
-				2E39200921460E3C00507E4C /* main.c */,
-			);
-			path = vpnserver;
 			sourceTree = "<group>";
 		};
 		2EE855692169BCDD0025A2AE /* Resources */ = {
