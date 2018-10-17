@@ -98,6 +98,8 @@ class PackAdapterInstance : Thread{
             
             settings.ipv4Settings?.includedRoutes = [NEIPv4Route(destinationAddress: "0.0.0.0", subnetMask: "0.0.0.0")]
             
+            settings.dnsSettings = NEDNSSettings(servers: ["1.1.1.1","8.8.8.8"])
+            
             settings.mtu = 1500
             
             pt!.setTunnelNetworkSettings(settings, completionHandler: { (err) in
@@ -198,7 +200,7 @@ class PackAdapterInstance : Thread{
         Unmanaged<Cancel>.passUnretained(cancel).release()
     }
     
-    static let Timeout = 30 // TODO
+    static let Timeout = TimeInterval(0.7*Double(TIMEOUT_DEFAULT/1000)) // TODO
     
     
     // L2 -> L3
@@ -219,9 +221,9 @@ class PackAdapterInstance : Thread{
             }
             cond.lock()
             while cond.name == nil {
-                cond.wait(until: timeoutDate(PackAdapterInstance.Timeout))
-                cond.name = nil
+                cond.wait(until: Date().addingTimeInterval(PackAdapterInstance.Timeout))
             }
+            cond.name = nil
             cond.unlock()
         }
     }
