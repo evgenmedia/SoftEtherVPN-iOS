@@ -16,5 +16,6 @@ void SCC_MD5(const void *data, unsigned int len, unsigned char *md);
 
 void SessionConnected(THREAD *);
 
+void PrintHex(void* data, UINT size);
 
 #endif /* AppleFunc_h */

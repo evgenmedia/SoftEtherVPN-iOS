@@ -32,6 +32,19 @@
 #pragma weak NewCancel
 #pragma weak ReleaseCancel
 #pragma weak Cancel
+#pragma weak NewSockEvent
+#pragma weak WaitSockEvent
+#pragma weak SetSockEvent
+#pragma weak ReleaseSockEvent
+#pragma weak WaitForTubes
+
+// IPC
+#pragma weak IPCRecvL2
+#pragma weak IPCSendL2
+#pragma weak NewIPCByParam
+#pragma weak IPCDhcpSetConditionalUserClass
+#pragma weak FlushTubeFlushList
+#pragma weak AddInterrupt
 
 #include "AppleFunc.h"
 

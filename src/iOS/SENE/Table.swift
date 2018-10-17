@@ -18,12 +18,12 @@ var res: [String:UnsafeMutableRawPointer] = [:]
 
 @_silgen_name("GetTableUniStr")
 public func GetTableUniStr(_ name: UnsafeMutablePointer<UInt8>)->UnsafeMutablePointer<wchar_t>{
-    let key = toSWString(name)
+    let key = String(cString: name)
     var value = resUni[key]
     if value == nil {
         let strPtr = GetTableStr(name)
         let strl = strlen(UnsafeMutableRawPointer(strPtr).assumingMemoryBound(to: Int8.self))
-        value = SMalloc((strl+2)*MemoryLayout<wchar_t>.size).assumingMemoryBound(to: wchar_t.self)
+        value = InternalMalloc(UINT((strl+2)*MemoryLayout<wchar_t>.size)).assumingMemoryBound(to: wchar_t.self)
         UnixStrToUni(value,UINT((strl+2)*MemoryLayout<wchar_t>.size),
                       res[key]?.assumingMemoryBound(to: Int8.self))
         resUni[key] = value
@@ -33,7 +33,7 @@ public func GetTableUniStr(_ name: UnsafeMutablePointer<UInt8>)->UnsafeMutablePo
 
 @_silgen_name("GetTableStr")
 public func GetTableStr(_ name: UnsafeMutablePointer<UInt8>)->UnsafeMutablePointer<UInt8>{
-    let key = toSWString(name)
+    let key = String(cString: name)
     var value = res[key]
     if value == nil {
         let str = NSLocalizedString(key, comment: "")

@@ -18,7 +18,7 @@ extension CLIENT_OPTION{
         rtn.Port=UINT32(port)
         rtn.PortUDP=UINT32(udp)
         rtn.UseEncrypt=1
-        rtn.MaxConnection=16
+        rtn.MaxConnection=2
         rtn.NoUdpAcceleration=1
         rtn.NumRetry=0
         rtn.AdditionalConnectionInterval=2

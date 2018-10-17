@@ -196,7 +196,7 @@ int PASCAL WinMain(HINSTANCE hInst, HINSTANCE hPrev, char *CmdLine, int CmdShow)
 #endif	// OS_WIN32
 
 // Macro that displays the current file name and line number
-#define	WHERE			if (IsDebug()){printf("%s: %u\n", __FILE__, __LINE__); SleepThread(10);}
+#define	WHERE			if (IsDebug()){Debug("%s: %u\n", __FILE__, __LINE__); SleepThread(10);}
 #define	WHERE32			if (IsDebug()){	\
 	char tmp[128]; sprintf(tmp, "%s: %u", __FILE__, __LINE__); Win32DebugAlert(tmp);	\
 	}

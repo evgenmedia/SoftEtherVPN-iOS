@@ -130,7 +130,7 @@ class Event : NSCondition{
                 obj.wait()
             }
         }else{
-            let until = Date().addingTimeInterval(TimeInterval(timeout))
+            let until = timeoutDate(timeout)
             while obj.value == 0 {
                 return obj.wait(until: until) ? 1 : 0
             }

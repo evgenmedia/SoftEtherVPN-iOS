@@ -47,6 +47,9 @@
 		2EC7A3F92147112F00DF7A5B /* Session.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F002146081A00507E4C /* Session.c */; };
 		2EC7A3FA2147113700DF7A5B /* WaterMark.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F0C2146081A00507E4C /* WaterMark.c */; };
 		2EE855762169D9870025A2AE /* Table.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE855752169D9870025A2AE /* Table.swift */; };
+		2EF30844217350EC0065F18F /* IPC.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391F6B2146081A00507E4C /* IPC.c */; };
+		2EF30845217351150065F18F /* TcpIp.c in Sources */ = {isa = PBXBuildFile; fileRef = 2E391FE52146081B00507E4C /* TcpIp.c */; };
+		2EF3084721735CBD0065F18F /* PacketAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF3084621735CBD0065F18F /* PacketAdapter.swift */; };
 		448751506D0E818E56904009 /* Pods_SENE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C033BF4E9D21CEED91DB402 /* Pods_SENE.framework */; };
 		EF64C6C353584B7B93DEEB5A /* Pods_SoftEther.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17D4107C2BE262D20CBD135 /* Pods_SoftEther.framework */; };
 /* End PBXBuildFile section */
@@ -396,6 +399,7 @@
 		2EE855732169D8F00025A2AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2EE855742169D8F60025A2AE /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2EE855752169D9870025A2AE /* Table.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Table.swift; sourceTree = "<group>"; };
+		2EF3084621735CBD0065F18F /* PacketAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketAdapter.swift; sourceTree = "<group>"; };
 		2FC8D0EAE2B1A204A96BF9AA /* Pods-SENE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SENE.release.xcconfig"; path = "Pods/Target Support Files/Pods-SENE/Pods-SENE.release.xcconfig"; sourceTree = "<group>"; };
 		6C033BF4E9D21CEED91DB402 /* Pods_SENE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SENE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C6E8AC1A9558AE0CEB95C8 /* Pods-SoftEther.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoftEther.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoftEther/Pods-SoftEther.debug.xcconfig"; sourceTree = "<group>"; };
@@ -488,6 +492,7 @@
 				2EC7A3E62147105C00DF7A5B /* Str.swift */,
 				2EE855752169D9870025A2AE /* Table.swift */,
 				2EC7A3E82147105C00DF7A5B /* Util.swift */,
+				2EF3084621735CBD0065F18F /* PacketAdapter.swift */,
 			);
 			path = SENE;
 			sourceTree = "<group>";
@@ -1102,11 +1107,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF30845217351150065F18F /* TcpIp.c in Sources */,
+				2EF30844217350EC0065F18F /* IPC.c in Sources */,
 				2EC7A3EF214710CB00DF7A5B /* Network.c in Sources */,
 				2EC7A3EE214710C000DF7A5B /* Internat.c in Sources */,
 				2EC7A3EA2147105C00DF7A5B /* Object.swift in Sources */,
 				2EC7A3E12147105500DF7A5B /* Memory.swift in Sources */,
 				2EC7A3E02147105500DF7A5B /* Encrpt.swift in Sources */,
+				2EF3084721735CBD0065F18F /* PacketAdapter.swift in Sources */,
 				2EC7A3EB2147105C00DF7A5B /* Str.swift in Sources */,
 				2EC7A3D92147104B00DF7A5B /* AppleFunc.c in Sources */,
 				2EC7A3D82147104B00DF7A5B /* AppleSock.c in Sources */,
@@ -1358,7 +1366,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -1381,6 +1389,7 @@
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -1395,6 +1404,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.NE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1434,7 +1444,7 @@
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -1452,6 +1462,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "UNIX_IOS=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_MISSING_PARENTHESES = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -1465,6 +1476,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.nsyd.se.NE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

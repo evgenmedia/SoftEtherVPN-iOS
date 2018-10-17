@@ -52,44 +52,6 @@ class SClientThread: NamedThread {
     }
 }
 
-class PackAdapterInstance{
-    let packetFlow:NEPacketTunnelFlow
-    let paPtr = salloc(PACKET_ADAPTER.self)
-    init(_ packet: NEPacketTunnelFlow) {
-        packetFlow=packet
-        var pa = PACKET_ADAPTER()
-        pa.Init = SPAInit
-        pa.GetCancel = SPAGetCancel
-        pa.GetNextPacket = SPAGetNextPacket
-        pa.PutPacket = SPAPutPacket
-        pa.Free = SPAFree
-        pa.Param = nil
-        paPtr.pointee = pa
-    }
-}
-
-
-
-func SPAInit(_ s:UnsafeMutablePointer<SESSION>?) ->  UInt32{
-    return 1
-}
-
-func SPAGetCancel(_ s:UnsafeMutablePointer<SESSION>?)->UnsafeMutablePointer<CANCEL>?{
-    return nil
-}
-
-func SPAGetNextPacket(_ s: UnsafeMutablePointer<SESSION>!, _ pack: UnsafeMutablePointer<UnsafeMutableRawPointer?>!) -> UINT{
-    return 0
-}
-
-func SPAPutPacket(_ s:UnsafeMutablePointer<SESSION>?, _ pack: UnsafeMutableRawPointer?, _ size: UINT)->UINT{
-    return 1
-}
-
-func SPAFree(_ s:UnsafeMutablePointer<SESSION>?){
-    
-}
-
 extension SESSION{
     static func setup(_ opt:UnsafeMutablePointer<CLIENT_OPTION>, _ auth:UnsafeMutablePointer<CLIENT_AUTH>, _ pa:UnsafeMutablePointer<PACKET_ADAPTER>, _ account:UnsafeMutablePointer<ACCOUNT>)->UnsafeMutablePointer<SESSION>{
 //        let ptr = UnsafeMutablePointer<SESSION>.allocate(capacity: 1)

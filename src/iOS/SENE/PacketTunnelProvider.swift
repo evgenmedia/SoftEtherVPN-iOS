@@ -20,7 +20,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     }
     var t:SClientThread!
     static var instance:PacketTunnelProvider!
-    var pa:PackAdapterInstance?
+    var pa:PackAdapterInstance!
     override init() {
         super.init()
         PacketTunnelProvider.instance = self
@@ -54,9 +54,8 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         let auth = CLIENT_AUTH.setup("asd","asdpas")
         let opt = CLIENT_OPTION.setup("mac-mini.local", 443)
         let acc = ACCOUNT.setup(opt, auth)
-        pa = PackAdapterInstance(packetFlow)//pa!.paPtr
-        session = SESSION.setup(opt, auth, NullGetPacketAdapter(), acc)
-
+        pa = PackAdapterInstance(self)//pa!.paPtr
+        session = SESSION.setup(opt, auth, pa.pa, acc)
         t = SClientThread(self, completionHandler)
     
     }

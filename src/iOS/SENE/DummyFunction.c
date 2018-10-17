@@ -2,6 +2,8 @@
 
 #include "CedarPch.h"
 
+#pragma clang diagnostic ignored "-Wint-conversion"
+
 void* unimplemented(){ return 0x1; }
 void* ignored(){ return 0x1; }
 
@@ -125,9 +127,6 @@ void SiCallCreateTicket(SERVER *s, FARM_MEMBER *f, char *hubname, char *username
 UINT GetServerCapsInt(SERVER *s, char *name)
 { return unimplemented(); }
 
-bool ParseAndExtractMsChapV2InfoFromPassword(IPC_MSCHAP_V2_AUTHINFO *d, char *password)
-{ return unimplemented(); }
-
 bool UdpAccelInitServer(UDP_ACCEL *a, UCHAR *client_key, IP *client_ip, UINT client_port, IP *client_ip_2)
 { return unimplemented(); }
 
@@ -246,9 +245,6 @@ bool VirtualPutPacket(VH *v, void *data, UINT size)
 USER *AcGetUser(HUB *h, char *name)
 { return unimplemented(); }
 
-void FreePacket(PKT *p)
-{ unimplemented(); }
-
 IO *FileOpenExW(wchar_t *name, bool write_mode, bool read_lock)
 { return unimplemented(); }
 
@@ -344,9 +340,6 @@ bool CheckXDateNow(X *x)
 LOG *NewLog(char *dir, char *prefix, UINT switch_type)
 { return unimplemented(); }
 
-bool IsDhcpPacketForSpecificMac(UCHAR *data, UINT size, UCHAR *mac_address)
-{ return unimplemented(); }
-
 UINT64 LocalTime64()
 { return unimplemented(); }
 
@@ -434,9 +427,6 @@ UINT FileSize(IO *o)
 
 void MsChapV2_GenerateChallenge8(UCHAR *dst, UCHAR *client_challenge, UCHAR *server_challenge, char *username)
 { unimplemented(); }
-
-USHORT IpChecksum(void *buf, UINT size)
-{ return unimplemented(); }
 
 UINT StGetHubMsg(ADMIN *a, RPC_MSG *t)
 { return unimplemented(); }
@@ -573,9 +563,6 @@ void CloseEth(ETH *e)
 bool CheckXandK(X *x, K *k)
 { return unimplemented(); }
 
-UINT GetIpHeaderSize(UCHAR *src, UINT src_size)
-{ return unimplemented(); }
-
 BUF *HttpRequestEx3(URL_DATA *data, INTERNET_SETTING *setting,
 					UINT timeout_connect, UINT timeout_comm,
 					UINT *error_code, bool check_ssl_trust, char *post_data,
@@ -675,3 +662,5 @@ IO *FileCreate(char *name)
 UINT Release(REF *ref)
 { return unimplemented(); }
 
+void GetBroadcastAddress4(IP *dst, IP *addr, IP *mask)
+{ unimplemented(); }

@@ -9,9 +9,13 @@ import Foundation
 
 
 public func salloc<T>(_ type: T.Type)->UnsafeMutablePointer<T>{
-    let ptr = SZeroMalloc(MemoryLayout<T>.size)
+    let ptr = ZeroMalloc(UINT(MemoryLayout<T>.size))!
 //    NSLog("alloc \(T.self) @ \(ptr)")
     return ptr.assumingMemoryBound(to: T.self)
+}
+
+public func salloc<T>()->UnsafeMutablePointer<T>{
+    return salloc(T.self)
 }
 
 //@_silgen_name("ZeroMalloc")
@@ -26,18 +30,18 @@ public func CZero(_ addr: UnsafeMutableRawPointer!, _ size: UINT){
 
 @_silgen_name("InternalMalloc")
 public func CMalloc(_ size: UINT) -> UnsafeMutableRawPointer!{
-    return SMalloc(Int(size))
+    return UnsafeMutableRawPointer.allocate(byteCount: Int(size), alignment: 0)
 }
 
-public func SMalloc(_ size: Int) -> UnsafeMutableRawPointer{
-    return UnsafeMutableRawPointer.allocate(byteCount: size, alignment: 0)
-}
-
-func SZeroMalloc(_ size: Int) -> UnsafeMutableRawPointer{
-    let ptr = UnsafeMutableRawPointer.allocate(byteCount: size, alignment: 0)
-    ptr.initializeMemory(as: UInt8.self, repeating: 0, count: size)
-    return ptr
-}
+//public func SMalloc(_ size: Int) -> UnsafeMutableRawPointer{
+//    return
+//}
+//
+//func SZeroMalloc(_ size: Int) -> UnsafeMutableRawPointer{
+//    let ptr = UnsafeMutableRawPointer.allocate(byteCount: size, alignment: 0)
+//    ptr.initializeMemory(as: UInt8.self, repeating: 0, count: size)
+//    return ptr
+//}
 
 @_silgen_name("Copy")
 public func CCopy(_ dst: UnsafeMutableRawPointer!, _ src: UnsafeMutableRawPointer!, _ size: UINT){

@@ -10,12 +10,16 @@ import UIKit
 
 extension String{
     func setPtr( _ ptr:UnsafeMutableRawPointer){
-        if var data = self.data(using: String.Encoding.utf8){
-            data.append(0)
-            data.withUnsafeBytes { (byt) in
-                ptr.copyMemory(from: byt, byteCount: self.count+1)
-            }
+        withCString { (str) in
+            ptr.copyMemory(from: str, byteCount: self.count+1)
         }
+//        if var data = self.data(using: String.Encoding.utf8){
+//            data.append(0)
+//
+//            data.withUnsafeBytes { (byt) in
+//                ptr.copyMemory(from: byt, byteCount: self.count+1)
+//            }
+//        }
     }
     
     func newPtr()->UnsafeMutableRawPointer{
@@ -25,15 +29,15 @@ extension String{
     }
 }
 
-func toSWString(_ of:UnsafeMutableRawPointer ) -> String{
-    return String(cString: of.bindMemory(to: UInt8.self, capacity: 256))
-}
+//func toSWString(_ of:UnsafeMutableRawPointer ) -> String{
+//    return String(cString: of)
+//}
 
 
 @_silgen_name("CNSLog")
-func CNSLog(_ pipe: UnsafeMutablePointer<UInt8>, _ msg: UnsafeMutableRawPointer){
-    let str = toSWString(msg)
-    let pi = toSWString(pipe)
+func CNSLog(_ pipe: UnsafeMutablePointer<UInt8>, _ msg: UnsafeMutablePointer<UInt8>){
+    let str = String(cString: msg)
+    let pi = String(cString: pipe)
     NSLog("%@: %@",pi,str)
 }
 
@@ -135,8 +139,8 @@ class NamedThread: Thread {
     }
     
     @_silgen_name("NewThreadNamed")
-    static func SNewThreadNamed(_ thread_proc: UnsafeMutableRawPointer, _ param:  UnsafeMutableRawPointer, _ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<THREAD>!{
-        return NamedThread(getThreadProc(thread_proc),param,toSWString(name)).ptr!
+    static func SNewThreadNamed(_ thread_proc: @escaping @convention(c) (UnsafeMutablePointer<THREAD>?, UnsafeMutableRawPointer?) -> Void, _ param:  UnsafeMutableRawPointer, _ name: UnsafeMutablePointer<Int8>!) -> UnsafeMutablePointer<THREAD>!{
+        return NamedThread(thread_proc,param,String(cString: name)).ptr!
     }
     
     @_silgen_name("WaitThreadInit")
@@ -174,6 +178,7 @@ func GetOpaque<T:AnyObject>(_ ptr: UnsafeRawPointer?)->T?{
 
 func ToOpaque<T:AnyObject,S>(_ obj: T)->UnsafeMutablePointer<S>{
     let i = Unmanaged<T>.passRetained(obj)
+    i.retain()
     return i.toOpaque().assumingMemoryBound(to: S.self)
 }
 
@@ -182,4 +187,16 @@ func ReleaseOpaque(_ ptr: UnsafeRawPointer?){
         return
     }
     Unmanaged<AnyObject>.fromOpaque(p).release()
+}
+
+func timeoutDate(_ time: UINT) -> Date {
+    return timeoutDate(Double(time))
+}
+
+func timeoutDate(_ time: Int) -> Date {
+    return timeoutDate(Double(time))
+}
+
+func timeoutDate(_ time: Double) -> Date {
+    return Date().addingTimeInterval(TimeInterval(time))
 }

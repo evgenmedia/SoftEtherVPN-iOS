@@ -34,7 +34,7 @@ class SockHandler : NSCondition {
                   _ ssl_no_tls: bool,
                   _ no_get_hostname: bool,
                   _ ret_ip: UnsafeMutablePointer<IP>!) {
-        self.hostname = toSWString(hostname)
+        self.hostname = String(cString: hostname)
         //param = NWTLSParameters()
         if timeout == 0{
             self.timeout = Double(TIMEOUT_TCP_PORT_CHECK)/1000
@@ -94,7 +94,7 @@ class SockHandler : NSCondition {
     }
     
     func getTimeout() -> Date{
-        return Date().addingTimeInterval(TimeInterval(self.timeout))
+        return timeoutDate(self.timeout)
     }
     
     @_silgen_name("ConnectEx4")
@@ -336,9 +336,16 @@ class SockHandler : NSCondition {
                 }
             }
         })
+        
+        Cancel.RegisterCancel(c1, notify)
+        Cancel.RegisterCancel(c2, notify)
+        
         if notify.name == nil{
-            let cond = notify.wait(until: Date().addingTimeInterval(TimeInterval(Double(timeout)/1000)))
+            let cond = notify.wait(until: timeoutDate(Double(timeout)/1000))
         }
+        
+        Cancel.RegisterCancel(c1, nil)
+        Cancel.RegisterCancel(c2, nil)
         
         for sh in selectList{
             sh.selectOff(check: notify)
@@ -385,8 +392,8 @@ func SStartSSLEx(_ sock: UnsafeMutablePointer<SOCK>!, _ x: UnsafeMutablePointer<
 
 class Cancel {
     var cond:NSCondition?
-    
-    static func RegisterCancel(_ c: UnsafeMutablePointer<CANCEL>!, _ cond: NSCondition){
+    var str:String?
+    static func RegisterCancel(_ c: UnsafeMutablePointer<CANCEL>!, _ cond: NSCondition?){
         guard let cancel:Cancel = GetOpaque(c) else {
             return
         }
@@ -408,10 +415,76 @@ class Cancel {
         guard let cancel:Cancel = GetOpaque(c) else {
             return
         }
+        cancel.cond?.name = "Cancel"
         cancel.cond?.broadcast()
         
     }
 }
+
+@_silgen_name("WaitForTubes")
+func SWaitForTubes(_ tubes: UnsafeMutablePointer<UnsafeMutablePointer<TUBE>?>!, _ num: UINT, _ timeout: UINT){
+    let cond = NSCondition()
+    withEachEvent(tubes,num){ c in
+        c.cond = cond
+    }
+    
+    if cond.name == nil {
+        cond.wait(until: timeoutDate(num))
+    }
+    
+    withEachEvent(tubes,num){ c in
+        c.cond = nil
+    }
+}
+
+@_silgen_name("ReleaseSockEvent")
+func SReleaseSockEvent(_ event: UnsafeMutablePointer<SOCK_EVENT>!){
+    ReleaseOpaque(event)
+}
+
+@_silgen_name("WaitSockEvent")
+func SWaitSockEvent(_ event: UnsafeMutablePointer<SOCK_EVENT>!, _ timeout: UINT) -> bool{
+    guard let e:Cancel = GetOpaque(event) else {
+        return 0
+    }
+    e.cond = NSCondition()
+    
+    var result = true
+    if e.str == nil{
+        result = e.cond!.wait(until: timeoutDate(timeout))
+        e.str = nil
+    }
+    return result ? 1 : 0
+}
+
+@_silgen_name("SetSockEvent")
+func SSetSockEvent(_ event: UnsafeMutablePointer<SOCK_EVENT>!){
+    guard let e:Cancel = GetOpaque(event) else {
+        return
+    }
+    e.str = "Set"
+    e.cond?.broadcast()
+}
+
+@_silgen_name("NewSockEvent")
+func SNewSockEvent() -> UnsafeMutablePointer<SOCK_EVENT>!{
+    var ptr:UnsafeMutablePointer<SOCK_EVENT>=ToOpaque(Cancel())
+    NSLog("Sock Event: %p\n", ptr)
+    return ptr
+}
+
+func withEachEvent(_ tubes: UnsafeMutablePointer<UnsafeMutablePointer<TUBE>?>!, _ num: UINT, _ fuc: (Cancel)->Void) {
+    for i in 0...Int(num) {
+        guard let t = tubes.advanced(by: i).pointee?.pointee else{
+            continue
+        }
+        guard let c:Cancel = GetOpaque(t.SockEvent) else{
+            continue
+        }
+        fuc(c)
+    }
+}
+
 //public func IPToStr(_ str: UnsafeMutablePointer<Int8>!, _ size: UINT, _ ip: UnsafeMutablePointer<IP>!){
 //    if (ip.pointee.addr == (0xDF,0xFF,0xFF,0xFE)){ // is IPv6
 //        "::1".setPtr(str)
