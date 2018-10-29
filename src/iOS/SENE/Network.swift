@@ -7,6 +7,7 @@
 
 import Foundation
 import NetworkExtension
+import os.signpost
 
 class SockHandler : NSCondition {
     let sp = salloc(SOCK.self)
@@ -24,6 +25,7 @@ class SockHandler : NSCondition {
     let timeout:Double
     var buf:UInt8?
     var err:Error?
+    var signID:OSSignpostID!
     init(_ hostname: UnsafeMutablePointer<Int8>!,
                   _ port: UINT,
                   _ timeout: UINT,
@@ -63,7 +65,7 @@ class SockHandler : NSCondition {
         tcp = tunnel.createTCPConnection(to: endPoint, enableTLS: try_start_ssl==1, tlsParameters: nil, delegate: self)
         
         tcp.addObserver(self, forKeyPath: "state", options: .initial, context: &tcp)
-        
+        signID = OSSignpostID(log: SockHandler.selectLog, object: self)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -83,7 +85,7 @@ class SockHandler : NSCondition {
             tcp.cancel()
             fallthrough
         default:
-            raise(SIGINT)
+//            raise(SIGINT)
             break
         }
         
@@ -132,28 +134,37 @@ class SockHandler : NSCondition {
     }
     
     var minRead = 1
-    var selectEvent:NSCondition?
+//    weak var selectEvent:NSCondition?
     var asyncMode:Bool { return minRead == 0 }
     
     var reading = false
     
     var lastRecv:UINT64 = 0
     
-    func selectOn(_ event: NSCondition) -> Int{
+    var flag:UnsafeMutablePointer<Bool>?
+    
+    enum SelectErr:String {
+        case notConnected = "notConnected"
+        case connectionError = "connectionError"
+        case dataBuffered = "dataBuffered"
+        case selectIPG = "selectIPG"
+        case normal = "normal"
+    }
+    
+    func selectOn(_ flagPtr: UnsafeMutablePointer<Bool>) -> SelectErr{
         lock()
         defer {
-            selectEvent = event
             name = nil
             unlock()
         }
-        
+        // SelectTimeout*1.5
         if tcp.state != .connected{
-            return -1
+            return .notConnected
         }
         
         if let e = self.err{
             NSLog("Select Error %@\n", e.localizedDescription)
-            return -2
+            return .connectionError
         }
         
         if !asyncMode{
@@ -162,30 +173,30 @@ class SockHandler : NSCondition {
         }
         
         if buf != nil{
-            event.name = hostname
-            event.broadcast()
-            return 1
+            flagPtr.pointee = true
+            SockHandler.notify.broadcast()
+            return .dataBuffered
         }
         
-        if selectEvent != nil{
-            return -3
+        if flag != nil{
+            return .selectIPG
         }
+        
+        flag = flagPtr
         
         if reading {
-            return 2
+            return .normal
         }
-        
         reading = true
         tcp.readLength(1, completionHandler: { (rec, e) in
             self.lock()
-            self.reading = false
             self.lastRecv = Tick64()
             defer{
-                if let event = self.selectEvent{
-                    event.name = self.hostname
-                    event.broadcast()
-                    self.selectEvent = nil
+                if let flag = self.flag{
+                    flag.pointee = true
+                    SockHandler.notify.broadcast()
                 }
+                self.reading = false
                 self.unlock()
             }
             if let r = rec{
@@ -196,7 +207,7 @@ class SockHandler : NSCondition {
                 self.err = e
             }
         })
-        return 0
+        return .normal
     }
     
     @_silgen_name("Send")
@@ -312,54 +323,60 @@ class SockHandler : NSCondition {
             return readed
         }
     }
+    static private func forEachSOCK(_ first:UnsafeMutableRawPointer,_ size:UINT, _ block: (SockHandler)->Void){
+        let first = first.assumingMemoryBound(to: (UnsafeMutablePointer<SOCK>?).self)
+        for i in 0...Int(size){
+            if let sh = GetSockHandler(first.advanced(by: i).pointee){
+                block(sh)
+            }
+        }
+    }
+    
+    static var selectStr = "select"
+    
+    static let notify = NSCondition()
+    static var SelectTimeout = 250.0/1000
+    
+    static let selectLog:OSLog = .disabled//OSLog(subsystem: "tech.nsyd.se.SENE", category: "Select")
     
     @_silgen_name("Select")
     public static func SSelect(_ set: UnsafeMutablePointer<SOCKSET>!, _ timeout: UINT, _ c1: UnsafeMutablePointer<CANCEL>!, _ c2: UnsafeMutablePointer<CANCEL>!){
-        let notify = NSCondition()
-        
+        let signID = OSSignpostID(log: selectLog)
+        os_signpost(.begin, log: selectLog, name: "Select",signpostID:signID)
         notify.lock()
-        
-        var selectList = [SockHandler]()
-        
-        
-        withUnsafeMutablePointer(to: &(set.pointee.Sock), { ptr in
-            let first = UnsafeMutableRawPointer(ptr).assumingMemoryBound(to: (UnsafeMutablePointer<SOCK>?).self)
-            for i in 0...set.pointee.NumSocket{
-                if let sock = first.advanced(by: Int(i)).pointee{
-                    if let sh = GetSockHandler(sock){
-                        let ii = sh.selectOn(notify)
-                        selectList.append(sh)
-                        if ii != 0 && ii != 2{
-                            NSLog("Select Connection %d State: %d", i,ii)
-                        }
-                    }
-                }
+        defer {
+            notify.unlock()
+            os_signpost(.end, log: selectLog, name: "Select",signpostID:signID)
+        }
+        var m = false
+        withUnsafeMutablePointer(to: &(set.pointee.Sock)){ ptr in
+        withUnsafeMutablePointer(to: &m){ monitor in
+            forEachSOCK(ptr,set.pointee.NumSocket){ sh in
+                os_signpost(.begin, log: SockHandler.selectLog, name: "Select On",signpostID:sh.signID)
+                let result = sh.selectOn(monitor)
+                os_signpost(.end, log: SockHandler.selectLog, name: "Select On",signpostID:sh.signID,"Result: %{public}@", result.rawValue)
             }
-        })
-        
-        Cancel.RegisterCancel(c1, notify)
-        Cancel.RegisterCancel(c2, notify)
-        
-        if notify.name == nil{
-            let cond = notify.wait(until: timeoutDate(Double(timeout)/1000))
-        }
-        
-        Cancel.RegisterCancel(c1, nil)
-        Cancel.RegisterCancel(c2, nil)
-        
-        for sh in selectList{
-            sh.selectOff(check: notify)
-        }
-        
-        notify.unlock()
+            
+            Cancel.RegisterCancel(c1, notify)
+            Cancel.RegisterCancel(c2, notify)
+            
+            if !monitor.pointee{
+                let cond = notify.wait(until: timeoutDate(Double(timeout)/1000))
+                notify.broadcast()
+            }
+            
+            Cancel.RegisterCancel(c1, nil)
+            Cancel.RegisterCancel(c2, nil)
+            
+            forEachSOCK(ptr,set.pointee.NumSocket){ sh in
+                sh.selectOff()
+            }
+        }}
     }
     
     func selectOff(check event: NSCondition? = nil) {
         lock()
-        if event != nil && selectEvent != nil && event != selectEvent{
-            raise(SIGINT)
-        }
-        selectEvent = nil
+        flag = nil
         unlock()
     }
     
@@ -391,7 +408,7 @@ func SStartSSLEx(_ sock: UnsafeMutablePointer<SOCK>!, _ x: UnsafeMutablePointer<
 }
 
 class Cancel {
-    var cond:NSCondition?
+    weak var cond:NSCondition?
     var str:String?
     static func RegisterCancel(_ c: UnsafeMutablePointer<CANCEL>!, _ cond: NSCondition?){
         guard let cancel:Cancel = GetOpaque(c) else {

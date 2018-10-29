@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+//import UIKit
 
 extension String{
     func setPtr( _ ptr:UnsafeMutableRawPointer){
@@ -34,8 +34,9 @@ extension String{
 //}
 
 
+
 @_silgen_name("CNSLog")
-func CNSLog(_ pipe: UnsafeMutablePointer<UInt8>, _ msg: UnsafeMutablePointer<UInt8>){
+func SNSLog(_ pipe: UnsafeMutablePointer<UInt8>, _ msg: UnsafeMutablePointer<UInt8>){
     let str = String(cString: msg)
     let pi = String(cString: pipe)
     NSLog("%@: %@",pi,str)
@@ -44,25 +45,25 @@ func CNSLog(_ pipe: UnsafeMutablePointer<UInt8>, _ msg: UnsafeMutablePointer<UIn
 var os_info:UnsafeMutablePointer<OS_INFO>?
 
 @_silgen_name("GetOsInfo")
-func GetOsInfo() -> UnsafeMutablePointer<OS_INFO>!{
+func SGetOsInfo() -> UnsafeMutablePointer<OS_INFO>!{
     if let os = os_info{
         return os
     }
     var info = OS_INFO()
     info.OsProductName = "iOS".newPtr().assumingMemoryBound(to: Int8.self)
-    info.OsVersion = String(UIDevice.current.systemVersion).newPtr().assumingMemoryBound(to: Int8.self)
+//    info.OsVersion = String(UIDevice.current.systemVersion).newPtr().assumingMemoryBound(to: Int8.self)
     os_info = salloc(OS_INFO.self)
     os_info?.pointee = info
     return os_info
 }
 
 @_silgen_name("OSGetProductId")
-func OSGetProductId() -> UnsafeMutablePointer<Int8>!{
+func SOSGetProductId() -> UnsafeMutablePointer<Int8>!{
     return "--".newPtr().assumingMemoryBound(to: Int8.self)
 }
 
 @_silgen_name("UINT64ToSystem")
-func CUINT64ToSystem(_ st: UnsafeMutablePointer<SYSTEMTIME>!, _ sec64: UINT64){
+func SUINT64ToSystem(_ st: UnsafeMutablePointer<SYSTEMTIME>!, _ sec64: UINT64){
     let date = Date.init(timeIntervalSince1970: TimeInterval(sec64/1000))
     var time = SYSTEMTIME()
     let calendar = Calendar.current
@@ -199,4 +200,22 @@ func timeoutDate(_ time: Int) -> Date {
 
 func timeoutDate(_ time: Double) -> Date {
     return Date().addingTimeInterval(TimeInterval(time))
+}
+
+func report_memory() {
+    var taskInfo = mach_task_basic_info()
+    var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.size)/4
+    let kerr: kern_return_t = withUnsafeMutablePointer(to: &taskInfo) {
+        $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
+            task_info(mach_task_self_, task_flavor_t(MACH_TASK_BASIC_INFO), $0, &count)
+        }
+    }
+    
+    if kerr == KERN_SUCCESS {
+        NSLog("Memory used in bytes: \(taskInfo.resident_size)")
+    }
+    else {
+        NSLog("Error with task_info(): " +
+            (String(cString: mach_error_string(kerr), encoding: String.Encoding.ascii) ?? "unknown error"))
+    }
 }

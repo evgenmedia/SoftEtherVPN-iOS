@@ -16,6 +16,7 @@ void SCC_MD5(const void *data, unsigned int len, unsigned char *md);
 
 void SessionConnected(THREAD *);
 
-void PrintHex(void* data, UINT size);
+void* getTag(void* addr);
 
+void SendPacketv4(void* data, UINT size);
 #endif /* AppleFunc_h */

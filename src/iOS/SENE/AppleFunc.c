@@ -6,6 +6,7 @@
 //
 
 #include "CedarPch.h"
+
 UINT StrCpy(char *dst, UINT size, char *src);
 
 // Sam.c
@@ -75,15 +76,6 @@ void Hash(void *dst, void *src, UINT size,bool sha){
 void HashSha1(void *dst, void *src, UINT size)
 { Hash(dst, src, size, true); }
 
-void PrintHex(void* data, UINT size){
-    char buffer[size*2];
-    char* ptr = data;
-    for (int i=0; i<size; i++) {
-        sprintf(&buffer[i], "%02x",ptr[i]);
-    }
-    Debug("Packet: %s",buffer);
-}
-
 // Virtual
 void GenMacAddress(UCHAR *mac)
 {
@@ -121,3 +113,9 @@ void GenMacAddress(UCHAR *mac)
     
     FreeBuf(b);
 }
+
+void* getTag(void* addr){
+    return POINTER_TO_MEMTAG(addr);
+}
+
+

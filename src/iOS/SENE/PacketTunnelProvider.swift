@@ -24,6 +24,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     override init() {
         super.init()
         PacketTunnelProvider.instance = self
+        
     }
     override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         // Add code here to start the process of connecting the tunnel.

@@ -15,9 +15,20 @@
 #pragma weak InternalFree
 #pragma weak InternalMalloc
 #pragma weak InternalReAlloc
-
-
+#pragma weak Free
+#pragma weak Malloc
+#pragma weak ReAlloc
+#pragma weak ZeroMallocEx
+#pragma weak MallocEx
 #pragma weak UniFormat
+// Queue
+#pragma weak GetNext
+#pragma weak NewQueueFast
+#pragma weak GetQueueNum
+#pragma weak InsertQueueWithLock
+#pragma weak NewQueue
+#pragma weak InsertQueue
+#pragma weak ReleaseQueue
 
 // Protocol
 #pragma weak GenerateMachineUniqueHash
