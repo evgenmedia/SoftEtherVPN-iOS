@@ -151,6 +151,8 @@ class SockHandler : NSCondition {
         case normal = "normal"
     }
     
+    static let dq = DispatchQueue(label: "ConnectionSelect", qos: .userInteractive, attributes: .concurrent)
+    
     func selectOn(_ flagPtr: UnsafeMutablePointer<Bool>) -> SelectErr{
         lock()
         defer {
@@ -169,7 +171,7 @@ class SockHandler : NSCondition {
         
         if !asyncMode{
             minRead = 0
-            s.AsyncMode = 1
+            SockHandler.dq.async(execute: selectMonitor)
         }
         
         if buf != nil{
@@ -183,31 +185,60 @@ class SockHandler : NSCondition {
         }
         
         flag = flagPtr
-        
-        if reading {
-            return .normal
+
+        if !reading{
+            broadcast() // wake up Monitor
         }
-        reading = true
-        tcp.readLength(1, completionHandler: { (rec, e) in
-            self.lock()
-            self.lastRecv = Tick64()
-            defer{
-                if let flag = self.flag{
-                    flag.pointee = true
-                    SockHandler.notify.broadcast()
-                }
-                self.reading = false
-                self.unlock()
-            }
-            if let r = rec{
-                self.buf = r.first
-            }
-            
-            if e != nil{
-                self.err = e
-            }
-        })
         return .normal
+    }
+    
+//    let seleLock = NSCondition()
+    var monRun = false
+    func selectMonitor(){
+        lock()
+        s.AsyncMode = 1
+        if monRun{
+            return
+        }
+        monRun = true
+        defer {
+            minRead = 1
+            unlock()
+        }
+        while tcp.state == .connected && asyncMode{
+            while reading || flag == nil{
+                wait()
+            }
+            if buf != nil{
+                break
+            }
+            reading = true
+            tcp.readLength(1, completionHandler: { (rec, e) in
+                self.lock()
+                self.lastRecv = Tick64()
+                defer{
+                    if let flag = self.flag{
+                        flag.pointee = true
+                        SockHandler.notify.broadcast()
+                    }
+                    self.reading = false
+                    self.unlock()
+                }
+                if let r = rec{
+                    self.buf = r.first
+                }
+                
+                if e != nil{
+                    self.err = e
+                }
+            })
+        }
+    }
+    
+    func selectOff(check event: NSCondition? = nil) {
+        lock()
+        flag = nil
+        unlock()
     }
     
     @_silgen_name("Send")
@@ -373,13 +404,6 @@ class SockHandler : NSCondition {
             }
         }}
     }
-    
-    func selectOff(check event: NSCondition? = nil) {
-        lock()
-        flag = nil
-        unlock()
-    }
-    
     
     @_silgen_name("Disconnect")
     public static func SDisconnect(_ sock: UnsafeMutablePointer<SOCK>!){
