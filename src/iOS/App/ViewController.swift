@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var vpnManager:NETunnelProviderManager = NETunnelProviderManager()
     
     
-    let tunnelBundleId = "tech.nsyd.se.NE"
+    let tunnelBundleId = "tech.nsyd.se.SENE"
     let serverAddress = "1.1.1.1"
     let serverPort = "54345"
     let mtu = "1400"
