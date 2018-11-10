@@ -43,7 +43,7 @@ class SockHandler : NSCondition {
         }else{
             self.timeout = Double(timeout)/1000
         }
-        
+        moniSP = OSSignpostID.init(log: log, object: semaphore)
         super.init()
         
         let tunnel = PacketTunnelProvider.instance!
@@ -141,7 +141,7 @@ class SockHandler : NSCondition {
     
     var lastRecv:UINT64 = 0
     
-    var flag:UnsafeMutablePointer<Bool>?
+    var flag:(() -> ())?
     
     enum SelectErr:String {
         case notConnected = "notConnected"
@@ -153,16 +153,17 @@ class SockHandler : NSCondition {
     
     static let dq = DispatchQueue(label: "ConnectionSelect", qos: .userInteractive, attributes: .concurrent)
     
-    func selectOn(_ flagPtr: UnsafeMutablePointer<Bool>) -> SelectErr{
+    func selectOn(_ flagFunc: @escaping () -> ()) -> SelectErr{
         lock()
         defer {
             name = nil
             unlock()
         }
         // SelectTimeout*1.5
-        if tcp.state != .connected{
-            return .notConnected
-        }
+        // Checking state has higher weight
+//        if tcp.state != .connected{
+//            return .notConnected
+//        }
         
         if let e = self.err{
             NSLog("Select Error %@\n", e.localizedDescription)
@@ -171,11 +172,12 @@ class SockHandler : NSCondition {
         
         if !asyncMode{
             minRead = 0
-            SockHandler.dq.async(execute: selectMonitor)
+            s.AsyncMode = 1
+            //SockHandler.dq.async(execute: selectMonitor)
         }
         
         if buf != nil{
-            flagPtr.pointee = true
+            flagFunc()
             SockHandler.notify.broadcast()
             return .dataBuffered
         }
@@ -184,18 +186,52 @@ class SockHandler : NSCondition {
             return .selectIPG
         }
         
-        flag = flagPtr
+        flag = flagFunc
 
         if !reading{
-            broadcast() // wake up Monitor
+//            broadcast() // wake up Monitor
+            //semaphore.signal()
+            reading = true
+            readCount+=1
+            os_signpost(.begin, log: SockHandler.selectLog, name: "RecvOne", signpostID: signID)
+//            SockHandler.dq.async{
+            self.tcp.readLength(1) {(rec, e) in
+                self.lock()
+                self.readCount-=1
+                self.lastRecv = Tick64()
+                if let r = rec{
+                    self.buf = r.first
+                }
+                
+                if e != nil{
+                    self.err = e
+                }
+                
+                os_signpost(.end, log: SockHandler.selectLog, name: "RecvOne", signpostID: self.signID)
+                
+                if let flag = self.flag{
+                    flag()
+                    SockHandler.notify.broadcast()
+                }
+                self.reading = false
+                self.unlock()
+            }
+//            }
         }
         return .normal
     }
-    
-//    let seleLock = NSCondition()
+    var readCount = 0
+    // Locks: asyncMode,reading,flag,monRun,minRead
+    let seleLock = NSCondition()
+    let semaphore = DispatchSemaphore(value: 0)
     var monRun = false
+    let log = OSLog(subsystem: "Connection", category: "Network")
+    let moniSP:OSSignpostID
+    static var monCount = 0;
     func selectMonitor(){
         lock()
+        os_signpost(.begin, log: log, name: "Monitor", signpostID: moniSP)
+        SockHandler.monCount+=1
         s.AsyncMode = 1
         if monRun{
             return
@@ -203,12 +239,14 @@ class SockHandler : NSCondition {
         monRun = true
         defer {
             minRead = 1
-            unlock()
         }
+        unlock()
         while tcp.state == .connected && asyncMode{
-            while reading || flag == nil{
-                wait()
-            }
+            repeat{
+                os_signpost(.end, log: log, name: "Monitor", signpostID: moniSP)
+                semaphore.wait()
+                os_signpost(.begin, log: log, name: "Monitor", signpostID: moniSP)
+            }while reading || flag == nil
             if buf != nil{
                 break
             }
@@ -218,7 +256,7 @@ class SockHandler : NSCondition {
                 self.lastRecv = Tick64()
                 defer{
                     if let flag = self.flag{
-                        flag.pointee = true
+                        flag()
                         SockHandler.notify.broadcast()
                     }
                     self.reading = false
@@ -354,11 +392,13 @@ class SockHandler : NSCondition {
             return readed
         }
     }
-    static private func forEachSOCK(_ first:UnsafeMutableRawPointer,_ size:UINT, _ block: (SockHandler)->Void){
+    static private func forEachSOCK(_ first:UnsafeMutableRawPointer,_ size:UINT, _ block: (SockHandler)->Bool){
         let first = first.assumingMemoryBound(to: (UnsafeMutablePointer<SOCK>?).self)
         for i in 0...Int(size){
             if let sh = GetSockHandler(first.advanced(by: i).pointee){
-                block(sh)
+                if !block(sh){
+                    break
+                }
             }
         }
     }
@@ -368,42 +408,80 @@ class SockHandler : NSCondition {
     static let notify = NSCondition()
     static var SelectTimeout = 250.0/1000
     
-    static let selectLog:OSLog = .disabled//OSLog(subsystem: "tech.nsyd.se.SENE", category: "Select")
+    static let selectLog:OSLog = OSLog(subsystem: "tech.nsyd.se.SENE", category: "Select")
+    
+    
+    static let selectID = OSSignpostID.init(log: selectLog)
+//    static let monitorLock = NSCondition()
+    static let mDQ = DispatchQueue(label: "ConnectionSig")
+    static var m = false
+    static var monitor:Bool{
+        get{
+            return mDQ.sync {
+                return m
+            }
+        }
+        set{
+            mDQ.sync{
+                m = newValue
+            }
+        }
+    }
     
     @_silgen_name("Select")
     public static func SSelect(_ set: UnsafeMutablePointer<SOCKSET>!, _ timeout: UINT, _ c1: UnsafeMutablePointer<CANCEL>!, _ c2: UnsafeMutablePointer<CANCEL>!){
-        let signID = OSSignpostID(log: selectLog)
-        os_signpost(.begin, log: selectLog, name: "Select",signpostID:signID)
-        notify.lock()
+        os_signpost(.begin, log: selectLog, name: "Select", signpostID: selectID)
+//        notify.lock()
+        var didTimeout = false
+        monitor = false
+        var timeout = timeoutDate(Double(timeout)/1000)
+        
         defer {
-            notify.unlock()
-            os_signpost(.end, log: selectLog, name: "Select",signpostID:signID)
+            os_signpost(.end, log: selectLog, name: "Select", signpostID: selectID, "Timeout:%d, Monitor:%d",didTimeout,monitor)
+            if didTimeout && monitor{
+                os_signpost(.event, log: selectLog, name: "Select Did not wake up", signpostID: selectID)
+            }
+//            notify.unlock()
         }
-        var m = false
+        
+        
         withUnsafeMutablePointer(to: &(set.pointee.Sock)){ ptr in
-        withUnsafeMutablePointer(to: &m){ monitor in
-            forEachSOCK(ptr,set.pointee.NumSocket){ sh in
-                os_signpost(.begin, log: SockHandler.selectLog, name: "Select On",signpostID:sh.signID)
-                let result = sh.selectOn(monitor)
-                os_signpost(.end, log: SockHandler.selectLog, name: "Select On",signpostID:sh.signID,"Result: %{public}@", result.rawValue)
+            forEachSOCK(ptr,set.pointee.NumSocket){ sh -> Bool in
+                let result = sh.selectOn() {
+                        monitor = true;
+                    }
+                if result != .normal {
+                    os_signpost(.event, log: selectLog, name: "Select", signpostID: selectID, "%s",result.rawValue)
+                }
+                return result == .normal
+            }
+            defer{
+                forEachSOCK(ptr,set.pointee.NumSocket){ sh -> Bool in
+                    sh.selectOff()
+                    return true
+                }
+            }
+            
+            if monitor{
+                return
             }
             
             Cancel.RegisterCancel(c1, notify)
             Cancel.RegisterCancel(c2, notify)
             
-            if !monitor.pointee{
-                let cond = notify.wait(until: timeoutDate(Double(timeout)/1000))
-                notify.broadcast()
+            defer{
+                Cancel.RegisterCancel(c1, nil)
+                Cancel.RegisterCancel(c2, nil)
             }
             
-            Cancel.RegisterCancel(c1, nil)
-            Cancel.RegisterCancel(c2, nil)
-            
-            forEachSOCK(ptr,set.pointee.NumSocket){ sh in
-                sh.selectOff()
+            if !monitor{
+                didTimeout = !notify.wait(until: timeout)
+//                notify.broadcast()
+            }else{
+                didTimeout = false
             }
-        }}
-    }
+        }
+}
     
     @_silgen_name("Disconnect")
     public static func SDisconnect(_ sock: UnsafeMutablePointer<SOCK>!){

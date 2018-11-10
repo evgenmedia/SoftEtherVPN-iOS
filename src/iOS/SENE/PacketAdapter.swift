@@ -155,21 +155,21 @@ class PackAdapterInstance : Thread{
         guard let data = data else {
             return 1
         }
-        PA2IPC.enqueue(data, size)
+        PA2IPC.enqueue((data, size))
         
         // Signal Read -> main()
         cond.broadcast()
         return 1
     }
     
-    let IPC2PA = DataQueueHandle()
-    let PA2IPC = DataQueueHandle()
+    let IPC2PA = QueueHandle<(UnsafeMutableRawPointer,UINT)>()
+    let PA2IPC = QueueHandle<(UnsafeMutableRawPointer,UINT)>()
     
     //  IPC(SendTube) -> PA -> Client
     // data is stack allocated!
     @_silgen_name("IPCSendL2")
     static func SIPCSendL2(_ ipc: UnsafeMutablePointer<IPC>!, _ data: UnsafeMutableRawPointer!, _ size: UINT){
-        i.IPC2PA.enqueue(Clone(data, size), size)
+        i.IPC2PA.enqueue((Clone(data, size), size))
     }
     
     // Client -> PA -> IPC(SendTube)
@@ -211,6 +211,7 @@ class PackAdapterInstance : Thread{
     static let Timeout = TimeInterval(0.7*Double(TIMEOUT_DEFAULT/1000)) // TODO
     
     let forwardIPv4Que = DispatchQueue.init(label: "forwardIPv4Que")
+    
     //Ipv4 -> packetFlow
     func forwardIPv4(_ block: UnsafeMutableRawPointer) {
         forwardIPv4Que.async {
@@ -220,10 +221,7 @@ class PackAdapterInstance : Thread{
             Free(block)
         }
     }
-//
-//    var datas = [Data]()
-//    var nums = [NSNumber]()
-//    var ptrs = [UnsafeMutablePointer<UCHAR>]()
+    
     // L2 -> L3
     override func main() {
         while(state == .running){
@@ -236,22 +234,20 @@ class PackAdapterInstance : Thread{
     func SSendPacketv4(_ data: UnsafeMutableRawPointer!, _ size: UINT){
         PackAdapterInstance.i?.packetFlow.writePackets([Data(bytes: data, count: Int(size))], withProtocols: [NSNumber(value: AF_INET)])
     }
-    
-    
 }
 
-class DataQueueHandle:QueueHandle<(UnsafeMutableRawPointer,UINT)> {
-    func enqueue(_ data:UnsafeMutableRawPointer,_ size:UINT){
-        super.enqueue((data, size))
-    }
-    
-    override func dequeue() -> (UnsafeMutableRawPointer,UINT)? {
-        guard let data = super.dequeue() else{
-            return nil
-        }
-        return (data.0,data.1)
-    }
-}
+//class DataQueueHandle:QueueHandle<(UnsafeMutableRawPointer,UINT)> {
+//    func enqueue(_ data:UnsafeMutableRawPointer,_ size:UINT){
+//        super.enqueue((data, size))
+//    }
+//
+//    override func dequeue() -> (UnsafeMutableRawPointer,UINT)? {
+//        guard let data = super.dequeue() else{
+//            return nil
+//        }
+//        return (data.0,data.1)
+//    }
+//}
 
 extension IP{
     mutating func toString() -> String {

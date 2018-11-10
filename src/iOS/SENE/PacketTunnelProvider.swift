@@ -53,7 +53,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         InitStringLibrary()
         InitNetwork()
         let auth = CLIENT_AUTH.setup("asd","asdpas")
-        let opt = CLIENT_OPTION.setup("mac-mini.local", 443)
+        let opt = CLIENT_OPTION.setup("ca-nsyd.vpnazure.net", 443)
         let acc = ACCOUNT.setup(opt, auth)
         pa = PackAdapterInstance(self)//pa!.paPtr
         session = SESSION.setup(opt, auth, pa.pa, acc)
