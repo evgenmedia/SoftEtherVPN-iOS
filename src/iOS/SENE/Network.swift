@@ -10,6 +10,84 @@ import NetworkExtension
 import os.signpost
 
 class SockHandler : NSCondition {
+    
+    class RingBuffer:NSCondition {
+        let array:UnsafeMutablePointer<UInt8>
+        var block = DispatchSemaphore(value: 0)
+        var sizeMax:Int
+        var writeHead = 0
+        var readHead = 0
+        var full = false
+        init(_ size: Int) {
+            sizeMax = size
+            array = UnsafeMutablePointer.allocate(capacity: sizeMax)
+        }
+    
+        deinit {
+            array.deallocate()
+        }
+        func write(_ buf: UnsafeRawPointer, _ size: Int) -> Bool{
+            let available = self.available
+            if size > available{
+                return false
+            }else if size == available{
+                full = true
+            }
+            var buf = buf.assumingMemoryBound(to: UInt8.self)
+            let toEnd = sizeMax-writeHead
+            if toEnd < size{
+                array.advanced(by: writeHead).assign(from: buf, count: toEnd)
+                buf = buf.advanced(by: toEnd)
+                array.assign(from: buf, count: size-toEnd)
+            }else{
+                array.advanced(by: writeHead).assign(from: buf, count: size)
+            }
+            
+            writeHead=(writeHead+size)%sizeMax
+            broadcast()
+            return true
+        }
+        func copyTo(_ buf: UnsafeMutableRawPointer, _ size: Int) -> Int{
+            if size<1 || isEmpty {
+                return 0
+            }
+            let size = min(size, current)
+            var buf = buf.assumingMemoryBound(to: UInt8.self)
+            let array = self.array.advanced(by: readHead)
+            let toEnd = sizeMax-readHead
+            if toEnd < size{
+                buf.assign(from: array, count: toEnd)
+                buf = buf.advanced(by: toEnd)
+                buf.assign(from: self.array, count: size-toEnd)
+            }else{
+                buf.assign(from: array, count: size)
+            }
+            
+            full = false
+            readHead=(readHead+size)%sizeMax
+            broadcast()
+            
+            return size
+        }
+        var available:Int{
+            if full{
+                return 0
+            }
+            if readHead == writeHead{
+                return sizeMax
+            } else if readHead > writeHead{
+                return readHead - writeHead
+            }
+            return sizeMax - writeHead + readHead
+        }
+        var isEmpty:Bool{
+            return writeHead == readHead && !full
+        }
+        var current:Int{
+            return sizeMax - available
+        }
+    }
+    
     let sp = salloc(SOCK.self)
     var s:SOCK{
         get {
@@ -21,9 +99,11 @@ class SockHandler : NSCondition {
     }
     var hostname:String
     //var param:NWTLSParameters
+    static var count = 0
+    var count = SockHandler.count
     var tcp:NWTCPConnection!
     let timeout:Double
-    var buf:UInt8?
+    let buf = RingBuffer(Int(RECV_BUF_SIZE))
     var err:Error?
     var signID:OSSignpostID!
     init(_ hostname: UnsafeMutablePointer<Int8>!,
@@ -43,7 +123,6 @@ class SockHandler : NSCondition {
         }else{
             self.timeout = Double(timeout)/1000
         }
-        moniSP = OSSignpostID.init(log: log, object: semaphore)
         super.init()
         
         let tunnel = PacketTunnelProvider.instance!
@@ -65,7 +144,9 @@ class SockHandler : NSCondition {
         tcp = tunnel.createTCPConnection(to: endPoint, enableTLS: try_start_ssl==1, tlsParameters: nil, delegate: self)
         
         tcp.addObserver(self, forKeyPath: "state", options: .initial, context: &tcp)
-        signID = OSSignpostID(log: SockHandler.selectLog, object: self)
+        signID = OSSignpostID(log: SockHandler.connectionLog, object: self)
+    
+        SockHandler.count+=1
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -97,6 +178,47 @@ class SockHandler : NSCondition {
     
     func getTimeout() -> Date{
         return timeoutDate(self.timeout)
+    }
+    
+    let recvLock = DispatchSemaphore(value: 0)
+    
+    func recv(_ bufTarget: UnsafeMutableRawPointer, _ size: Int) -> uint{
+        buf.lock()
+        os_signpost(.event, log: SockHandler.connectionLog, name: "recv", signpostID: signID)
+        defer {
+            buf.unlock()
+        }
+        var read = 0
+        let ptr = bufTarget.assumingMemoryBound(to: UInt8.self)
+        
+        if asyncMode {
+            if buf.isEmpty {
+                return SOCK_LATER
+            }
+            
+            read = buf.copyTo(ptr, size)
+            if read == buf.sizeMax{
+                self.read()
+            }
+        }else{
+            tcp.readMinimumLength(1, maximumLength: size) { (data, err) in
+                data?.withUnsafeBytes { (dat:UnsafePointer<UInt8>) in
+                    ptr.assign(from: dat, count: (data!.count))
+                    read = data!.count
+                }
+                
+                if let err = err{
+                    self.err = err
+                }
+                
+                self.recvLock.signal()
+            }
+            recvLock.wait()
+        }
+        
+        s.RecvSize+=UINT64(read)
+        s.RecvNum+=1
+        return uint(read)
     }
     
     @_silgen_name("ConnectEx4")
@@ -133,17 +255,11 @@ class SockHandler : NSCondition {
         return GetOpaque(s.pointee.connection)
     }
     
-    var minRead = 1
-//    weak var selectEvent:NSCondition?
-    var asyncMode:Bool { return minRead == 0 }
+    var asyncMode = false
     
-    var reading = false
+    var flag:(() -> Any)?
     
-    var lastRecv:UINT64 = 0
-    
-    var flag:(() -> ())?
-    
-    enum SelectErr:String {
+    enum SelectState:String {
         case notConnected = "notConnected"
         case connectionError = "connectionError"
         case dataBuffered = "dataBuffered"
@@ -151,34 +267,49 @@ class SockHandler : NSCondition {
         case normal = "normal"
     }
     
-    static let dq = DispatchQueue(label: "ConnectionSelect", qos: .userInteractive, attributes: .concurrent)
+    var reading = false
     
-    func selectOn(_ flagFunc: @escaping () -> ()) -> SelectErr{
-        lock()
-        defer {
-            name = nil
-            unlock()
+    fileprivate func read() {
+        if !reading{
+            reading=true
+            os_signpost(.begin, log: SockHandler.connectionLog, name: "read", signpostID: self.signID)
+            tcp.readMinimumLength(1, maximumLength: buf.available) { (data, err) in
+                self.buf.lock()
+                os_signpost(.end, log: SockHandler.connectionLog, name: "read", signpostID: self.signID)
+                data?.withUnsafeBytes { (dat:UnsafePointer<UInt8>) in
+                    self.buf.write(dat, data!.count)
+                }
+                
+                if let err = err{
+                    self.err = err
+                }
+                self.reading=false
+                self.flag?()
+                self.buf.unlock()
+            }
         }
-        // SelectTimeout*1.5
-        // Checking state has higher weight
-//        if tcp.state != .connected{
-//            return .notConnected
-//        }
+    }
+    
+    func selectOn(_ flagFunc: (() -> Any)?=nil) -> SelectState{
+        buf.lock()
+        defer {
+//            name = nil
+            buf.unlock()
+        }
         
-        if let e = self.err{
-            NSLog("Select Error %@\n", e.localizedDescription)
+        if self.err != nil{
+//            NSLog("Select Error %@\n", e.localizedDescription)
             return .connectionError
         }
         
         if !asyncMode{
-            minRead = 0
+            asyncMode = true
             s.AsyncMode = 1
             //SockHandler.dq.async(execute: selectMonitor)
         }
         
-        if buf != nil{
-            flagFunc()
-            SockHandler.notify.broadcast()
+        if !buf.isEmpty{
+            flagFunc?()
             return .dataBuffered
         }
         
@@ -187,90 +318,10 @@ class SockHandler : NSCondition {
         }
         
         flag = flagFunc
-
-        if !reading{
-//            broadcast() // wake up Monitor
-            //semaphore.signal()
-            reading = true
-            readCount+=1
-            os_signpost(.begin, log: SockHandler.selectLog, name: "RecvOne", signpostID: signID)
-//            SockHandler.dq.async{
-            self.tcp.readLength(1) {(rec, e) in
-                self.lock()
-                self.readCount-=1
-                self.lastRecv = Tick64()
-                if let r = rec{
-                    self.buf = r.first
-                }
-                
-                if e != nil{
-                    self.err = e
-                }
-                
-                os_signpost(.end, log: SockHandler.selectLog, name: "RecvOne", signpostID: self.signID)
-                
-                if let flag = self.flag{
-                    flag()
-                    SockHandler.notify.broadcast()
-                }
-                self.reading = false
-                self.unlock()
-            }
-//            }
-        }
+        
+        read()
+        
         return .normal
-    }
-    var readCount = 0
-    // Locks: asyncMode,reading,flag,monRun,minRead
-    let seleLock = NSCondition()
-    let semaphore = DispatchSemaphore(value: 0)
-    var monRun = false
-    let log = OSLog(subsystem: "Connection", category: "Network")
-    let moniSP:OSSignpostID
-    static var monCount = 0;
-    func selectMonitor(){
-        lock()
-        os_signpost(.begin, log: log, name: "Monitor", signpostID: moniSP)
-        SockHandler.monCount+=1
-        s.AsyncMode = 1
-        if monRun{
-            return
-        }
-        monRun = true
-        defer {
-            minRead = 1
-        }
-        unlock()
-        while tcp.state == .connected && asyncMode{
-            repeat{
-                os_signpost(.end, log: log, name: "Monitor", signpostID: moniSP)
-                semaphore.wait()
-                os_signpost(.begin, log: log, name: "Monitor", signpostID: moniSP)
-            }while reading || flag == nil
-            if buf != nil{
-                break
-            }
-            reading = true
-            tcp.readLength(1, completionHandler: { (rec, e) in
-                self.lock()
-                self.lastRecv = Tick64()
-                defer{
-                    if let flag = self.flag{
-                        flag()
-                        SockHandler.notify.broadcast()
-                    }
-                    self.reading = false
-                    self.unlock()
-                }
-                if let r = rec{
-                    self.buf = r.first
-                }
-                
-                if e != nil{
-                    self.err = e
-                }
-            })
-        }
     }
     
     func selectOff(check event: NSCondition? = nil) {
@@ -312,11 +363,11 @@ class SockHandler : NSCondition {
             }
         })
         
-        while sh.name != "Send" {
-            if !sh.waitTimeout(){
-                return 0
-            }
-        }
+//        while sh.name != "Send" {
+//            if !sh.waitTimeout(){
+//                return 0
+//            }
+//        }
         
         if let e = sh.err{
             NSLog("Network: \(e.localizedDescription)")
@@ -331,66 +382,8 @@ class SockHandler : NSCondition {
         guard let sh = GetSockHandler(sock) else{
             return 0
         }
-        var readed:UINT = 0
-        var nextData = data.assumingMemoryBound(to: UInt8.self)
         
-        sh.lock()
-        defer {
-            sh.name = nil
-            sh.unlock()
-        }
-        
-        if sh.err != nil{
-            return 0
-        }
-        
-        if let byte = sh.buf {
-            nextData.pointee = byte
-            nextData = nextData.advanced(by: 1)
-            readed+=1
-            sh.buf = nil
-        }else if sh.asyncMode {
-            return SOCK_LATER
-        }
-        
-        sh.tcp.readMinimumLength(max(0,sh.minRead-Int(readed)), maximumLength: Int(size-readed), completionHandler: { (rec, e) in
-            sh.lock()
-            defer {
-                sh.name = "Recv"
-                sh.broadcast()
-                sh.unlock()
-            }
-            
-            if let r = rec{
-                r.copyBytes(to: nextData, count: r.count)
-                readed+=UINT(r.count)
-            }
-            
-            if e != nil{
-                sh.err = e
-            }
-            
-            
-            sh.s.RecvSize+=UINT64(readed)
-            sh.s.RecvNum+=1
-        })
-        
-        while sh.name != "Recv" {
-            if !sh.waitTimeout(){
-                return 0
-            }
-        }
-        
-        if let e = sh.err{
-            NSLog("Network Error: \(e.localizedDescription)")
-            if readed != 0{
-                sh.err = nil
-                return readed
-            }
-            return 0
-        }else{
-            return readed
-        }
+        return sh.recv(data, Int(size))
     }
     static private func forEachSOCK(_ first:UnsafeMutableRawPointer,_ size:UINT, _ block: (SockHandler)->Bool){
         let first = first.assumingMemoryBound(to: (UnsafeMutablePointer<SOCK>?).self)
@@ -403,55 +396,31 @@ class SockHandler : NSCondition {
         }
     }
     
-    static var selectStr = "select"
-    
-    static let notify = NSCondition()
     static var SelectTimeout = 250.0/1000
     
-    static let selectLog:OSLog = OSLog(subsystem: "tech.nsyd.se.SENE", category: "Select")
+    static let connectionLog:OSLog = .disabled//OSLog(subsystem: "tech.nsyd.se.SENE", category: "Connection")
+    // .disabled//
     
-    
-    static let selectID = OSSignpostID.init(log: selectLog)
-//    static let monitorLock = NSCondition()
-    static let mDQ = DispatchQueue(label: "ConnectionSig")
-    static var m = false
-    static var monitor:Bool{
-        get{
-            return mDQ.sync {
-                return m
-            }
-        }
-        set{
-            mDQ.sync{
-                m = newValue
-            }
-        }
-    }
+    static let selectID = OSSignpostID.init(log: connectionLog)
     
     @_silgen_name("Select")
     public static func SSelect(_ set: UnsafeMutablePointer<SOCKSET>!, _ timeout: UINT, _ c1: UnsafeMutablePointer<CANCEL>!, _ c2: UnsafeMutablePointer<CANCEL>!){
-        os_signpost(.begin, log: selectLog, name: "Select", signpostID: selectID)
-//        notify.lock()
-        var didTimeout = false
-        monitor = false
-        var timeout = timeoutDate(Double(timeout)/1000)
-        
+        os_signpost(.begin, log: connectionLog, name: "Select", signpostID: selectID)
+        let monitor = DispatchSemaphore(value: 0)
+        var timeout = UInt32(DispatchTime.now().uptimeNanoseconds/1000000)+UInt32(timeout)
+        var wakeup = false
         defer {
-            os_signpost(.end, log: selectLog, name: "Select", signpostID: selectID, "Timeout:%d, Monitor:%d",didTimeout,monitor)
-            if didTimeout && monitor{
-                os_signpost(.event, log: selectLog, name: "Select Did not wake up", signpostID: selectID)
-            }
-//            notify.unlock()
+            os_signpost(.end, log: connectionLog, name: "Select", signpostID: selectID,"status: %d", wakeup)
         }
         
         
         withUnsafeMutablePointer(to: &(set.pointee.Sock)){ ptr in
+            var toWait = true
             forEachSOCK(ptr,set.pointee.NumSocket){ sh -> Bool in
-                let result = sh.selectOn() {
-                        monitor = true;
-                    }
+                let result = sh.selectOn(monitor.signal)
                 if result != .normal {
-                    os_signpost(.event, log: selectLog, name: "Select", signpostID: selectID, "%s",result.rawValue)
+                    os_signpost(.event, log: connectionLog, name: "selectOn not Normal", signpostID: selectID, "%s",result.rawValue)
+                    toWait = false
                 }
                 return result == .normal
             }
@@ -462,26 +431,20 @@ class SockHandler : NSCondition {
                 }
             }
             
-            if monitor{
+            if !toWait{
                 return
             }
             
-            Cancel.RegisterCancel(c1, notify)
-            Cancel.RegisterCancel(c2, notify)
+            Cancel.RegisterCancel(c1, monitor.signal)
+            Cancel.RegisterCancel(c2, monitor.signal)
             
             defer{
                 Cancel.RegisterCancel(c1, nil)
                 Cancel.RegisterCancel(c2, nil)
             }
-            
-            if !monitor{
-                didTimeout = !notify.wait(until: timeout)
-//                notify.broadcast()
-            }else{
-                didTimeout = false
-            }
+            wakeup = SemaphoreWait(monitor,until: timeout)
         }
-}
+    }
     
     @_silgen_name("Disconnect")
     public static func SDisconnect(_ sock: UnsafeMutablePointer<SOCK>!){
@@ -510,13 +473,13 @@ func SStartSSLEx(_ sock: UnsafeMutablePointer<SOCK>!, _ x: UnsafeMutablePointer<
 }
 
 class Cancel {
-    weak var cond:NSCondition?
+    var action:(()->Any)?
     var str:String?
-    static func RegisterCancel(_ c: UnsafeMutablePointer<CANCEL>!, _ cond: NSCondition?){
+    static func RegisterCancel(_ c: UnsafeMutablePointer<CANCEL>!, _ cond: (()->Any)?){
         guard let cancel:Cancel = GetOpaque(c) else {
             return
         }
-        cancel.cond = cond
+        cancel.action = cond
     }
     
     @_silgen_name("NewCancel")
@@ -534,25 +497,22 @@ class Cancel {
         guard let cancel:Cancel = GetOpaque(c) else {
             return
         }
-        cancel.cond?.name = "Cancel"
-        cancel.cond?.broadcast()
+        cancel.action?()
         
     }
 }
 
 @_silgen_name("WaitForTubes")
 func SWaitForTubes(_ tubes: UnsafeMutablePointer<UnsafeMutablePointer<TUBE>?>!, _ num: UINT, _ timeout: UINT){
-    let cond = NSCondition()
+    let cond = DispatchSemaphore(value: 0)
     withEachEvent(tubes,num){ c in
-        c.cond = cond
+        c.action = cond.signal
     }
     
-    if cond.name == nil {
-        cond.wait(until: timeoutDate(num))
-    }
+    SemaphoreWait(cond, UInt32(5000))
     
     withEachEvent(tubes,num){ c in
-        c.cond = nil
+        c.action = nil
     }
 }
 
@@ -566,11 +526,12 @@ func SWaitSockEvent(_ event: UnsafeMutablePointer<SOCK_EVENT>!, _ timeout: UINT)
     guard let e:Cancel = GetOpaque(event) else {
         return 0
     }
-    e.cond = NSCondition()
+    let cond = DispatchSemaphore(value: 0)
+    e.action = cond.signal
     
     var result = true
     if e.str == nil{
-        result = e.cond!.wait(until: timeoutDate(timeout))
+        result = SemaphoreWait(cond, timeout)
         e.str = nil
     }
     return result ? 1 : 0
@@ -582,12 +543,12 @@ func SSetSockEvent(_ event: UnsafeMutablePointer<SOCK_EVENT>!){
         return
     }
     e.str = "Set"
-    e.cond?.broadcast()
+    e.action?()
 }
 
 @_silgen_name("NewSockEvent")
 func SNewSockEvent() -> UnsafeMutablePointer<SOCK_EVENT>!{
-    var ptr:UnsafeMutablePointer<SOCK_EVENT>=ToOpaque(Cancel())
+    let ptr:UnsafeMutablePointer<SOCK_EVENT>=ToOpaque(Cancel())
     NSLog("Sock Event: %p\n", ptr)
     return ptr
 }
@@ -603,13 +564,4 @@ func withEachEvent(_ tubes: UnsafeMutablePointer<UnsafeMutablePointer<TUBE>?>!, 
         fuc(c)
     }
 }
-
-//public func IPToStr(_ str: UnsafeMutablePointer<Int8>!, _ size: UINT, _ ip: UnsafeMutablePointer<IP>!){
-//    if (ip.pointee.addr == (0xDF,0xFF,0xFF,0xFE)){ // is IPv6
-//        "::1".setPtr(str)
-//    }else{
-//        String(format: "%d.%d.%d.%d", ip.pointee.addr.0,ip.pointee.addr.1,ip.pointee.addr.2,ip.pointee.addr.3).setPtr(str)
-//    }
-//}
-
 

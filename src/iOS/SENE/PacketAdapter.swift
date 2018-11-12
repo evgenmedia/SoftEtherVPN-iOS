@@ -59,7 +59,7 @@ class PackAdapterInstance : Thread{
         }}
         sockPtr = s1
         PackAdapterInstance.TmpSock = s2
-        cancel.cond = cond
+        cancel.action = cond.broadcast
         
         name = "PacketAdapterThread"
     }
