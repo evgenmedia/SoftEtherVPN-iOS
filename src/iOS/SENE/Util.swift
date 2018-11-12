@@ -88,11 +88,11 @@ func CSystemTime64() -> UINT64{
 
 @_silgen_name("Tick64")
 func CTick64() -> UINT64{
-    struct Tick{
-        static var Start = Date()
+    struct TickStart{
+        // first evluated when used, it on the right of - in return, it will be smaller than now()
+        static var value = DispatchTime.now().uptimeNanoseconds/1000000 - 50001
     }
-    
-    return UINT64(Date().timeIntervalSince(Tick.Start)*1000)
+    return DispatchTime.now().uptimeNanoseconds/1000000 - TickStart.value
 }
 
 @_silgen_name("TickHighres64")
@@ -202,21 +202,20 @@ func timeoutDate(_ time: Double) -> Date {
     return Date().addingTimeInterval(TimeInterval(time))
 }
 
-func report_memory() {
-    var taskInfo = mach_task_basic_info()
-    var count = mach_msg_type_number_t(MemoryLayout<mach_task_basic_info>.size)/4
-    let kerr: kern_return_t = withUnsafeMutablePointer(to: &taskInfo) {
-        $0.withMemoryRebound(to: integer_t.self, capacity: 1) {
-            task_info(mach_task_self_, task_flavor_t(MACH_TASK_BASIC_INFO), $0, &count)
-        }
-    }
-    
-    if kerr == KERN_SUCCESS {
-        NSLog("Memory used in bytes: \(taskInfo.resident_size)")
-    }
-    else {
-        NSLog("Error with task_info(): " +
-            (String(cString: mach_error_string(kerr), encoding: String.Encoding.ascii) ?? "unknown error"))
-    }
+func DispatchTimeout(_ miliseconds: UInt32)->DispatchTime{
+    return DispatchTimeout(UInt64(miliseconds)*1000000)
+}
+func DispatchTimeout(_ nanoseconds: UInt64)->DispatchTime{
+    return DispatchTime(uptimeNanoseconds: DispatchTime.now().uptimeNanoseconds + nanoseconds)
 }
 
+// true on success
+@discardableResult
+func SemaphoreWait(_ ds: DispatchSemaphore, _ miliseconds: UInt32)->Bool{
+    return ds.wait(timeout: DispatchTimeout(miliseconds)) == .success
+}
+
+@discardableResult
+func SemaphoreWait(_ ds: DispatchSemaphore, until miliseconds: UInt32)->Bool{
+    return ds.wait(timeout: DispatchTime(uptimeNanoseconds: UInt64(miliseconds)*1000000)) == .success
+}
